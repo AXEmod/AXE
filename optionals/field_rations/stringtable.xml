@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Field_Rations">
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Field_Rations">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Field_Rations_Title">
+				<Original>AXE Field Rations</Original>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_URL">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Categories">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Field_Rations_CBA_Category">
+				<Original>AXE Field Rations</Original>
+				<German>AXE Feldrationen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Field_Rations_CBA_Category_Common">
+				<Original>Common</Original>
+				<German>Allgemeines</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Field_Rations_CBA_Category_Energy">
+				<Original>Drinking (Caffeine)</Original>
+				<German>Trinken (Koffein)</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CBA_Category_Water">
+				<Original>Drinking (Water)</Original>
+				<German>Trinken (Wasser)</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CBA_Category_Food">
+				<Original>Eating</Original>
+				<German>Essen</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Settings">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Field_Rations_CBA_Enabled_Title">
+				<Original>Activate Effects</Original>
+				<German>Effekte aktivieren</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CBA_Enabled_Tip">
+				<Original>Eating &amp; drinking has effects on the vital values.\n(&quot;ACEX Field Rations&quot; must be activated)</Original>
+				<German>Essen &amp; Trinken hat Auswirkungen auf die Vital-Werte.\n(&quot;ACEX Feldrationen&quot; muss aktiviert sein)</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Field_Rations_CBA_Global_Sounds_Title">
+				<Original>Global Sounds</Original>
+				<German>Globale Sounds</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CBA_Global_Sounds_Tip">
+				<Original>Eating &amp; drinking can be heard from players nearby.</Original>
+				<German>Essen &amp; Trinken kann von Spielern in der Nähe gehört werden.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Field_Rations_CBA_Canteen_Enabled_Title">
+				<Original>Canteen</Original>
+				<German>Feldflaschen</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CBA_Canteen_Enabled_Tip">
+				<Original>Canteens always regenerate stamina to 100%.\n(&quot;Digest Water&quot; must be activated)</Original>
+				<German>Feldflaschen regenerieren die Ausdauer immer auf 100%.\n(&quot;Wasser verdauen&quot; muss aktiviert sein)</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Field_Rations_CBA_Water_Enabled_Title">
+				<Original>Enable Water</Original>
+				<German>Wasser aktivieren</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CBA_Water_Enabled_Tip">
+				<Original>Regenerates stamina depending on the set factor.</Original>
+				<German>Regeneriert die Ausdauer abhängig vom eingestellten Faktor.</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CBA_Water_Factor_Title">
+				<Original>Factor</Original>
+				<German>Faktor</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CBA_Water_Factor_Tip">
+				<Original>A higher factor regenerates more stamina than a lower factor.</Original>
+				<German>Ein höherer Faktor regeneriert mehr Ausdauer als ein niedriger Faktor.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Field_Rations_CBA_Energy_Enabled_Title">
+				<Original>Enable Caffeine</Original>
+				<German>Koffein aktivieren</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CBA_Energy_Enabled_Tip">
+				<Original>Restores Stamina to 100% and keeps it for a period of time.\nConsumption increases the heart rate!</Original>
+				<German>Regeneriert die Ausdauer auf 100% und hält diese über einen Zeitraum.\nDer Konsum erhöt die Herzfrequenz!</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CBA_Energy_Duration_Title">
+				<Original>Duration</Original>
+				<German>Wirkdauer</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CBA_Energy_Duration_Tip">
+				<Original>The duration (seconds) which the effect lasts.</Original>
+				<German>Die Wirkdauer (Sekunden), in dem der Effekt anhält.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Field_Rations_CBA_Food_Enabled_Title">
+				<Original>Enable Food</Original>
+				<German>Essen aktivieren</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CBA_Food_Enabled_Tip">
+				<Original>Eating is heavy in the stomach and reduces stamina.</Original>
+				<German>Essen liegt schwer im Magen und reduziert die Ausdauer.</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CBA_Food_Factor_Title">
+				<Original>Factor</Original>
+				<German>Faktor</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CBA_Food_Factor_Tip">
+				<Original>A higher factor reduces stamina more than a lower factor.</Original>
+				<German>Ein höherer Faktor verringert die Ausdauer mehr als ein niedriger Faktor.</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Interactions">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Field_Rations_Action_Box_Open">
+				<Original>Open</Original>
+				<German>Öffnen</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Containers">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Field_Rations_Box_MRE">
+				<Original>Food Supplies Box (MRE)</Original>
+				<German>Lebensmittel-Karton (MRE)</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_Box_RedGull">
+				<Original>Food Supplies Box (Red Gull)</Original>
+				<German>Lebensmittel-Karton (Red Gull)</German>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_Box_Water">
+				<Original>Food Supplies Box (Water)</Original>
+				<German>Lebensmittel-Karton (Wasser)</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Messages">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Field_Rations_Canteen_DisplayName">
+				<Original>Canteen</Original>
+				<Chinese>食堂</Chinese>
+				<Chinesesimp>食堂</Chinesesimp>
+				<Czech>Jídelna</Czech>
+				<French>Cantine</French>
+				<German>Feldflasche</German>
+				<Hungarian>Kantin</Hungarian>
+				<Italian>Mensa</Italian>
+				<Japanese>水筒</Japanese>
+				<Korean>반합</Korean>
+				<Polish>Manierka</Polish>
+				<Portuguese>Cantina</Portuguese>
+				<Russian>Столовая</Russian>
+				<Spanish>Cantina</Spanish>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_Canteen_Description">
+				<Original>A canteen filled with water</Original>
+				<Chinese>一個裝滿水的食堂</Chinese>
+				<Chinesesimp>一个装满水的食堂</Chinesesimp>
+				<Czech>Jídelna naplněná vodou</Czech>
+				<French>Une cantine remplie d'eau</French>
+				<German>Eine Feldflasche gefüllt mit Wasser</German>
+				<Hungarian>Vízzel töltött kantin</Hungarian>
+				<Italian>Una mensa piena d'acqua</Italian>
+				<Japanese>水で一杯の水筒</Japanese>
+				<Korean>물이 채워진 식당</Korean>
+				<Polish>Manierka wypełniona wodą</Polish>
+				<Portuguese>Uma cantina cheia de água</Portuguese>
+				<Russian>Столовая с водой</Russian>
+				<Spanish>Una cantina llena de agua</Spanish>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CanteenHalf_DisplayName">
+				<Original>Canteen (Half)</Original>
+				<Chinese>食堂（一半）</Chinese>
+				<Chinesesimp>食堂（一半）</Chinesesimp>
+				<Czech>Jídelna (poloviční)</Czech>
+				<French>Cantine (Demi)</French>
+				<German>Feldflasche (halbvoll)</German>
+				<Hungarian>Étkezés (fél)</Hungarian>
+				<Italian>Mensa (metà)</Italian>
+				<Japanese>水筒 (半分)</Japanese>
+				<Korean>캔틴 (하프)</Korean>
+				<Polish>Manierka (połowa)</Polish>
+				<Portuguese>Cantina (meio)</Portuguese>
+				<Russian>Столовая (половина)</Russian>
+				<Spanish>Cantina (Mitad)</Spanish>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CanteenHalf_Description">
+				<Original>A canteen half filled with water</Original>
+				<Chinese>食堂一半裝滿了水</Chinese>
+				<Chinesesimp>食堂一半装满了水</Chinesesimp>
+				<Czech>Jídelna naplněná vodou</Czech>
+				<French>Une cantine à moitié remplie d'eau</French>
+				<German>Eine Feldflasche halb mit Wasser gefüllt</German>
+				<Hungarian>A vízzel töltött kantin</Hungarian>
+				<Italian>Una mensa riempita per metà di acqua</Italian>
+				<Japanese>水が半分入っている水筒</Japanese>
+				<Korean>물이 담긴 식당 절반</Korean>
+				<Polish>Manierka w połowie wypełniona wodą</Polish>
+				<Portuguese>Uma meia cantina cheia de água</Portuguese>
+				<Russian>Столовая наполовину заполнена водой</Russian>
+				<Spanish>Una cantina medio llena de agua</Spanish>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CanteenEmpty_DisplayName">
+				<Original>Canteen (Empty)</Original>
+				<Chinese>食堂（空）</Chinese>
+				<Chinesesimp>食堂（空）</Chinesesimp>
+				<Czech>Jídelna (prázdné)</Czech>
+				<French>Cantine (Vide)</French>
+				<German>Feldflasche (leer)</German>
+				<Hungarian>Étkezde (üres)</Hungarian>
+				<Italian>Mensa (vuota)</Italian>
+				<Japanese>水筒 (空)</Japanese>
+				<Korean>캔틴 (비어 있음)</Korean>
+				<Polish>Manierka (pusta)</Polish>
+				<Portuguese>Cantina (vazia)</Portuguese>
+				<Russian>Столовая (пустая)</Russian>
+				<Spanish>Cantina (Vacío)</Spanish>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_CanteenEmpty_Description">
+				<Original>An empty canteen</Original>
+				<Chinese>一個空的食堂</Chinese>
+				<Chinesesimp>一个空的食堂</Chinesesimp>
+				<Czech>Prázdná jídelna</Czech>
+				<French>Une cantine vide</French>
+				<German>Eine leere Feldflasche</German>
+				<Hungarian>Egy üres kantin</Hungarian>
+				<Italian>Una mensa vuota</Italian>
+				<Japanese>空の水筒</Japanese>
+				<Korean>빈 수통</Korean>
+				<Polish>Pusta manierka</Polish>
+				<Portuguese>Uma cantina vazia</Portuguese>
+				<Russian>Пустая столовая</Russian>
+				<Spanish>Una cantina vacía</Spanish>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Field_Rations_EatingX">
+				<Original>Eating %1...</Original>
+				<German>Esse %1...</German>
+				<Japanese>%1を食べています・・・</Japanese>
+				<Polish>Jedzenie %1...</Polish>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_DrinkingX">
+				<Original>Drinking %1...</Original>
+				<German>Trinke %1...</German>
+				<Japanese>%1を飲んでいます・・・</Japanese>
+				<Polish>Picie %1...</Polish>
+			</Key>
+			<Key ID="STR_AXE_Field_Rations_DrinkingFromX">
+				<Original>Drinking from %1...</Original>
+				<German>Trinke aus %1...</German>
+				<Japanese>%1から飲んでいます・・・</Japanese>
+				<Polish>Picie z %1...</Polish>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	</Package>
+	<!-- ####################################################################################### -->
+
+</Project>

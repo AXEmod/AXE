@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Fatigue">
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Fatigue">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Fatigue_Title">
+				<Original>AXE Fatigue</Original>
+			</Key>
+			<Key ID="STR_AXE_Fatigue_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Fatigue_Url">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Categories">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Fatigue_CBA_Category">
+				<Original>AXE Fatigue</Original>
+				<German>AXE Ausdauer</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Fatigue_CBA_Category_Common">
+				<Original>Common</Original>
+				<German>Allgemeines</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Settings">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Fatigue_CBA_Global_Sounds_Title">
+				<Original>Global Sounds</Original>
+				<German>Globale Sounds</German>
+			</Key>
+			<Key ID="STR_AXE_Fatigue_CBA_Global_Sounds_Tip">
+				<Original>Heavy breathing (exhaustion) can be heard from players nearby.</Original>
+				<German>Schweres Atmen (Erschöpfung), kann von Spielern in der Nähe gehört werden.</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	</Package>
+	<!-- ####################################################################################### -->
+
+</Project>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Hints">
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Hints">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_Title">
+				<Original>AXE Hint</Original>
+			</Key>
+			<Key ID="STR_AXE_Hints_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Hints_URL">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Categories">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_CBA_Category">
+				<Original>AXE Hints</Original>
+				<German>AXE Hinweise</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_CBA_Category_Common">
+				<Original>Common Settings</Original>
+				<German>Allgemeines</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Category_Colors">
+				<Original>Hint Colors</Original>
+				<German>Farben</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Category_Options">
+				<Original>Hint Options</Original>
+				<German>Optionen</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Settings">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_CBA_Position_Title">
+				<Original>Screen Position</Original>
+				<German>Bildschirmposition</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Position_Tip">
+				<Original>Position on the screen</Original>
+				<German>Position auf dem Bildschirm</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_CBA_Position_0">
+				<Original>top right</Original>
+				<German>oben rechts</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Position_1">
+				<Original>top left</Original>
+				<German>oben links</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Position_2">
+				<Original>bottom left</Original>
+				<German>unten links</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Position_3">
+				<Original>bottom right</Original>
+				<German>unten rechts</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_CBA_Duration_Title">
+				<Original>Duration</Original>
+				<German>Anzeigedauer</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Duration_Tip">
+				<Original>Display duration in seconds</Original>
+				<German>Anzeigedauer in Sekunden</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_CBA_Sound_Title">
+				<Original>Signal Sound</Original>
+				<German>Hinweiston</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Sound_Tip">
+				<Original>Play an acoustic note</Original>
+				<German>Spiele einen Hinweiston ab</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_CBA_Sound_0">
+				<Original>disabled</Original>
+				<German>deaktiviert</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Sound_1">
+				<Original>Type 1 (default)</Original>
+				<German>Typ 1 (Standard)</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Sound_2">
+				<Original>Type 2</Original>
+				<German>Typ 2</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Sound_3">
+				<Original>Type 3</Original>
+				<German>Typ 3</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Sound_4">
+				<Original>Type 4</Original>
+				<German>Typ 4</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_CBA_Color_Default_Title">
+				<Original>Default</Original>
+				<German>Standard</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Color_Default_Tip">
+				<Original>Color for standart hints</Original>
+				<German>Farbe für allgemeine Hinweise</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_CBA_Color_Info_Title">
+				<Original>Information</Original>
+				<German>Information</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Color_Info_Tip">
+				<Original>Color for informations</Original>
+				<German>Farbe für Informationen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_CBA_Color_Alert_Title">
+				<Original>Alert</Original>
+				<German>Warnung</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Color_Alert_Tip">
+				<Original>Color for alerts</Original>
+				<German>Farbe für Warnungen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_CBA_Queue_Size_Title">
+				<Original>Stacked Size</Original>
+				<German>Stapelgröße</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Queue_Size_Tip">
+				<Original>Maximum amount of stacked hints</Original>
+				<German>Maximale Anzahl der gestapelten Hinweise</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_CBA_Queue_Alpha_Title">
+				<Original>Transparency</Original>
+				<German>Transparenz</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Queue_Alpha_Tip">
+				<Original>Amount of transparency of stacked hints(alpha-channel)</Original>
+				<German>Grad der Durchsichtigkeit der gestapelten Hinweise (Alpha-Kanal)</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_CBA_Option_ACE_Title">
+				<Original>Include ACE</Original>
+				<German>ACE einbeziehen</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Option_ACE_Tip">
+				<Original>ACE hints will be shown in AXE style</Original>
+				<German>ACE Hinweise werden im AXE-Stil angezeigt</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_CBA_Option_CBA_Title">
+				<Original>Include CBA</Original>
+				<German>CBA einbeziehen</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Option_CBA_Tip">
+				<Original>CBA hints will be shown in AXE style</Original>
+				<German>CBA Hinweise werden im AXE-Stil angezeigt</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	</Package>
+	<!-- ####################################################################################### -->
+
+</Project>

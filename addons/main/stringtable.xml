@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_eXtended_Environment">
+
+	<!-- ####################################################################################### -->
+	<Package name="AXE">
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Addon">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Addon_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_Title">
+				<Original>Arma eXtended Environment</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_Name">
+				<Original>Arma eXtended Environment 1.2.0</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_Short">
+				<Original>AXE</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_Description">
+				<Original>Bugtracker: https://github.com/AXEmod/AXE/issues</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_Tooltip">
+				<Original>AXE</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_Logo">
+				<Original>\axe_main\data\logo_normal.paa</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_Logo_Over">
+				<Original>\axe_main\data\logo_over.paa</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_Logo_Small">
+				<Original>\axe_main\data\logo_small.paa</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_Picture">
+				<Original>\axe_main\data\picture.paa</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_Overview">
+				<Original>Arma eXtended Environment, also known as AXE, adds a variety of additional functions and features on top of Arma3, CBA and the ACE3 framework.</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_Footnote">
+				<Original>&lt;br /&gt;&lt;br /&gt;&lt;t color='#999999'&gt;Arma eXtended Environment - Copyright &copy; 2019 by AXE-Team&lt;t /&gt;</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_Action">
+				<Original>Website</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_URL">
+				<Original>http://axemod.userscreen.net</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_URL_Issues">
+				<Original>https://github.com/AXEmod/AXE/issues</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_URL_Releases">
+				<Original>https://github.com/AXEmod/AXE/releases</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_URL_Version">
+				<Original>http://axemod.userscreen.net/version.html</Original>
+			</Key>
+			<Key ID="STR_AXE_Addon_URL_Wiki">
+				<Original>https://github.com/AXEmod/AXE/wiki</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="EditorCategories">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_EdCat">
+				<Original>AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="FactionClasses">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_FactionClass">
+				<Original>AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	</Package>
+	<!-- ####################################################################################### -->
+
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Main">
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Main">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Main_Title">
+				<Original>AXE Main</Original>
+			</Key>
+			<Key ID="STR_AXE_Main_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Main_URL">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	</Package>
+	<!-- ####################################################################################### -->
+
+</Project>

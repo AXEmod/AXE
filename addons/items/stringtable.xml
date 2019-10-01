@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Items">
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Items">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Items_Title">
+				<Original>AXE Items</Original>
+			</Key>
+			<Key ID="STR_AXE_Items_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Items_URL">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Cards">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_ClothingCard_DisplayName">
+				<Original>Clothing Card</Original>
+				<German>Kleidermarke</German>
+			</Key>
+			<Key ID="STR_AXE_Item_ClothingCard_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_WeaponCard_DisplayName">
+				<Original>Weapon Card</Original>
+				<German>Waffenkarte</German>
+			</Key>
+			<Key ID="STR_AXE_Item_WeaponCard_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Protest">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_ProtestSign_DisplayName">
+				<Original>Protest Sign</Original>
+				<German>Protest-Schild</German>
+			</Key>
+			<Key ID="STR_AXE_Item_ProtestSign_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Intel">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_File_V1_DisplayName">
+				<Original>File (Documents)</Original>
+				<German>Akte (Dokumente)</German>
+			</Key>
+			<Key ID="STR_AXE_Item_File_V1_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_File_V2_DisplayName">
+				<Original>File (Research)</Original>
+				<German>Akte (Forschung)</German>
+			</Key>
+			<Key ID="STR_AXE_Item_File_V2_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_File_V3_DisplayName">
+				<Original>File (Photos)</Original>
+				<German>Akte (Fotos)</German>
+			</Key>
+			<Key ID="STR_AXE_Item_File_V3_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_File_V4_DisplayName">
+				<Original>File (Top Secret)</Original>
+				<German>Akte (Streng Geheim)</German>
+			</Key>
+			<Key ID="STR_AXE_Item_File_V4_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_File_V5_DisplayName">
+				<Original>Document (Top Secret)</Original>
+				<German>Dokument (Streng Geheim)</German>
+			</Key>
+			<Key ID="STR_AXE_Item_File_V5_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_MoneyPile_DisplayName">
+				<Original>Moneypile</Original>
+				<German>Geldhaufen</German>
+			</Key>
+			<Key ID="STR_AXE_Item_MoneyPile_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Notepad_DisplayName">
+				<Original>Notepad</Original>
+				<German>Notizblock</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Notepad_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Wallet_DisplayName">
+				<Original>Wallet</Original>
+				<German>Brieftasche</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Wallet_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Electronics">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Battery_DisplayName">
+				<Original>Battery</Original>
+				<German>Batterie</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Battery_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Battery_Car_DisplayName">
+				<Original>Battery (Car)</Original>
+				<German>Batterie (Auto)</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Battery_Car_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Battery_Truck_DisplayName">
+				<Original>Battery (Truck)</Original>
+				<German>Batterie (LKW)</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Battery_Truck_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Camera_V1_DisplayName">
+				<Original>Camera</Original>
+				<German>Kamera</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Camera_V1_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_HandyCam_DisplayName">
+				<Original>HandyCam</Original>
+				<German>Handkamera</German>
+			</Key>
+			<Key ID="STR_AXE_Item_HandyCam_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_MobilePhoneOld_DisplayName">
+				<Original>Mobile Phone</Original>
+				<German>Mobiltelefon</German>
+			</Key>
+			<Key ID="STR_AXE_Item_MobilePhoneOld_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_MobilePhoneSmart_DisplayName">
+				<Original>Smartphone</Original>
+				<German>Smartphone</German>
+			</Key>
+			<Key ID="STR_AXE_Item_MobilePhoneSmart_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Tablet_V1_DisplayName">
+				<Original>Tablet</Original>
+				<German>Tablet</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Tablet_V1_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Tablet_V2_DisplayName">
+				<Original>Rugged Tablet</Original>
+				<German>Robustes Tablet</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Tablet_V2_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Tools">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Axe_V1_DisplayName">
+				<Original>Axe</Original>
+				<German>Axt</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Axe_V1_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Axe_V2_DisplayName">
+				<Original>Axe (Fire)</Original>
+				<German>Axt (Feuerwehr)</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Axe_V2_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Bucket_DisplayName">
+				<Original>Bucket</Original>
+				<German>Eimer</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Bucket_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_CanOpener_DisplayName">
+				<Original>Can Opener</Original>
+				<German>Dosenöffner</German>
+			</Key>
+			<Key ID="STR_AXE_Item_CanOpener_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Crowbar_DisplayName">
+				<Original>Crowbar</Original>
+				<German>Brecheisen</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Crowbar_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_DrillAku_DisplayName">
+				<Original>Akku Drill</Original>
+				<German>Akkuschrauber</German>
+			</Key>
+			<Key ID="STR_AXE_Item_DrillAku_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_DuctTape_DisplayName">
+				<Original>DuctTape</Original>
+				<German>Klebeband</German>
+			</Key>
+			<Key ID="STR_AXE_Item_DuctTape_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_File_DisplayName">
+				<Original>File</Original>
+				<German>Feile</German>
+			</Key>
+			<Key ID="STR_AXE_Item_File_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_FireExtinguisher_DisplayName">
+				<Original>Fire Extinguisher</Original>
+				<German>Feuerlöscher</German>
+			</Key>
+			<Key ID="STR_AXE_Item_FireExtinguisher_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Hammer_DisplayName">
+				<Original>Hammer</Original>
+				<German>Hammer</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Hammer_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_MetalWire_DisplayName">
+				<Original>Metal Wire</Original>
+				<German>Metalldraht</German>
+			</Key>
+			<Key ID="STR_AXE_Item_MetalWire_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_MultiMeter_DisplayName">
+				<Original>MultiMeter</Original>
+				<German>MultiMeter</German>
+			</Key>
+			<Key ID="STR_AXE_Item_MultiMeter_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Pliers_DisplayName">
+				<Original>Pliers</Original>
+				<German>Zange</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Pliers_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Rope_DisplayName">
+				<Original>Rope</Original>
+				<German>Seil</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Rope_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Saw_DisplayName">
+				<Original>Saw</Original>
+				<German>Säge</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Saw_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Screwdriver_V1_DisplayName">
+				<Original>Screwdriver (-)</Original>
+				<German>Schlitzschraubendreher</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Screwdriver_V1_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Screwdriver_V2_DisplayName">
+				<Original>Screwdriver (+)</Original>
+				<German>Kreuzschlitzschraubendreher</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Screwdriver_V2_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Shovel_DisplayName">
+				<Original>Shovel</Original>
+				<German>Schaufel</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Shovel_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Wrench_DisplayName">
+				<Original>Wrench</Original>
+				<German>Schraubenschlüssel</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Wrench_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	</Package>
+	<!-- ####################################################################################### -->
+
+</Project>

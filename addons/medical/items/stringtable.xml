@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Medical_Items">
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Medical_Items">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Items_Title">
+				<Original>AXE Medical Items</Original>
+			</Key>
+			<Key ID="STR_AXE_Medical_Items_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Medical_Items_URL">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Item_Medical">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Medical_Stethoscope_DisplayName">
+				<Original>Stethoscope</Original>
+				<German>Stethoskop</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Medical_Stethoscope_Description">
+				<Original>Facilitates the diagnosis of patients</Original>
+				<German>Erleichtert die Diagnose von Patienten</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	</Package>
+	<!-- ####################################################################################### -->
+
+</Project>

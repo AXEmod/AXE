@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+	
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Common">
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Common">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Common_Title">
+				<Original>AXE Common</Original>
+			</Key>
+			<Key ID="STR_AXE_Common_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Common_URL">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Categories">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Common_CBA_Category">
+				<Original>AXE Common</Original>
+				<German>AXE Allgemeines</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Common_CBA_Category_Common">
+				<Original>Common Settings</Original>
+				<German>Allgemeines</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Settings">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Common_CBA_Debug_Enabled_Title">
+				<Original>Debug Mode</Original>
+				<German>Debug Modus</German>
+			</Key>
+			<Key ID="STR_AXE_Common_CBA_Debug_Enabled_Tip">
+				<Original>Debug mode for more detailed informations.</Original>
+				<German>Debug-Modus für ausführlichere Informationen.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Common_CBA_Show_News_Title">
+				<Original>Show News</Original>
+				<German>Zeige Neuigkeiten</German>
+			</Key>
+			<Key ID="STR_AXE_Common_CBA_Show_News_Tip">
+				<Original>Show news in the main menu.</Original>
+				<German>Zeige Neuigkeiten im Hauptmenü an.</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Extended_Hints">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Common_Hint_Need_Restart_Mission">
+				<Original>The setting&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;has been changed.&lt;br/&gt;For the change to take effect, the mission must be restarted!&lt;br/&gt;</Original>
+				<German>Die Einstellung&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;wurde geändert.&lt;br/&gt;Damit die Änderung in Kraft treten kann, muss die Mission neu gestartet werden!&lt;br/&gt;</German>
+			</Key>
+			<Key ID="STR_AXE_Common_Hint_Need_Restart_Client">
+				<Original>The setting&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;has been changed.&lt;br/&gt;Please restart ArmA!&lt;br/&gt;</Original>
+				<German>Die Einstellung&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;wurde geändert.&lt;br/&gt;Bitte ArmA neu starten!&lt;br/&gt;</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Messages">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Message_SkipVideo">
+				<Original>Press %1 to skip</Original>
+				<German>Drücke %1 zum Überspringen</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="KeyBinds">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_KeyBinds_Shift_Modifier">
+				<Original>Shift+</Original>
+				<German>Umschalt+</German>
+			</Key>
+			<Key ID="STR_AXE_KeyBinds_Ctrl_Modifier">
+				<Original>Ctrl+</Original>
+				<German>Strg+</German>
+			</Key>
+			<Key ID="STR_AXE_KeyBinds_Alt_Modifier">
+				<Original>Alt+</Original>
+				<German>Alt+</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+	</Package>
+	<!-- ####################################################################################### -->
+	
+</Project>

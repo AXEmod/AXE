@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Medical_Supplies">
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Medical_Supplies">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Supplies_Title">
+				<Original>AXE Medical Supplies</Original>
+			</Key>
+			<Key ID="STR_AXE_Medical_Supplies_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Medical_Supplies_URL">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Interactions">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Supplies_Action_FirstAid">
+				<Original>Unpack First Aid Pack</Original>
+				<German>Erste-Hilfe-Pack auspacken</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Supplies_Action_MedicKit">
+				<Original>Unpack First Aid Kit</Original>
+				<German>Verbandskasten auspacken</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Messages">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Supplies_Progress_FirstAid">
+				<Original>Unpack First Aid Pack...</Original>
+				<German>Erste-Hilfe-Pack auspacken...</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Supplies_Progress_MedicKit">
+				<Original>Unpack First Aid Kit...</Original>
+				<German>Verbandskasten auspacken...</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Items">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Medical_FirstAid_DisplayName">
+				<Original>First Aid Pack</Original>
+				<German>Erste-Hilfe-Pack</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Medical_FirstAid_Description">
+				<Original>Contains material for first aid</Original>
+				<German>Enthält Material für die Erste-Hilfe</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Medical_MedicKit_DisplayName">
+				<Original>First Aid Kit</Original>
+				<German>Verbandskasten</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Medical_MedicKit_Description">
+				<Original>Contains material for first aid</Original>
+				<German>Enthält Material für die Erste-Hilfe</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	</Package>
+	<!-- ####################################################################################### -->
+
+</Project>

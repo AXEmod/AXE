@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Medical_Crates">
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Medical_Crates">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Crates_Title">
+				<Original>AXE Medical Crates</Original>
+			</Key>
+			<Key ID="STR_AXE_Medical_Crates_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Medical_Crates_URL">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Crate_Medical">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Crate_Medical_Default">
+				<Original>Medical Crate (Default)</Original>
+				<German>Sanitätskiste (Standard)</German>
+			</Key>
+			<Key ID="STR_AXE_Crate_Medical_Default_Open">
+				<Original>Open Medical Crate</Original>
+				<German>Sanitätskiste öffnen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Crate_Medical_Equipment">
+				<Original>Medical Crate (Equipment)</Original>
+				<German>Sanitätskiste (Ausrüstung)</German>
+			</Key>
+			<Key ID="STR_AXE_Crate_Medical_Equipment_Open">
+				<Original>Open Equipment Crate</Original>
+				<German>Ausrüstungskiste öffnen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Crate_Medical_Dressing">
+				<Original>Medical Crate (Dressing)</Original>
+				<German>Sanitätskiste (Verbände)</German>
+			</Key>
+			<Key ID="STR_AXE_Crate_Medical_Dressing_Open">
+				<Original>Open Dressing Crate</Original>
+				<German>Verbandskiste öffnen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Crate_Medical_Medicine">
+				<Original>Medical Crate (Medicine)</Original>
+				<German>Sanitätskiste (Medikamente)</German>
+			</Key>
+			<Key ID="STR_AXE_Crate_Medical_Medicine_Open">
+				<Original>Open Medicine Crate</Original>
+				<German>Medikamentenkiste öffnen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Crate_Medical_Transfusion">
+				<Original>Medical Crate (Transfusion)</Original>
+				<German>Sanitätskiste (Infusionen)</German>
+			</Key>
+			<Key ID="STR_AXE_Crate_Medical_Transfusion_Open">
+				<Original>Open Transfusion Crate</Original>
+				<German>Infusionskiste öffnen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Crate_Medical_TransfusionEx">
+				<Original>Medical Crate (Transfusion+)</Original>
+				<German>Sanitätskiste (Infusionen+)</German>
+			</Key>
+			<Key ID="STR_AXE_Crate_Medical_TransfusionEx_Open">
+				<Original>Open Transfusion+ Crate</Original>
+				<German>Infusionskiste+ öffnen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Crate_Medical_Ordnance">
+				<Original>Medical Crate (Ordnance)</Original>
+				<German>Sanitätskiste (Material)</German>
+			</Key>
+			<Key ID="STR_AXE_Crate_Medical_Ordnance_Open">
+				<Original>Open Ordnance Crate</Original>
+				<German>Materialkiste öffnen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Crate_Medical_Supplies">
+				<Original>Medical Crate (Supplies)</Original>
+				<German>Sanitätskiste (Nachschub)</German>
+			</Key>
+			<Key ID="STR_AXE_Crate_Medical_Supplies_Open">
+				<Original>Open Supply Crate</Original>
+				<German>Nachschubkiste öffnen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Crate_Medical_OpenLid">
+				<Original>Open Cover</Original>
+				<German>Deckel aufklappen</German>
+			</Key>
+			<Key ID="STR_AXE_Crate_Medical_CloseLid">
+				<Original>Close Cover</Original>
+				<German>Deckel zuklappen</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	</Package>
+	<!-- ####################################################################################### -->
+
+</Project>

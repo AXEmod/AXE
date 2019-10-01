@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+	
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Interactions">
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Interactions">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Interactions_Title">
+				<Original>AXE Interactions</Original>
+			</Key>
+			<Key ID="STR_AXE_Interactions_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Interactions_URL">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Categories">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Interactions_CBA_Category">
+				<Original>AXE Interactions</Original>
+				<German>AXE Interaktionen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Interactions_CBA_Category_Common">
+				<Original>Common</Original>
+				<German>Allgemeines</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Category_TapShoulder">
+				<Original>Tab Shoulder</Original>
+				<German>Schulterklopfen</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Category_Backpacks">
+				<Original>Access Backpacks</Original>
+				<German>Zugriff Rucksäcke</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Category_Gear">
+				<Original>Access Equipment</Original>
+				<German>Zugriff Ausrüstung</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Settings">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Interactions_CBA_Global_Sounds_Title">
+				<Original>Global Sounds</Original>
+				<German>Globale Sounds</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Global_Sounds_Tip">
+				<Original>Interactions can be heard from players nearby.</Original>
+				<German>Interaktionen können von Spielern in der Nähe gehört werden.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Interactions_CBA_TapShoulder_AI_Title">
+				<Original>Enable for AI</Original>
+				<German>Für KI aktivieren</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_TapShoulder_AI_Tip">
+				<Original>When activated, AI units can be tapped on the shoulder.</Original>
+				<German>Wenn aktiviert, kann KI-Einheiten auf die Schulter geklopft werden.</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_TapShoulder_Hint_Title">
+				<Original>Show Hint</Original>
+				<German>Zeige Hinweis</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_TapShoulder_Hint_Tip">
+				<Original>Show players a hint when tapped on the shoulder.</Original>
+				<German>Zeige Spieler einen Hinweis, wenn auf die Schulter geklopft wird.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Faction_Title">
+				<Original>Own Units</Original>
+				<German>Eigene Einheiten</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Faction_Tip">
+				<Original>Players can open backpacks of their own faction/group.</Original>
+				<German>Spieler können Rucksäcke der eigenen Fraktion/Gruppe öffnen.</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Faction_0">
+				<Original>disabled</Original>
+				<German>gesperrt</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Faction_1">
+				<Original>group</Original>
+				<German>Gruppe</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Faction_2">
+				<Original>faction</Original>
+				<German>Fraktion</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Friendly_Title">
+				<Original>Friendly Units</Original>
+				<German>Freundliche Einheiten</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Friendly_Tip">
+				<Original>Players can open packs of friendly units.</Original>
+				<German>Spieler können Rucksäcke von verbündeten Einheiten öffnen.</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Friendly_0">
+				<Original>disabled</Original>
+				<German>gesperrt</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Friendly_1">
+				<Original>enabled</Original>
+				<German>aktiviert</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Enemy_Title">
+				<Original>Hostile Units</Original>
+				<German>Feindliche Einheiten</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Enemy_Tip">
+				<Original>Players can open backpacks of enemy units.</Original>
+				<German>Spieler können Rucksäcke von feindlichen Einheiten öffnen.</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Enemy_0">
+				<Original>disabled</Original>
+				<German>gesperrt</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Enemy_1">
+				<Original>enabled</Original>
+				<German>aktiviert</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Hint_Title">
+				<Original>Show Hint</Original>
+				<German>Zeige Hinweis</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Hint_Tip">
+				<Original>Show players a hint when the backpack is opened.</Original>
+				<German>Zeige Spieler einen Hinweis, wenn der Rucksack geöffnet wird.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Interactions_CBA_Gear_Access_Enabled_Title">
+				<Original>Search Body</Original>
+				<German>Person durchsuchen</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Gear_Access_Enabled_Tip">
+				<Original>Players can search units that have surrendered, are tied up, unconscious, or dead.</Original>
+				<German>Spieler können Einheiten durchsuchen, die sich ergeben haben, gefesselt, bewusstlos oder tot sind.</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Gear_Access_Enabled_0">
+				<Original>disabled</Original>
+				<German>gesperrt</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Gear_Access_Enabled_1">
+				<Original>enabled</Original>
+				<German>aktiviert</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Gear_Access_Hint_Title">
+				<Original>Show Hint</Original>
+				<German>Zeige Hinweis</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_CBA_Gear_Access_Hint_Tip">
+				<Original>Show players a hint when the equipment is searched.</Original>
+				<German>Zeige Spieler einen Hinweis, wenn die Ausrüstung durchsucht wird.</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="ACE_Interactions">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Interactions_Action_TapShoulder">
+				<Original>Tap Shoulder</Original>
+				<German>Auf Schulter klopfen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Interactions_Action_Backpack_Access">
+				<Original>Open Backpack</Original>
+				<German>Rucksack öffnen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Interactions_Action_Gear_Access">
+				<Original>Search Body</Original>
+				<German>Person durchsuchen</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Messages">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Interactions_Inventory_Disabled">
+				<Original>Can't use inventory!</Original>
+				<German>Inventar kann nicht benutzt werden!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Interactions_Hint_TapShoulder">
+				<Original>%1&lt;br/&gt;tapped you on the&lt;br/&gt;%2&lt;br/&gt;shoulder!</Original>
+				<German>%1&lt;br/&gt;hat dir auf die&lt;br/&gt;%2&lt;br/&gt;Schulter geklopft!</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_Hint_TapShoulder_Left">
+				<Original>left</Original>
+				<German>linke</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_Hint_TapShoulder_Right">
+				<Original>right</Original>
+				<German>rechte</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Interactions_Hint_Backpack_Access">
+				<Original>%1&lt;br/&gt;%2&lt;br/&gt;opens your backpack!</Original>
+				<German>%1&lt;br/&gt;%2&lt;br/&gt;öffnet deinen Rucksack!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Interactions_Hint_Gear_Access">
+				<Original>%1&lt;br/&gt;%2&lt;br/&gt;is searching your body!</Original>
+				<German>%1&lt;br/&gt;%2&lt;br/&gt;durchsucht dich!</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+	</Package>
+	<!-- ####################################################################################### -->
+	
+</Project>

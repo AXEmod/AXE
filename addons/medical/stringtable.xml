@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Medical">
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Medical">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Title">
+				<Original>AXE Medical</Original>
+			</Key>
+			<Key ID="STR_AXE_Medical_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Medical_URL">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Categories">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_CBA_Category">
+				<Original>AXE Medical</Original>
+				<German>AXE Medizinisch</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_CBA_Category_Common">
+				<Original>Common Settings</Original>
+				<German>Allgemeines</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_CBA_Category_Consume">
+				<Original>Consumption (Order)</Original>
+				<German>Verbrauch (Reihenfolge)</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_CBA_Category_Return">
+				<Original>Consumption (Return)</Original>
+				<German>Verbrauch (Rückgabe)</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Settings">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_CBA_Consume_Tourniquet_Title">
+				<Original>Consume Tourniquets</Original>
+				<German>Tourniquets verbrauchen</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_CBA_Consume_Tourniquet_Tip">
+				<Original>Tourniquets become consumable items.\n(Ignore return value)</Original>
+				<German>Tourniquets werden zum Verbrauchsmaterial.\n(Ignoriert Rückgabe)</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_CBA_Stethoscope_Enabled_Title">
+				<Original>Count In Stethoscope</Original>
+				<German>Stethoskop berücksichtigen</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_CBA_Stethoscope_Enabled_Tip">
+				<Original>A stethoscope in the inventory reduces the time of a diagnosis.\nWithout a stethoscope the time increases a bit.</Original>
+				<German>Ein Stethoskop im Inventar veringert die Zeit einer Diagnose.\nOhne Stethoskop wird die Zeit etwas erhöht.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_CBA_Usage_Order_Responder_Title">
+				<Original>First Responder</Original>
+				<German>Ersthelfer</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_CBA_Usage_Order_Responder_Tip">
+				<Original>Sets the order whose material will be used first.</Original>
+				<German>Legt die Reihenfolge fest, wessen Material zuerst verwendet wird.</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_CBA_Usage_Order_Responder_0">
+				<Original>Patient, Responder, Crew</Original>
+				<German>Patient, Ersthelfer, Besatzung</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_CBA_Usage_Order_Responder_1">
+				<Original>Responder, Patient, Crew</Original>
+				<German>Ersthelfer, Patient, Besatzung</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_CBA_Usage_Order_Medics_Title">
+				<Original>Medical Personnel</Original>
+				<German>Mediziner</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_CBA_Usage_Order_Medics_Tip">
+				<Original>Sets the order whose material will be used first.</Original>
+				<German>Legt die Reihenfolge fest, wessen Material zuerst verwendet wird.</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_CBA_Usage_Order_Medics_0">
+				<Original>Patient, Medics, Crew</Original>
+				<German>Patient, Mediziner, Besatzung</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_CBA_Usage_Order_Medics_1">
+				<Original>Medics, Patient, Crew</Original>
+				<German>Mediziner, Patient, Besatzung</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_CBA_Return_Items_Title">
+				<Original>Give Back Treatment-Items</Original>
+				<German>Behandlungsmaterial zurückgeben</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_CBA_Return_Items_Tip">
+				<Original>Treatment material is returned to the patient.</Original>
+				<German>Behandlungsmaterial wird dem Patienten zurückgegeben.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_CBA_Return_Tourniquets_Title">
+				<Original>Tourniquets</Original>
+				<German>Tourniquets</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_CBA_Return_Tourniquets_Tip">
+				<Original>Maximum number of tourniquets that a patient gets back.</Original>
+				<German>Maximale Anzahl an Tourniquets, die ein Patient zurück bekommt.</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Check_Bloodpressure">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Check_Bloodpressure_Output_1">
+				<Original>The blood pressure of&lt;br/&gt;%1&lt;br/&gt;is at&lt;br/&gt;%2</Original>
+				<German>Der Blutdruck von&lt;br/&gt;%1&lt;br/&gt;liegt bei&lt;br/&gt;%2</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Check_Bloodpressure_Output_2">
+				<Original>The blood pressure of&lt;br/&gt;%1&lt;br/&gt;is&lt;br/&gt;%2</Original>
+				<German>Der Blutdruck von&lt;br/&gt;%1&lt;br/&gt;ist&lt;br/&gt;%2</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Check_Bloodpressure_Output_3">
+				<Original>The patient&lt;br/&gt;%1&lt;br/&gt;has&lt;br/&gt;%2</Original>
+				<German>Der Patient&lt;br/&gt;%1&lt;br/&gt;hat&lt;br/&gt;%2</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Check_Bloodpressure_Output_4">
+				<Original>You fail to find&lt;br/&gt;a blood pressure of&lt;br/&gt;%1</Original>
+				<German>Du kannst bei&lt;br/&gt;%1&lt;br/&gt;keinen Blutdruck feststellen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Check_Bloodpressure_None">
+				<Original>No Blood Pressure</Original>
+				<German>Kein Blutdruck</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Check_Pulse">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Check_Pulse_Output_1">
+				<Original>The Heart Rate of&lt;br/&gt;%1&lt;br/&gt;is at&lt;br/&gt;%2</Original>
+				<German>Die Herzfrequenz von&lt;br/&gt;%1&lt;br/&gt;liegt bei&lt;br/&gt;%2</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Check_Pulse_Output_2">
+				<Original>The Heart Rate of&lt;br/&gt;%1&lt;br/&gt;is&lt;br/&gt;%2</Original>
+				<German>Die Herzfrequenz von&lt;br/&gt;%1&lt;br/&gt;ist&lt;br/&gt;%2</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Check_Pulse_Output_3">
+				<Original>You find no&lt;br/&gt;Heart Rate of&lt;br/&gt;%1</Original>
+				<German>Du kannst bei&lt;br/&gt;%1&lt;br/&gt;keinen Puls feststellen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Check_Pulse_None">
+				<Original>No Heart Rate</Original>
+				<German>Keine Herzfrequenz</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Check_Response">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Check_Response_Output">
+				<Original>%1&lt;br/&gt;is&lt;br/&gt;%2</Original>
+				<German>%1&lt;br/&gt;ist&lt;br/&gt;%2</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Check_Response_Responsive">
+				<Original>responsive</Original>
+				<German>ansprechbar</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Check_Response_Unresponsive">
+				<Original>not responsive</Original>
+				<German>nicht ansprechbar</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Check_Response_Log_Output">
+				<Original>%1 checked response: %2</Original>
+				<German>%1 kontrollierte Ansprechbarkeit: %2</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Medical_Splint">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Splint_Output">
+				<Original>The limbs of&lt;br/&gt;%1&lt;br/&gt;have the following status:&lt;br/&gt;%2 %3</Original>
+				<German>Die Gliedmaßen von&lt;br/&gt;%1&lt;br/&gt;haben folgenden Status:&lt;br/&gt;%2 %3</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Splint_Log">
+				<Original>%1 checked limbs: %2 / %3</Original>
+				<German>%1 kontrollierte Gliedmaße: %2 / %3</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Splint_Log_Hands_Normal">
+				<Original>Arms OK</Original>
+				<German>Arme OK</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Splint_Log_Hands_Splint">
+				<Original>Splint Arms</Original>
+				<German>Arme schienen</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Splint_Log_Legs_Normal">
+				<Original>Legs OK</Original>
+				<German>Beine OK</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Splint_Log_Legs_Splint">
+				<Original>Splint Legs</Original>
+				<German>Beine schienen</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Messages">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Need_CPR_AED">
+				<Original>You need to use CPR or AED to resuscitate.</Original>
+				<German>Es muss HLW oder AED benutzt werden.</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_NoPainIfDead">
+				<Original>Pain is irrelevant.</Original>
+				<German>Schmerz ist irrelevant.</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	</Package>
+	<!-- ####################################################################################### -->
+
+</Project>

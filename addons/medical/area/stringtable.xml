@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Medical_Area">
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Medical_Area">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Area_Title">
+				<Original>AXE Medical Area</Original>
+			</Key>
+			<Key ID="STR_AXE_Medical_Area_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Medical_Area_URL">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Categories">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Area_CBA_Category">
+				<Original>AXE Medical</Original>
+				<German>AXE Medizinisch</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Area_CBA_Category_Common">
+				<Original>Dressing Station</Original>
+				<German>Verbandsplatz</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Settings">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Area_CBA_Construct_Time_Title">
+				<Original>Time to construct</Original>
+				<German>Zeit zum Aufbauen</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Area_CBA_Construct_Time_Tip">
+				<Original>Indicates how much time passes (seconds) until the dressing station is constructed.</Original>
+				<German>Gibt an, wieviel Zeit vergeht (Sekunden), bis der Verbandsplatz aufgebaut ist.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Area_CBA_Dismantle_Time_Title">
+				<Original>Time to dismantle</Original>
+				<German>Zeit zum Abbauen</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Area_CBA_Dismantle_Time_Tip">
+				<Original>Indicates how much time passes (seconds) until the dressing station is dismantled.</Original>
+				<German>Gibt an, wieviel Zeit vergeht (Sekunden), bis der Verbandsplatz abgebaut ist.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Area_CBA_Enable_Defibrillator_Title">
+				<Original>Stationary Defibrillator</Original>
+				<German>Stationärer Defibrillator</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Area_CBA_Enable_Defibrillator_Tip">
+				<Original>Creates a usable defibrillator (Land_Defibrillator_F).\n(Adjustable in &quot;ADV - ACE CPR&quot;)</Original>
+				<German>Erstellt einen benutzbaren Defibrillator (Land_Defibrillator_F).\n(Einstellbar in &quot;ADV - ACE CPR&quot;)</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Interactions">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Area_Action_Construct">
+				<Original>Construct Dressing-Station</Original>
+				<German>Verbandsplatz aufbauen</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Area_Action_Dismantle">
+				<Original>Dismantle Dressing-Station</Original>
+				<German>Verbandsplatz abbauen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Area_Action_LightOff">
+				<Original>Light OFF</Original>
+				<German>Beleuchtung AUS</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Area_Action_LightOn">
+				<Original>Light ON</Original>
+				<German>Beleuchtung AN</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Messages">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Area_Progress_Construct">
+				<Original>Construct Dressing-Station...</Original>
+				<German>Verbandsplatz aufbauen...</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Area_Progress_Dismantle">
+				<Original>Dismantle Dressing-Station...</Original>
+				<German>Verbandsplatz abbauen...</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Area_Progress_LightOff">
+				<Original>Remove Lights...</Original>
+				<German>Beleuchtung abbauen...</German>
+			</Key>
+			<Key ID="STR_AXE_Medical_Area_Progress_LightOn">
+				<Original>Install Lights...</Original>
+				<German>Beleuchtung anbringen...</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Items">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Item_Medical_Area_DisplayName">
+				<Original>Dressing-Station</Original>
+				<German>Verbandsplatz</German>
+			</Key>
+			<Key ID="STR_AXE_Item_Medical_Area_Description">
+				<Original>Allows the treatment of patients in field</Original>
+				<German>Ermöglicht die Behandlung von Patienten im Feld</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	</Package>
+	<!-- ####################################################################################### -->
+
+</Project>

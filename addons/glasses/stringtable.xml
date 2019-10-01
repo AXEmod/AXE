@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Glasses">
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Glasses">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Glasses_Title">
+				<Original>AXE Glasses</Original>
+			</Key>
+			<Key ID="STR_AXE_Glasses_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Glasses_URL">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Interactions">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Glasses_Action_Blindfold_PutOn">
+				<Original>Blindfold</Original>
+				<German>Augen verbinden</German>
+			</Key>
+			<Key ID="STR_AXE_Glasses_Action_Blindfold_Remove">
+				<Original>Remove blindfold</Original>
+				<German>Augenbinde entfernen</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Items">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Glasses_Blindfold_Black_DisplayName">
+				<Original>Blindfold (fabric, black)</Original>
+				<German>Augenbinde (Gewebe, schwarz)</German>
+			</Key>
+			<Key ID="STR_AXE_Glasses_Blindfold_Black_Description">
+				<Original>Impairs the view of the wearer</Original>
+				<German>Beeinträchtigt die Sicht des Trägers</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Glasses_Blindfold_White_DisplayName">
+				<Original>Blindfold (fabric, white)</Original>
+				<German>Augenbinde (Gewebe, weiß)</German>
+			</Key>
+			<Key ID="STR_AXE_Glasses_Blindfold_White_Description">
+				<Original>Impairs the view of the wearer</Original>
+				<German>Beeinträchtigt die Sicht des Trägers</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Glasses_Blindfold_White_Blood_DisplayName">
+				<Original>Blindfold (fabric, bloody)</Original>
+				<German>Augenbinde (Gewebe, blutig)</German>
+			</Key>
+			<Key ID="STR_AXE_Glasses_Blindfold_White_Blood_Description">
+				<Original>Impairs the view of the wearer</Original>
+				<German>Beeinträchtigt die Sicht des Trägers</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	</Package>
+	<!-- ####################################################################################### -->
+
+</Project>
