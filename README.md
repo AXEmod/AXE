@@ -1,3 +1,4 @@
+
 <p align="center">
     <img src="http://axemod.userscreen.net/images/github/github_wiki_1.png" width=640>
 </p>
@@ -21,8 +22,36 @@
     <sup><strong>Requires the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases/latest">CBA A3</a> &amp; <a href="https://github.com/ACEmod/ACE3/releases/latest">ACE3</a>.<br/></strong></sup>
 </p>
 
-**Arma eXtended Environment** adds a variety of additional functions &amp; features on top of **Arma3**, **CBA** and the **ACE3** framework.
+**Arma eXtended Environment** adds a variety of additional functions &amp; features on top of **Arma3**, **CBA A3** and the **ACE3** framework.
 
 **This project is entirely open-source**. Feel free to maintain your own custom version, so long as the changes you make are open to the public in accordance with the GNU General Public License ([GPLv3](https://github.com/AXEmod/AXE/blob/master/LICENSE)).
 
 **AXE** is **built modularly**, so almost any included PBO can be easily removed from the configuration. This way, you can maintain its own tailored version of **AXE** by simply excluding any components you don't need, or those possibly in conflict with other mods.
+
+## Features
+### Base/Core
+
+- Stackable hint system (with CBA A3/ACE3 integration).
+- Easy-to-use (file-based) equipment system.
+- Fully configurable via CBA Settings.
+- German / English translations.
+
+### Additional
+
+- Global sounds (e.g. fatigue, eating and interaction).
+- Medical items like stethoscope or refill packs.
+- Medical dressing station.
+- Medical crates.
+- Tweaks for the diagnostic display.
+- Field rations (ACEX) with influence on vital values.
+- Food Supplies Boxes.
+- Blindfolds with appropriate interactions.
+- A bunch of inventory items.
+
+## Getting started
+
+AXE requires **Arma 3** and the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases/latest">CBA A3</a> and <a href="https://github.com/ACEmod/ACE3/releases/latest">ACE3</a>.
+
+## License
+
+AXE is licensed under the GNU General Public License ([GPLv3](https://github.com/AXEmod/AXE/blob/master/LICENSE)).
