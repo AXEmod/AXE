@@ -13,7 +13,7 @@
     <a href="https://github.com/axemod/axe/releases">
         <img src="https://img.shields.io/github/downloads/axemod/axe/total.svg?style=flat-square&label=Downloads" alt="AXE Downloads">
     </a>
-    <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
+    <a href="https://github.com/AXEmod/AXE/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-GPLv3-red.svg?style=flat-square" alt="AXE License">
     </a>
 </p>
