@@ -28,6 +28,6 @@ if (isNil "GEAR_DEFAULT_TEAM") then { GEAR_DEFAULT_TEAM = "blufor"; };
 if (isNil "GEAR_DEFAULT_ROLE") then { GEAR_DEFAULT_ROLE = "rifle"; };
 if (isNil "GEAR_DEFAULT_TYPE") then { GEAR_DEFAULT_TYPE = "0"; };
 
-if (isNil "GEAR_KEEP_GOGGLES") then { GEAR_KEEP_GOGGLES = false; };
+if (isNil "GEAR_KEEP_GOGGLES") then { GEAR_KEEP_GOGGLES = true; };
 
 // -------------------------------------------------------------------------------------------------

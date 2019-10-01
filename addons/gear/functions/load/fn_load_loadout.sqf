@@ -60,14 +60,18 @@ private _data = [] call compile preprocessFileLineNumbers _file;
 
 [5, "'%1' loading gear '%2' (File: %3) - Data: %4", [_unit, _role, _file, _data], "gear"] call AXE_fnc_diagLog;
 
-private _unit_goggles = (goggles _unit);
 _unit setUnitLoadout [_data, false];
 
+// -------------------------------------------------------------------------------------------------
+// LOAD PLAYERS DEFAULT GOGGLES
+
 if (GEAR_KEEP_GOGGLES) then {
-	if ((goggles _target) != "") then {
-		removeGoggles _unit;
+	private _unit_goggles = _unit getVariable ["gear_user_goggles", ""];
+	if (_unit_goggles != "") then {
+		if ((goggles _unit) != "") then {removeGoggles _unit;};
+		_unit addGoggles _unit_goggles;
+		_unit setVariable ["gear_user_goggles", nil];
 	};
-	_unit addGoggles _unit_goggles;
 };
 
 // -------------------------------------------------------------------------------------------------
