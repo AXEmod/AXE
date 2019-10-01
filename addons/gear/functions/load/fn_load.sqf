@@ -54,6 +54,15 @@ if (_type isEqualTo "") then { _type = _gear_type; };
 if (_team isEqualTo "") then { _team = _gear_team; };
 
 // -------------------------------------------------------------------------------------------------
+// PLAYERS DEFAULT GOGGLES
+
+if (GEAR_KEEP_GOGGLES) then {
+	if ((goggles _unit) != "") then {
+		_unit setVariable ["gear_user_goggles", (goggles _unit)];
+	};
+};
+
+// -------------------------------------------------------------------------------------------------
 
 [_unit] call AXE_gear_fnc_removeAll;
 
