@@ -1,6 +1,9 @@
 
+
 <p align="center">
-    <img src="http://axemod.userscreen.net/images/github/github_wiki_1.png" width=640>
+	<a href="https://github.com/axemod/axe">
+		<img src="http://axemod.userscreen.net/images/github/github_wiki_1.png" width=640>
+	</a>
 </p>
 
 <p align="center">
@@ -13,7 +16,9 @@
     <a href="https://github.com/axemod/axe/releases">
         <img src="https://img.shields.io/github/downloads/axemod/axe/total.svg?style=flat-square&label=Downloads" alt="AXE Downloads">
     </a>
-    <a href="https://github.com/AXEmod/AXE/blob/master/LICENSE">
+    <a href="https://github.com/axemod/axe/wiki">
+        <img src="https://img.shields.io/badge/AXE-Wiki-lightgrey.svg?style=flat-square" alt="AXE Wiki">
+    </a>    <a href="https://github.com/AXEmod/AXE/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-GPLv3-red.svg?style=flat-square" alt="AXE License">
     </a>
 </p>
@@ -50,7 +55,14 @@
 
 ## Getting started
 
-AXE requires **Arma 3** and the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases/latest">CBA A3</a> and <a href="https://github.com/ACEmod/ACE3/releases/latest">ACE3</a>.
+AXE requires [Arma 3](https://arma3.com/) and the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases/latest">CBA A3</a> and <a href="https://github.com/ACEmod/ACE3/releases/latest">ACE3</a>. Make sure you have these mods installed first.
+
+### Installation
+
+- Download latest version ([`AXE_vX.X.X.zip`](https://github.com/axemod/axe/releases/latest)) and extract the files into your Arma 3 folder.
+- Check `@AXE\optionals` if you need to copy optional components to the `@AXE\addons` folder.
+(depends of additional installed mods like ACEX, ACRE2, TFAR, ...)
+- Some features need to have `-filePatching` enabled.
 
 ## License
 
