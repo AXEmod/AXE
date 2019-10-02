@@ -32,7 +32,7 @@
 		localize "STR_AXE_Medical_Area_CBA_Category_Common"
 	],
 	[3,60,20,0],
-	1,
+	0,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -48,7 +48,7 @@
 		localize "STR_AXE_Medical_Area_CBA_Category_Common"
 	],
 	[3,60,30,0],
-	1,
+	0,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -67,7 +67,7 @@ if (["adv_aceCPR"] call AXE_fnc_isAddon) then {
 		localize "STR_AXE_Medical_Area_CBA_Category_Common"
 	],
 	false,
-	1,
+	0,
 	{}
 ] call CBA_Settings_fnc_init;
 };
