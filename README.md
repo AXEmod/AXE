@@ -8,7 +8,7 @@
 
 <p align="center">
     <a href="https://github.com/axemod/axe/releases/latest">
-        <img src="https://img.shields.io/badge/Version-1.2.1-blue.svg?style=flat-square" alt="AXE Version">
+        <img src="https://img.shields.io/badge/Version-1.2.2-blue.svg?style=flat-square" alt="AXE Version">
     </a>
     <a href="https://github.com/axemod/axe/issues">
         <img src="https://img.shields.io/github/issues-raw/axemod/axe.svg?style=flat-square&label=Issues" alt="AXE Issues">
