@@ -44,4 +44,5 @@ private _log1 = [
 ] select ([_patient] call ACE_common_fnc_isAwake);
 private _logOutput = format [localize "STR_AXE_Medical_Check_Response_Log_Output", _medicName, _log1];
 
+[_patient, "activity", _logOutput, [[_patient, false, true] call ACE_common_fnc_getName]] call ACE_medical_fnc_addToLog;
 [_patient, "quick_view", _logOutput, [[_patient, false, true] call ACE_common_fnc_getName]] call ACE_medical_fnc_addToLog;

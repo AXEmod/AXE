@@ -95,6 +95,7 @@ if (_outputEx isEqualTo "") then {
 };
 
 if (_logOutPut != "") then {
+    [_patient, "activity", localize "STR_ACE_Medical_Check_Pulse_Log", [[_medic] call ACE_common_fnc_getName, _logOutPut]] call ACE_medical_fnc_addToLog;
     [_patient, "quick_view", localize "STR_ACE_Medical_Check_Pulse_Log", [[_medic] call ACE_common_fnc_getName, _logOutPut]] call ACE_medical_fnc_addToLog;
 };
 
