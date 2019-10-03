@@ -62,7 +62,6 @@ AXE requires [Arma 3](https://arma3.com/) and the latest version of <a href="htt
 - Download latest version ([`AXE_vX.X.X.zip`](https://github.com/axemod/axe/releases/latest)) and extract the files into your Arma 3 folder.
 - Check `@AXE\optionals` if you need to copy optional components to the `@AXE\addons` folder.
 (depends of additional installed mods like ACEX, ACRE2, TFAR, ...)
-- Some features need to have `-filePatching` enabled.
 
 ## License
 
