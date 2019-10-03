@@ -124,7 +124,7 @@
 		<Container name="Check_Bloodpressure">
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Medical_Check_Bloodpressure_Output_1">
-				<Original>The blood pressure of&lt;br/&gt;%1&lt;br/&gt;is at&lt;br/&gt;%2</Original>
+				<Original>The blood pressure of&lt;br/&gt;%1&lt;br/&gt;is&lt;br/&gt;%2</Original>
 				<German>Der Blutdruck von&lt;br/&gt;%1&lt;br/&gt;liegt bei&lt;br/&gt;%2</German>
 			</Key>
 			<Key ID="STR_AXE_Medical_Check_Bloodpressure_Output_2">
@@ -152,7 +152,7 @@
 		<Container name="Check_Pulse">
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Medical_Check_Pulse_Output_1">
-				<Original>The Heart Rate of&lt;br/&gt;%1&lt;br/&gt;is at&lt;br/&gt;%2</Original>
+				<Original>The Heart Rate of&lt;br/&gt;%1&lt;br/&gt;is&lt;br/&gt;%2</Original>
 				<German>Die Herzfrequenz von&lt;br/&gt;%1&lt;br/&gt;liegt bei&lt;br/&gt;%2</German>
 			</Key>
 			<Key ID="STR_AXE_Medical_Check_Pulse_Output_2">
