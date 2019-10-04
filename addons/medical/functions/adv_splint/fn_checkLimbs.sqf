@@ -61,4 +61,5 @@ private _message = format [localize "STR_AXE_Medical_Splint_Output", _patientNam
 
 private _logOutput = format [localize "STR_AXE_Medical_Splint_Log", _medicName, _logHands, _logLegs];
 
+[_patient, "activity", _logOutput, [[_patient, false, true] call ACE_common_fnc_getName]] call ACE_medical_fnc_addToLog;
 [_patient, "quick_view", _logOutput, [[_patient, false, true] call ACE_common_fnc_getName]] call ACE_medical_fnc_addToLog;

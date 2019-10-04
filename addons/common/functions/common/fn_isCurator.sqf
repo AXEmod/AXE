@@ -28,6 +28,6 @@ if (isNull _unit) exitWith {false};
 
 // -------------------------------------------------------------------------------------------------
 
-private _return = Not isNull (getAssignedCuratorLogic _unit);
+private _return = _unit in (allCurators apply {getAssignedCuratorUnit _x});
 
 _return

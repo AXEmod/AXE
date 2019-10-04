@@ -23,14 +23,12 @@
 
 params ["_medic", "_patient", "_bodyPart", "_className"];
 
-params ["_caller", "_target", "_selectionName", "_className"];
-
 // If the cursorMenu is open, the loading bar will fail. If we execute the function one frame later, it will work fine
 if (uiNamespace getVariable ["ace_interact_menu_cursorMenuOpened", false]) exitWith {
     [ACE_medical_fnc_treatment, _this] call CBA_fnc_execNextFrame;
 };
 
-if !(_target isKindOf "CAManBase") exitWith {false};
+if !(_patient isKindOf "CAManBase") exitWith {false};
 
 private _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
 if (ace_medical_level >= 2) then {
@@ -40,7 +38,7 @@ if (ace_medical_level >= 2) then {
 if !(isClass _config) exitWith {false};
 
 // Allow self treatment check
-if (_caller == _target && {getNumber (_config >> "allowSelfTreatment") == 0}) exitWith {false};
+if (_medic == _patient && {getNumber (_config >> "allowSelfTreatment") == 0}) exitWith {false};
 
 private _medicRequired = if (isNumber (_config >> "requiredMedic")) then {
     getNumber (_config >> "requiredMedic");
@@ -52,14 +50,14 @@ private _medicRequired = if (isNumber (_config >> "requiredMedic")) then {
     0;
 };
 
-if !([_caller, _medicRequired] call ACE_medical_fnc_isMedic) exitWith {false};
+if !([_medic, _medicRequired] call ACE_medical_fnc_isMedic) exitWith {false};
 
 private _allowedSelections = getArray (_config >> "allowedSelections");
-if !("All" in _allowedSelections || {(_selectionName in _allowedSelections)}) exitWith {false};
+if !("All" in _allowedSelections || {(_bodyPart in _allowedSelections)}) exitWith {false};
 
 // Check item
 private _items = getArray (_config >> "items");
-if (count _items > 0 && {!([_caller, _target, _items] call ACE_medical_fnc_hasItems)}) exitWith {false};
+if (count _items > 0 && {!([_medic, _patient, _items] call ACE_medical_fnc_hasItems)}) exitWith {false};
 
 private _return = true;
 if (isText (_config >> "condition")) then {
@@ -73,7 +71,7 @@ if (isText (_config >> "condition")) then {
         if (_condition isEqualType false) then {
             _return = _condition;
         } else {
-            _return = [_caller, _target, _selectionName, _className] call _condition;
+            _return = [_medic, _patient, _bodyPart, _className] call _condition;
         };
     };
 };
@@ -84,7 +82,7 @@ private _patientStateCondition = if (isText(_config >> "patientStateCondition"))
 } else {
     getNumber(_config >> "patientStateCondition")
 };
-if (_patientStateCondition == 1 && {!([_target] call ACE_medical_fnc_isInStableCondition)}) exitWith {false};
+if (_patientStateCondition == 1 && {!([_patient] call ACE_medical_fnc_isInStableCondition)}) exitWith {false};
 
 // Check allowed locations
 private _locations = getArray (_config >> "treatmentLocations");
@@ -92,8 +90,8 @@ private _locations = getArray (_config >> "treatmentLocations");
 if ("All" in _locations) then {
     _return = true;
 } else {
-    private _medFacility = {([_caller] call ACE_medical_fnc_isInMedicalFacility) || ([_target] call ACE_medical_fnc_isInMedicalFacility)};
-    private _medVeh = {([_caller] call ACE_medical_fnc_isInMedicalVehicle) || ([_target] call ACE_medical_fnc_isInMedicalVehicle)};
+    private _medFacility = {([_medic] call ACE_medical_fnc_isInMedicalFacility) || ([_patient] call ACE_medical_fnc_isInMedicalFacility)};
+    private _medVeh = {([_medic] call ACE_medical_fnc_isInMedicalVehicle) || ([_patient] call ACE_medical_fnc_isInMedicalVehicle)};
 
     {
         if (_x == "field") exitWith {_return = true;};
@@ -127,7 +125,7 @@ private _consumeItems = if (isNumber (_config >> "itemConsumed")) then {
     0;
 };
 if (_consumeItems > 0) then {
-    _usersOfItems = ([_caller, _target, _items] call ACE_medical_fnc_useItems) select 1;
+    _usersOfItems = ([_medic, _patient, _items] call ACE_medical_fnc_useItems) select 1;
 };
 
 // Parse the config for the progress callback
@@ -143,60 +141,60 @@ if (isNil _callbackProgress) then {
 
 // Patient Animation
 private _patientAnim = getText (_config >> "animationPatient");
-if (_target getVariable ["ACE_isUnconscious", false] && ace_medical_allowUnconsciousAnimationOnTreatment) then {
-    if !(animationState _target in (getArray (_config >> "animationPatientUnconsciousExcludeOn"))) then {
+if (_patient getVariable ["ACE_isUnconscious", false] && ace_medical_allowUnconsciousAnimationOnTreatment) then {
+    if !(animationState _patient in (getArray (_config >> "animationPatientUnconsciousExcludeOn"))) then {
         _patientAnim = getText (_config >> "animationPatientUnconscious");
     };
 };
 
-if (_caller != _target && {vehicle _target == _target} && {_patientAnim != ""}) then {
-    if (_target getVariable ["ACE_isUnconscious", false]) then {
-        [_target, _patientAnim, 2, true] call ACE_common_fnc_doAnimation;
+if (_medic != _patient && {vehicle _patient == _patient} && {_patientAnim != ""}) then {
+    if (_patient getVariable ["ACE_isUnconscious", false]) then {
+        [_patient, _patientAnim, 2, true] call ACE_common_fnc_doAnimation;
     } else {
-        [_target, _patientAnim, 1, true] call ACE_common_fnc_doAnimation;
+        [_patient, _patientAnim, 1, true] call ACE_common_fnc_doAnimation;
     };
 };
 
 // Player Animation
-private _callerAnim = [getText (_config >> "animationCaller"), getText (_config >> "animationCallerProne")] select (stance _caller == "PRONE");
-if (_caller == _target) then {
-    _callerAnim = [getText (_config >> "animationCallerSelf"), getText (_config >> "animationCallerSelfProne")] select (stance _caller == "PRONE");
+private _medicAnim = [getText (_config >> "animationCaller"), getText (_config >> "animationCallerProne")] select (stance _medic == "PRONE");
+if (_medic == _patient) then {
+    _medicAnim = [getText (_config >> "animationCallerSelf"), getText (_config >> "animationCallerSelfProne")] select (stance _medic == "PRONE");
 };
 
-_caller setVariable ["ace_medical_selectedWeaponOnTreatment", (weaponState _caller)];
+_medic setVariable ["ace_medical_selectedWeaponOnTreatment", (weaponState _medic)];
 
 // Cannot use secondairy weapon for animation
-if (currentWeapon _caller == secondaryWeapon _caller) then {
-    _caller selectWeapon (primaryWeapon _caller);
+if (currentWeapon _medic == secondaryWeapon _medic) then {
+    _medic selectWeapon (primaryWeapon _medic);
 };
 
-private _wpn = ["non", "rfl", "pst"] select (1 + ([primaryWeapon _caller, handgunWeapon _caller] find (currentWeapon _caller)));
-private _callerAnim = [_callerAnim, "[wpn]", _wpn] call CBA_fnc_replace;
-if (vehicle _caller == _caller && {_callerAnim != ""}) then {
-    if (primaryWeapon _caller == "") then {
-        _caller addWeapon "ACE_FakePrimaryWeapon";
+private _wpn = ["non", "rfl", "pst"] select (1 + ([primaryWeapon _medic, handgunWeapon _medic] find (currentWeapon _medic)));
+private _medicAnim = [_medicAnim, "[wpn]", _wpn] call CBA_fnc_replace;
+if (vehicle _medic == _medic && {_medicAnim != ""}) then {
+    if (primaryWeapon _medic == "") then {
+        _medic addWeapon "ACE_FakePrimaryWeapon";
     };
-    if (currentWeapon _caller == "") then {
-        _caller selectWeapon (primaryWeapon _caller); // unit always has a primary weapon here
+    if (currentWeapon _medic == "") then {
+        _medic selectWeapon (primaryWeapon _medic); // unit always has a primary weapon here
     };
 
-    if !(_caller call ACE_common_fnc_isSwimming) then {
+    if !(_medic call ACE_common_fnc_isSwimming) then {
         // Weapon on back also does not work underwater
-        if (isWeaponDeployed _caller) then {
-            //TRACE_1("Weapon Deployed, breaking out first",(stance _caller));
-            [_caller, "", 0] call ACE_common_fnc_doAnimation;
+        if (isWeaponDeployed _medic) then {
+            //TRACE_1("Weapon Deployed, breaking out first",(stance _medic));
+            [_medic, "", 0] call ACE_common_fnc_doAnimation;
         };
 
-        if ((stance _caller) == "STAND") then {
+        if ((stance _medic) == "STAND") then {
             switch (_wpn) do {//If standing, end in a crouched animation based on their current weapon
-                case ("rfl"): {_caller setVariable ["ace_medical_treatmentPrevAnimCaller", "AmovPknlMstpSrasWrflDnon"];};
-                case ("pst"): {_caller setVariable ["ace_medical_treatmentPrevAnimCaller", "AmovPknlMstpSrasWpstDnon"];};
-                case ("non"): {_caller setVariable ["ace_medical_treatmentPrevAnimCaller", "AmovPknlMstpSnonWnonDnon"];};
+                case ("rfl"): {_medic setVariable ["ace_medical_treatmentPrevAnimCaller", "AmovPknlMstpSrasWrflDnon"];};
+                case ("pst"): {_medic setVariable ["ace_medical_treatmentPrevAnimCaller", "AmovPknlMstpSrasWpstDnon"];};
+                case ("non"): {_medic setVariable ["ace_medical_treatmentPrevAnimCaller", "AmovPknlMstpSnonWnonDnon"];};
             };
         } else {
-            _caller setVariable ["ace_medical_treatmentPrevAnimCaller", animationState _caller];
+            _medic setVariable ["ace_medical_treatmentPrevAnimCaller", animationState _medic];
         };
-        [_caller, _callerAnim] call ACE_common_fnc_doAnimation;
+        [_medic, _medicAnim] call ACE_common_fnc_doAnimation;
     };
 };
 
@@ -214,7 +212,7 @@ private _treatmentTime = if (isNumber (_config >> "treatmentTime")) then {
         if (_treatmentTimeConfig isEqualType 0) exitWith {
             _treatmentTimeConfig;
         };
-        [_caller, _target, _selectionName, _className] call _treatmentTimeConfig;
+        [_medic, _patient, _bodyPart, _className] call _treatmentTimeConfig;
     };
     0;
 };
@@ -226,7 +224,7 @@ if (missionNamespace getVariable ["axe_medical_stethoscope_enabled", false]) the
 	private _modifier = 0;
 	
 	if (_className in ["CheckPulse", "CheckBloodPressure", "CheckResponse", "CheckLimbs", "Diagnose"]) then {
-		if ("AXE_Stethoscope" in items _caller) then {
+		if ("AXE_Stethoscope" in items _medic) then {
 			_modifier = -2;
 		} else {
 			_modifier = +2;
@@ -245,7 +243,7 @@ if (missionNamespace getVariable ["axe_medical_stethoscope_enabled", false]) the
 // Start treatment
 [
     _treatmentTime,
-    [_caller, _target, _selectionName, _className, _items, _usersOfItems],
+    [_medic, _patient, _bodyPart, _className, _items, _usersOfItems],
     ACE_medical_fnc_treatment_success,
     ACE_medical_fnc_treatment_failure,
     getText (_config >> "displayNameProgress"),
@@ -261,14 +259,14 @@ if (_iconDisplayed != "") then {
 
 // handle display of text/hints
 private _displayText = "";
-if (_target != _caller) then {
+if (_patient != _medic) then {
     _displayText = getText(_config >> "displayTextOther");
 } else {
     _displayText = getText(_config >> "displayTextSelf");
 };
 
 if (_displayText != "") then {
-    ["ace_common_displayTextStructured", [[_displayText, [_caller] call ACE_common_fnc_getName, [_target] call ACE_common_fnc_getName], 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
+    ["ace_common_displayTextStructured", [[_displayText, [_medic] call ACE_common_fnc_getName, [_patient] call ACE_common_fnc_getName], 1.5, _medic], [_medic]] call CBA_fnc_patientEvent;
 };
 
 true

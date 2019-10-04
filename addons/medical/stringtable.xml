@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Arma_Extended_Environment">
-
+	
 	<!-- ####################################################################################### -->
 	<Package name="AXE_Medical">
-
+		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Medical">
 			<!-- =============================================================================== -->
@@ -19,7 +19,7 @@
 			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
+		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="CBA_Categories">
 			<!-- =============================================================================== -->
@@ -43,7 +43,7 @@
 			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
+		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="CBA_Settings">
 			<!-- =============================================================================== -->
@@ -119,12 +119,12 @@
 			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
+		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Check_Bloodpressure">
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Medical_Check_Bloodpressure_Output_1">
-				<Original>The blood pressure of&lt;br/&gt;%1&lt;br/&gt;is at&lt;br/&gt;%2</Original>
+				<Original>The blood pressure of&lt;br/&gt;%1&lt;br/&gt;is&lt;br/&gt;%2</Original>
 				<German>Der Blutdruck von&lt;br/&gt;%1&lt;br/&gt;liegt bei&lt;br/&gt;%2</German>
 			</Key>
 			<Key ID="STR_AXE_Medical_Check_Bloodpressure_Output_2">
@@ -136,7 +136,7 @@
 				<German>Der Patient&lt;br/&gt;%1&lt;br/&gt;hat&lt;br/&gt;%2</German>
 			</Key>
 			<Key ID="STR_AXE_Medical_Check_Bloodpressure_Output_4">
-				<Original>You fail to find&lt;br/&gt;a blood pressure of&lt;br/&gt;%1</Original>
+				<Original>You fail to find&lt;br/&gt;a blood pressure from&lt;br/&gt;%1</Original>
 				<German>Du kannst bei&lt;br/&gt;%1&lt;br/&gt;keinen Blutdruck feststellen</German>
 			</Key>
 			<!-- =============================================================================== -->
@@ -147,12 +147,12 @@
 			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
+		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Check_Pulse">
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Medical_Check_Pulse_Output_1">
-				<Original>The Heart Rate of&lt;br/&gt;%1&lt;br/&gt;is at&lt;br/&gt;%2</Original>
+				<Original>The Heart Rate of&lt;br/&gt;%1&lt;br/&gt;is&lt;br/&gt;%2</Original>
 				<German>Die Herzfrequenz von&lt;br/&gt;%1&lt;br/&gt;liegt bei&lt;br/&gt;%2</German>
 			</Key>
 			<Key ID="STR_AXE_Medical_Check_Pulse_Output_2">
@@ -160,8 +160,8 @@
 				<German>Die Herzfrequenz von&lt;br/&gt;%1&lt;br/&gt;ist&lt;br/&gt;%2</German>
 			</Key>
 			<Key ID="STR_AXE_Medical_Check_Pulse_Output_3">
-				<Original>You find no&lt;br/&gt;Heart Rate of&lt;br/&gt;%1</Original>
-				<German>Du kannst bei&lt;br/&gt;%1&lt;br/&gt;keinen Puls feststellen</German>
+				<Original>You can not find&lt;br/&gt;a heart rate from&lt;br/&gt;%1.</Original>
+				<German>Du kannst bei&lt;br/&gt;%1&lt;br/&gt;keine Herzfrequenz feststellen.</German>
 			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Medical_Check_Pulse_None">
@@ -171,7 +171,7 @@
 			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
+		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Check_Response">
 			<!-- =============================================================================== -->
@@ -195,7 +195,7 @@
 			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
+		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Medical_Splint">
 			<!-- =============================================================================== -->
@@ -227,13 +227,24 @@
 			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Medical_Activities">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Medical_Activity_Tourniquet_Removed">
+				<Original>%1 has removed a tourniquet</Original>
+				<German>%1 hat ein Tourniquet abgenommen</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Messages">
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Medical_Need_CPR_AED">
-				<Original>You need to use CPR or AED to resuscitate.</Original>
-				<German>Es muss HLW oder AED benutzt werden.</German>
+				<Original>Perform a resuscitation!</Original>
+				<German>Führe eine Reanimation durch!</German>
 			</Key>
 			<Key ID="STR_AXE_Medical_NoPainIfDead">
 				<Original>Pain is irrelevant.</Original>
@@ -242,8 +253,8 @@
 			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
+		
 	</Package>
 	<!-- ####################################################################################### -->
-
+	
 </Project>

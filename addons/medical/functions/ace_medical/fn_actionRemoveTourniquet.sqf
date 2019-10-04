@@ -46,7 +46,11 @@ if (!(missionNamespace getVariable ["axe_medical_consume_tourniquet", false])) t
 		if ( ({_x == "ACE_tourniquet"} count (items _patient)) >= _holding ) then {
 			[_medic, "ACE_tourniquet", 1, [3,1,2], true] call AXE_fnc_addItem;
 		} else {
-			[_patient, "ACE_tourniquet", 1, [1,3,2], true] call AXE_fnc_addItem;
+			if (_patient canAdd "ACE_tourniquet") then {
+				[_patient, "ACE_tourniquet", 1, [1,3,2], true] call AXE_fnc_addItem;
+			} else {
+				[_medic, "ACE_tourniquet", 1, [3,1,2], true] call AXE_fnc_addItem;
+			};
 		};
 		
 	} else {
@@ -74,3 +78,6 @@ if (_updatedArray) then {
     _delayedMedications = _delayedMedications - [-1];
     _patient setVariable ["ace_medical_occludedMedications", _delayedMedications, true];
 };
+
+[_patient, "activity", localize "STR_AXE_Medical_Activity_Tourniquet_Removed", [[_medic, false, true] call ACE_common_fnc_getName]] call ACE_medical_fnc_addToLog;
+[_patient, "activity_view", localize "STR_AXE_Medical_Activity_Tourniquet_Removed", [[_medic, false, true] call ACE_common_fnc_getName]] call ACE_medical_fnc_addToLog;
