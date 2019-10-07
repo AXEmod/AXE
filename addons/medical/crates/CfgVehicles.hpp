@@ -12,6 +12,7 @@ class CfgVehicles {
 		displayName = "$STR_AXE_Crate_Medical_Default";
 		editorPreview = "\axe_medical\crates\data\previews\medical_crate.jpg";
 		vehicleClass = "Ammo";
+		ace_cookoff_probability = 0;
 		ace_cargo_canLoad = 1;
 		ace_cargo_size = 2;
 		ace_dragging_canCarry = 1;
