@@ -26,7 +26,7 @@ if (isMultiplayer) then {
 		// HOSTED
 		_return = true;
 	} else {
-		if ({call BIS_fnc_admin} > 0) then {
+		if ((call BIS_fnc_admin) > 0) then {
 			// DEDICATED
 			_return = true;
 		};
