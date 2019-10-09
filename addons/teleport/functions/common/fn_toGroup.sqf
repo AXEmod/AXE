@@ -35,6 +35,12 @@ if (isNull _group) then {_group = group _unit;};
 
 // -------------------------------------------------------------------------------------------------
 
+if (Not local _unit) exitWith {
+	[_unit, _group, _message, _blackout] remoteExecCall ["AXE_teleport_fnc_toGroup", _unit];
+};
+
+// -------------------------------------------------------------------------------------------------
+
 [_unit, _group, _message, _blackout] spawn {
 	
 	params ["_unit", "_group", "_message", "_blackout"];

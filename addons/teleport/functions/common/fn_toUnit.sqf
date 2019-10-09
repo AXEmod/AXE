@@ -35,6 +35,12 @@ if (isNull _target) exitWith {};
 
 // -------------------------------------------------------------------------------------------------
 
+if (Not local _unit) exitWith {
+	[_unit, _target, _message, _blackout] remoteExecCall ["AXE_teleport_fnc_toUnit", _unit];
+};
+
+// -------------------------------------------------------------------------------------------------
+
 [_unit, _target, _message, _blackout] spawn {
 	
 	params ["_unit", "_target", "_message", "_blackout"];

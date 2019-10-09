@@ -38,6 +38,12 @@ if (_direction isEqualTo -1) then { _direction = getDir _unit; };
 
 // -------------------------------------------------------------------------------------------------
 
+if (Not local _unit) exitWith {
+	[_unit, _position, _direction, _message, _blackout] remoteExecCall ["AXE_teleport_fnc_toPos", _unit];
+};
+
+// -------------------------------------------------------------------------------------------------
+
 [_unit, _position, _direction, _message, _blackout] spawn {
 	
 	params ["_unit", "_position", "_direction", "_message", "_blackout"];
