@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\axe_glasses\functions\fn_blindfold_canPutOn.sqf
+ *	\axe_glasses\functions\blindfold\fn_blindfold_canPutOn.sqf
  *	by Ojemineh
  *	
  *	check if unit can wear a blindfold

@@ -6,12 +6,16 @@ class CfgFunctions {
 		
 		class Glasses {
 			file = "\axe_glasses\functions";
+			class initialize {};
+			class initSettings {};
+		};
+		
+		class Blindfold {
+			file = "\axe_glasses\functions\blindfold";
 			class blindfold_canPutOn {};
 			class blindfold_canRemove {};
 			class blindfold_doPutOn {};
 			class blindfold_doRemove {};
-			class initialize {};
-			class initSettings {};
 		};
 		
 	};
