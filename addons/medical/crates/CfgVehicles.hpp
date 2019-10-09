@@ -353,9 +353,9 @@ class CfgVehicles {
 		displayName = "$STR_AXE_Crate_Medical_Supplies";
 		class TransportBackpacks {};
 		class TransportItems {
-			MACRO_ADDITEM(AXE_FirstAid,80);
-			MACRO_ADDITEM(AXE_MedicKit,40);
-			MACRO_ADDITEM(ACE_bodyBag,20);
+			MACRO_ADDITEM(AXE_FirstAid,30);
+			MACRO_ADDITEM(AXE_MedicKit,15);
+			MACRO_ADDITEM(ACE_bodyBag,10);
 		};
 		class TransportMagazines {};
 		class TransportWeapons {};
