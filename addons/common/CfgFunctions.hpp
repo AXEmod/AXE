@@ -46,8 +46,12 @@ class CfgFunctions {
 		class Diagnostic {
 			file = "\axe_common\functions\diagnostics";
 			class diagLog {};
+			class diagLogGlobal {};
+			class diagLogServer {};
 			class isDebug {};
 			class log {};
+			class logGlobal {};
+			class logServer {};
 		};
 		
 		class SafeMode {

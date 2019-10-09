@@ -1,9 +1,9 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\axe_common\functions\diagnostics\fn_diagLog.sqf
+ *	\axe_common\functions\diagnostics\fn_logGlobal.sqf
  *	by Ojemineh
  *	
- *	add a rpt-log if debug is enabled
+ *	add a rpt-log
  *	
  *	Arguments:
  *	0: type			- <NUMBER>
@@ -16,7 +16,7 @@
  *	nothing
  *	
  *	Example:
- *	[4, "Player: '%1', Time: '%2'", [player, time], "core"] call AXE_fnc_diagLog;
+ *	[4, "Player: '%1', Time: '%2'", [player, time], "core"] call AXE_fnc_logGlobal;
  *	
  */
 
@@ -32,8 +32,6 @@ _modification	= [_this, 4, "AXE", [""]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
-if (missionNamespace getVariable ["axe_debug_enabled", false]) then {
-	[_level, _message, _params, _extension, _modification] call AXE_fnc_log;
-};
+["axe_common_log", [_level, _message, _params, _extension, _modification]] call CBA_fnc_globalEvent;
 
 // -------------------------------------------------------------------------------------------------
