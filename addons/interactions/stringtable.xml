@@ -74,7 +74,7 @@
 			</Key>
 			<Key ID="STR_AXE_Interactions_CBA_TapShoulder_Hint_Tip">
 				<Original>Show players a hint when tapped on the shoulder.</Original>
-				<German>Zeige Spieler einen Hinweis, wenn auf die Schulter geklopft wird.</German>
+				<German>Zeige dem Spieler einen Hinweis, wenn auf die Schulter geklopft wird.</German>
 			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Faction_Title">
@@ -135,7 +135,7 @@
 			</Key>
 			<Key ID="STR_AXE_Interactions_CBA_Backpack_Access_Hint_Tip">
 				<Original>Show players a hint when the backpack is opened.</Original>
-				<German>Zeige Spieler einen Hinweis, wenn der Rucksack geöffnet wird.</German>
+				<German>Zeige dem Spieler einen Hinweis, wenn der Rucksack geöffnet wird.</German>
 			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Interactions_CBA_Gear_Access_Enabled_Title">
@@ -160,7 +160,7 @@
 			</Key>
 			<Key ID="STR_AXE_Interactions_CBA_Gear_Access_Hint_Tip">
 				<Original>Show players a hint when the equipment is searched.</Original>
-				<German>Zeige Spieler einen Hinweis, wenn die Ausrüstung durchsucht wird.</German>
+				<German>Zeige dem Spieler einen Hinweis, wenn die Ausrüstung durchsucht wird.</German>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container>
