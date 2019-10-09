@@ -21,7 +21,7 @@
 // CURATOR
 
 [
-	"axe_curator_chat_enablefor",
+	"axe_curator_chat_enableFor",
 	"LIST",
 	[
 		localize "STR_AXE_Curator_CBA_Chat_EnableFor_Title", 
@@ -45,7 +45,7 @@
 ] call CBA_Settings_fnc_init;
 
 [
-	"axe_curator_keys_enablefor",
+	"axe_curator_keys_enableFor",
 	"LIST",
 	[
 		localize "STR_AXE_Curator_CBA_Keys_EnableFor_Title", 
@@ -69,11 +69,11 @@
 ] call CBA_Settings_fnc_init;
 
 [
-	"axe_curator_delete_empty",
+	"axe_curator_module_deleteEmpty",
 	"CHECKBOX",
 	[
-		localize "STR_AXE_Curator_CBA_Delete_Empty_Title", 
-		localize "STR_AXE_Curator_CBA_Delete_Empty_Tip"
+		localize "STR_AXE_Curator_CBA_DeleteEmpty_Title", 
+		localize "STR_AXE_Curator_CBA_DeleteEmpty_Tip"
 	],
 	[
 		localize "STR_AXE_Curator_CBA_Category", 
@@ -85,11 +85,11 @@
 ] call CBA_Settings_fnc_init;
 
 [
-	"axe_curator_add_players",
+	"axe_curator_players_autoAdd",
 	"CHECKBOX",
 	[
-		localize "STR_AXE_Curator_CBA_Add_Players_Title", 
-		localize "STR_AXE_Curator_CBA_Add_Players_Tip"
+		localize "STR_AXE_Curator_CBA_AddPlayers_Title", 
+		localize "STR_AXE_Curator_CBA_AddPlayers_Tip"
 	],
 	[
 		localize "STR_AXE_Curator_CBA_Category", 
@@ -130,6 +130,22 @@
 		localize "STR_AXE_Curator_CBA_Category_FPS"
 	],
 	[100,1000,300,0],
+	0,
+	{}
+] call CBA_Settings_fnc_init;
+
+[
+	"axe_curator_fps_inZeus",
+	"CHECKBOX",
+	[
+		localize "STR_AXE_Curator_CBA_FPS_inZeus_Title", 
+		localize "STR_AXE_Curator_CBA_FPS_inZeus_Tip"
+	],
+	[
+		localize "STR_AXE_Curator_CBA_Category", 
+		localize "STR_AXE_Curator_CBA_Category_FPS"
+	],
+	true,
 	0,
 	{}
 ] call CBA_Settings_fnc_init;

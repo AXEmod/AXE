@@ -30,21 +30,13 @@ if  (is3DEN) exitWith {};
 [] call AXE_curator_fnc_client_registerModules;
 
 // -------------------------------------------------------------------------------------------------
+// PLAYER FPS
 
-if (missionNamespace getVariable ["axe_curator_add_players", false]) then {
-	
-	[] spawn {
-		
-		waitUntil {(!isNull player) && (time > 1)};
-		
-		private _assignedLogic = getAssignedCuratorLogic player;
-		
-		if !(isNull _assignedLogic) then {
-			_assignedLogic addCuratorEditableObjects [(allPlayers - entities "HeadlessClient_F"), false];
-		};
-		
-	};
-	
-};
+private _fpsInterval = round (missionNamespace getVariable ["axe_curator_fps_interval", 3]);
+if (_fpsInterval < 1) then {_fpsInterval = 1;};
+
+[{
+	player setVariable ["axe_current_fps", (round diag_fps), true];
+}, _fpsInterval] call CBA_fnc_addPerFrameHandler;
 
 // -------------------------------------------------------------------------------------------------

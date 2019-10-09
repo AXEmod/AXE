@@ -117,20 +117,20 @@
 				<German>Admin &amp; jeder Zeus</German>
 			</Key>
 			<!-- =============================================================================== -->
-			<Key ID="STR_AXE_Curator_CBA_Delete_Empty_Title">
+			<Key ID="STR_AXE_Curator_CBA_DeleteEmpty_Title">
 				<Original>Delete empty modules</Original>
 				<German>Leere Module löschen</German>
 			</Key>
-			<Key ID="STR_AXE_Curator_CBA_Delete_Empty_Tip">
+			<Key ID="STR_AXE_Curator_CBA_DeleteEmpty_Tip">
 				<Original>Automatically removes all unused Zeus modules.</Original>
 				<German>Entfernt automatisch alle ungenutzte Zeus-Module.</German>
 			</Key>
 			<!-- =============================================================================== -->
-			<Key ID="STR_AXE_Curator_CBA_Add_Players_Title">
+			<Key ID="STR_AXE_Curator_CBA_AddPlayers_Title">
 				<Original>Add Players</Original>
 				<German>Spieler hinzufügen</German>
 			</Key>
-			<Key ID="STR_AXE_Curator_CBA_Add_Players_Tip">
+			<Key ID="STR_AXE_Curator_CBA_AddPlayers_Tip">
 				<Original>Automatically adds all players to the object list.</Original>
 				<German>Fügt automatisch alle Spieler der Objekt-Liste hinzu.</German>
 			</Key>
@@ -149,8 +149,17 @@
 				<German>FPS Radius</German>
 			</Key>
 			<Key ID="STR_AXE_Curator_CBA_FPS_Distance_Tip">
-				<Original>Displays the FPS at the set radius around the camera.</Original>
-				<German>Zeigt die FPS in dem eingestellten Radius um die Kamera an.</German>
+				<Original>Radius around the camera in meters.</Original>
+				<German>Radius um die Kamera in Meter.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_CBA_FPS_inZeus_Title">
+				<Original>Only in Zeus</Original>
+				<German>Nur in Zeus</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_CBA_FPS_inZeus_Tip">
+				<Original>Display only within the Zeus interface.</Original>
+				<German>Anzeige nur innerhalb der Zeus-Oberfläche.</German>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container>
@@ -261,6 +270,10 @@
 				<German>Du bist abgeheftet!</German>
 			</Key>
 			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Hint_FPS_OnlyInZeus">
+				<Original>The FPS display can only be switched in the Zeus interface!</Original>
+				<German>Die FPS-Anzeige kann nur in der Zeus-Oberfläche umgeschaltet werden!</German>
+			</Key>
 			<Key ID="STR_AXE_Curator_Hint_FPS_Show">
 				<Original>Show Player-FPS!</Original>
 				<German>Spieler-FPS anzeigen!</German>
@@ -303,31 +316,53 @@
 				<German>Drücke %1 um die Oberfläche zu öffnen ...</German>
 			</Key>
 			<!-- =============================================================================== -->
-			<Key ID="STR_AXE_Curator_Module_Prepare">
-				<Original>Zeus is being prepared ...</Original>
-				<German>Zeus wird vorbereitet ...</German>
-			</Key>
-			<Key ID="STR_AXE_Curator_Module_Prepare_For">
-				<Original>Zeus is prepared for '%1' (%2) ...</Original>
-				<German>Zeus wird für '%1' (%2) vorbereitet ...</German>
-			</Key>
-			<Key ID="STR_AXE_Curator_Module_Prepare_Failed">
-				<Original>Zeus can not be created for '%1'!</Original>
-				<German>Zeus kann nicht für '%1' erstellt werden!</German>
-			</Key>
-			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Curator_Module_Unknown_Target">
 				<Original>'%1' is unknown!</Original>
 				<German>'%1' ist unbekannt!</German>
 			</Key>
 			<!-- =============================================================================== -->
-			<Key ID="STR_AXE_Curator_Module_Promoted_Player">
+			<Key ID="STR_AXE_Curator_Module_Create">
+				<Original>Zeus is being prepared ...</Original>
+				<German>Zeus wird vorbereitet ...</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Module_Create_For">
+				<Original>Zeus is prepared for '%1' (%2) ...</Original>
+				<German>Zeus wird für '%1' (%2) vorbereitet ...</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Module_Create_Failed">
+				<Original>Zeus can not be created!</Original>
+				<German>Zeus kann nicht erstellt werden!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Module_Created_Player">
 				<Original>You were promoted to Zeus!</Original>
 				<German>Du wurdest zum Zeus befördert!</German>
 			</Key>
-			<Key ID="STR_AXE_Curator_Module_Promoted_Target">
+			<Key ID="STR_AXE_Curator_Module_Created_Target">
 				<Original>'%1' has promoted you to Zeus!</Original>
 				<German>'%1' hat dich zum Zeus befördert!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Module_Remove">
+				<Original>Zeus is removed ...</Original>
+				<German>Zeus wird entfernt ...</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Module_Remove_For">
+				<Original>Zeus is removed for '%1' (%2) ...</Original>
+				<German>Zeus wird für '%1' (%2) entfernt ...</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Module_Remove_Failed">
+				<Original>Zeus can not be removed!</Original>
+				<German>Zeus kann nicht entfernt werden!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Module_Removed_Player">
+				<Original>You have removed Zeus!</Original>
+				<German>Du hast Zeus entfernt!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Module_Removed_Target">
+				<Original>'%1' removed Zeus from you!</Original>
+				<German>'%1' hat Zeus von dir entfernt!</German>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container>

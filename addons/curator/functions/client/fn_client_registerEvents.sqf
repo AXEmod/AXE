@@ -22,23 +22,75 @@
 if !(hasInterface) exitWith {};
 
 // -------------------------------------------------------------------------------------------------
-// UPDATE: PLAYER FPS
+// EVENT: END MISSION
 
-private _fpsInterval = round (missionNamespace getVariable ["axe_curator_fps_interval", 3]);
-if (_fpsInterval < 1) then {_fpsInterval = 1;};
-
-[{
-	
-	player setVariable ["axe_current_fps", (round diag_fps), true];
-	
-}, _fpsInterval] call CBA_fnc_addPerFrameHandler;
+[
+	"axe_curator_endMission", 
+	{
+		params ["_endName", "_isVictory"];
+		[_endName, _isVictory] call BIS_fnc_endMission;
+	}
+] call CBA_fnc_addEventHandler;
 
 // -------------------------------------------------------------------------------------------------
-// DRAW3D: PLAYER FPS
+// EVENT: MODULE CREATED
+
+[
+	"axe_curator_moduleCreated", 
+	{
+		
+		params ["_caller", "_target"];
+		
+		private _callerName = [_caller] call ACE_common_fnc_getName;
+		private _targetName = [_target] call ACE_common_fnc_getName;
+		
+		if (_caller isEqualTo _target) then {
+			systemChat format [localize "STR_AXE_Curator_Module_Created_Player", _callerName, _targetName];
+		} else {
+			systemChat format [localize "STR_AXE_Curator_Module_Created_Target", _callerName, _targetName];
+		};
+		
+		private _curatorKeyName = actionKeysNames "curatorInterface";
+		systemChat format [localize "STR_AXE_Curator_Module_Open", _curatorKeyName];
+		
+	}
+] call CBA_fnc_addEventHandler;
+
+// -------------------------------------------------------------------------------------------------
+// EVENT: MODULE REMOVED
+
+[
+	"axe_curator_moduleRemoved", 
+	{
+		
+		params ["_caller", "_target"];
+		
+		private _callerName = [_caller] call ACE_common_fnc_getName;
+		private _targetName = [_target] call ACE_common_fnc_getName;
+		
+		if (_caller isEqualTo _target) then {
+			systemChat format [localize "STR_AXE_Curator_Module_Removed_Player", _callerName, _targetName];
+		} else {
+			systemChat format [localize "STR_AXE_Curator_Module_Removed_Target", _callerName, _targetName];
+		};
+		
+	}
+] call CBA_fnc_addEventHandler;
+
+// -------------------------------------------------------------------------------------------------
+// EVENT: DRAW3D
 
 addMissionEventHandler ["Draw3D", {
 	
-	if (AXE_CURATOR_SHOW_FPS) then {
+	private _zeusGUI = false;
+	
+	if (missionNamespace getVariable ["axe_curator_fps_inZeus", false]) then {
+		_zeusGUI = !(isNull curatorCamera);
+	} else {
+		_zeusGUI = true;
+	};
+	
+	if ((AXE_CURATOR_FPS_SHOW) && (_zeusGUI) && !(visibleMap) && !(dialog)) then {
 		
 		private _distanceMax = round (missionNamespace getVariable ["axe_curator_fps_distance", 300]);
 		
@@ -93,43 +145,5 @@ addMissionEventHandler ["Draw3D", {
 	};
 	
 }];
-
-// -------------------------------------------------------------------------------------------------
-// EVENT: MODULE CREATED
-
-[
-	"axe_curator_moduleCreated", 
-	{
-		
-		params ["_caller", "_target"];
-		
-		private _callerName = [_caller] call ACE_common_fnc_getName;
-		private _targetName = [_target] call ACE_common_fnc_getName;
-		
-		if (_caller isEqualTo _target) then {
-			systemChat format [localize "STR_AXE_Curator_Module_Promoted_Player", _callerName, _targetName];
-		} else {
-			systemChat format [localize "STR_AXE_Curator_Module_Promoted_Target", _callerName, _targetName];
-		};
-		
-		private _curatorKeyName = actionKeysNames "curatorInterface";
-		systemChat format [localize "STR_AXE_Curator_Module_Open", _curatorKeyName];
-		
-	}
-] call CBA_fnc_addEventHandler;
-
-// -------------------------------------------------------------------------------------------------
-// EVENT: END MISSION
-
-[
-	"axe_curator_endMission", 
-	{
-		
-		params ["_endName", "_isVictory"];
-		
-		[_endName, _isVictory] call BIS_fnc_endMission;
-		
-	}
-] call CBA_fnc_addEventHandler;
 
 // -------------------------------------------------------------------------------------------------

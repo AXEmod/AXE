@@ -29,9 +29,11 @@ if !(hasInterface) exitWith {};
 	"AXE_Curator_KEY_JumpToAim", 
 	["STR_AXE_Curator_KEY_JumpToAim_Title", "STR_AXE_Curator_KEY_JumpToAim_Tip"], 
 	{
+		
+		if ((visibleMap) || (vehicle player != player)) exitWith {};
 		if (
-			((missionNamespace getVariable ["axe_curator_keys_enablefor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
-			((missionNamespace getVariable ["axe_curator_keys_enablefor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
+			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
+			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
 		) then {
 			
 			private _intersections = lineIntersectsWith [eyePos player, AGLtoASL screenToWorld [0.5,0.5], player, objNull, true];
@@ -59,9 +61,10 @@ if !(hasInterface) exitWith {};
 			};
 			
 		};
+		
 	}, 
 	{}, 
-	[DIK_F1, [false, true, false]]
+	[DIK_NUMPAD1, [false, true, false]]
 ] call CBA_fnc_addKeybind;
 
 // -------------------------------------------------------------------------------------------------
@@ -72,9 +75,11 @@ if !(hasInterface) exitWith {};
 	"AXE_Curator_KEY_HideZeus", 
 	["STR_AXE_Curator_KEY_HideZeus_Title", "STR_AXE_Curator_KEY_HideZeus_Tip"], 
 	{
+		
+		if (visibleMap) exitWith {};
 		if (
-			((missionNamespace getVariable ["axe_curator_keys_enablefor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
-			((missionNamespace getVariable ["axe_curator_keys_enablefor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
+			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
+			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
 		) then {
 			
 			if (Not isObjectHidden player) then {
@@ -96,9 +101,10 @@ if !(hasInterface) exitWith {};
 			};
 			
 		};
+		
 	}, 
 	{}, 
-	[DIK_F2, [false, true, false]]
+	[DIK_NUMPAD2, [false, true, false]]
 ] call CBA_fnc_addKeybind;
 
 // -------------------------------------------------------------------------------------------------
@@ -109,9 +115,11 @@ if !(hasInterface) exitWith {};
 	"AXE_Curator_KEY_AttachTo", 
 	["STR_AXE_Curator_KEY_AttachTo_Title", "STR_AXE_Curator_KEY_AttachTo_Tip"], 
 	{
+		
+		if ((visibleMap) || (vehicle player != player)) exitWith {};
 		if (
-			((missionNamespace getVariable ["axe_curator_keys_enablefor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
-			((missionNamespace getVariable ["axe_curator_keys_enablefor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
+			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
+			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
 		) then {
 			
 			if (isNull attachedTo player) then {
@@ -147,9 +155,10 @@ if !(hasInterface) exitWith {};
 			};
 			
 		};
+		
 	}, 
 	{}, 
-	[DIK_F3, [false, true, false]]
+	[DIK_NUMPAD3, [false, true, false]]
 ] call CBA_fnc_addKeybind;
 
 // -------------------------------------------------------------------------------------------------
@@ -160,21 +169,28 @@ if !(hasInterface) exitWith {};
 	"AXE_Curator_KEY_PlayerFPS", 
 	["STR_AXE_Curator_KEY_PlayerFPS_Title", "STR_AXE_Curator_KEY_PlayerFPS_Tip"], 
 	{
+		
+		if (visibleMap) exitWith {};
 		if (
-			((missionNamespace getVariable ["axe_curator_keys_enablefor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
-			((missionNamespace getVariable ["axe_curator_keys_enablefor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
+			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
+			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
 		) then {
 			
-			if (AXE_CURATOR_SHOW_FPS) then {
+			if ((missionNamespace getVariable ["axe_curator_fps_inZeus", false]) && (isNull curatorCamera)) exitWith {
+				private _hint = format [hint_tpl_liner_1, localize "STR_AXE_Curator_Hint_FPS_OnlyInZeus"];
+				[_hint] call AXE_fnc_hint;
+			};
+			
+			if (AXE_CURATOR_FPS_SHOW) then {
 				
-				AXE_CURATOR_SHOW_FPS = false;
+				AXE_CURATOR_FPS_SHOW = false;
 				
 				private _hint = format [hint_tpl_liner_1, localize "STR_AXE_Curator_Hint_FPS_Hide"];
 				[_hint] call AXE_fnc_hint;
 				
 			} else {
 				
-				AXE_CURATOR_SHOW_FPS = true;
+				AXE_CURATOR_FPS_SHOW = true;
 				
 				private _hint = format [hint_tpl_liner_1, localize "STR_AXE_Curator_Hint_FPS_Show"];
 				[_hint] call AXE_fnc_hint;
@@ -182,9 +198,10 @@ if !(hasInterface) exitWith {};
 			};
 			
 		};
+		
 	}, 
 	{}, 
-	[DIK_F4, [false, true, false]]
+	[DIK_NUMPAD4, [false, true, false]]
 ] call CBA_fnc_addKeybind;
 
 // -------------------------------------------------------------------------------------------------
@@ -195,9 +212,11 @@ if !(hasInterface) exitWith {};
 	"AXE_Curator_KEY_HealPlayer", 
 	["STR_AXE_Curator_KEY_HealPlayer_Title", "STR_AXE_Curator_KEY_HealPlayer_Tip"], 
 	{
+		
+		if ((visibleMap) || (vehicle player != player)) exitWith {};
 		if (
-			((missionNamespace getVariable ["axe_curator_keys_enablefor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
-			((missionNamespace getVariable ["axe_curator_keys_enablefor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
+			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
+			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
 		) then {
 			
 			if (isPlayer cursorObject) then {
@@ -220,9 +239,10 @@ if !(hasInterface) exitWith {};
 			};
 			
 		};
+		
 	}, 
 	{}, 
-	[DIK_F5, [false, true, false]]
+	[DIK_NUMPAD5, [false, true, false]]
 ] call CBA_fnc_addKeybind;
 
 // -------------------------------------------------------------------------------------------------
@@ -233,9 +253,11 @@ if !(hasInterface) exitWith {};
 	"AXE_Curator_KEY_DeleteObject", 
 	["STR_AXE_Curator_KEY_DeleteObject_Title", "STR_AXE_Curator_KEY_DeleteObject_Tip"], 
 	{
+		
+		if ((visibleMap) || (vehicle player != player)) exitWith {};
 		if (
-			((missionNamespace getVariable ["axe_curator_keys_enablefor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
-			((missionNamespace getVariable ["axe_curator_keys_enablefor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
+			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
+			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
 		) then {
 			
 			if (Not isNull cursorObject) then {
@@ -267,9 +289,10 @@ if !(hasInterface) exitWith {};
 			};
 			
 		};
+		
 	}, 
 	{}, 
-	[DIK_F9, [false, true, false]]
+	[DIK_NUMPAD9, [false, true, false]]
 ] call CBA_fnc_addKeybind;
 
 // -------------------------------------------------------------------------------------------------

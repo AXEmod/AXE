@@ -34,10 +34,10 @@ if !(["achilles_functions_f_ares"] call AXE_fnc_isAddon) exitWith {};
 			["_objectUnderCursor", objNull, [objNull]]
 		];
 		
-		if (AXE_CURATOR_SHOW_FPS) then {
-			AXE_CURATOR_SHOW_FPS = false;
+		if (AXE_CURATOR_FPS_SHOW) then {
+			AXE_CURATOR_FPS_SHOW = false;
 		} else {
-			AXE_CURATOR_SHOW_FPS = true;
+			AXE_CURATOR_FPS_SHOW = true;
 		};
 		
 	}
