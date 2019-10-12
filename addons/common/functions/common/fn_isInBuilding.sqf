@@ -33,7 +33,8 @@ private _building = nearestObject [_unit, "HouseBase"];
 
 if (Not isNull _building) then {
 	
-	private _boundingBox = boundingBox _building;
+	//private _boundingBox = boundingBox _building;
+	private _boundingBox = 0 boundingBoxReal _building;
 	private _min = (_boundingBox select 0);
 	private _max = (_boundingBox select 1);
 	
