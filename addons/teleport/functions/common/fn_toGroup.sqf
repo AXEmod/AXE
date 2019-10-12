@@ -3,7 +3,7 @@
  *	\axe_teleport\functions\common\fn_toGroup.sqf
  *	by Ojemineh
  *	
- *	teleport a unit to a group
+ *	teleport unit to a group
  *	
  *	Arguments:
  *	0: unit		- <OBJECT>
@@ -56,8 +56,9 @@ if (Not local _unit) exitWith {
 	};
 	
 	if (missionNamespace getVariable ["axe_teleport_safeMode", true]) then {
-		_unit setVariable ["ACE_allowDamage", false, true];
-		_unit allowDamage false;
+		//_unit setVariable ["ACE_allowDamage", false, true];
+		//_unit allowDamage false;
+		[_unit, "blockDamage", "axe_teleport_toGroup", true] call ACE_common_fnc_statusEffect_set;
 	};
 	
 	_unit setVariable ["AXE_Teleport_InProgress", true, true];
@@ -174,8 +175,9 @@ if (Not local _unit) exitWith {
 			
 			uiSleep _time;
 			
-			_unit setVariable ["ACE_allowDamage", true, true];
-			_unit allowDamage true;
+			//_unit setVariable ["ACE_allowDamage", true, true];
+			//_unit allowDamage true;
+			[_unit, "blockDamage", "axe_teleport_toGroup", false] call ACE_common_fnc_statusEffect_set;
 			
 		};
 		
