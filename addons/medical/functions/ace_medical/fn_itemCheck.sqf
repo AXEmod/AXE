@@ -44,11 +44,11 @@ while {({_x == "FirstAidKit"} count items _unit) > 0} do {
 			[_unit, "ACE_packingBandage",	3, _order, false] call AXE_fnc_addItem;
 			[_unit, "ACE_quikClot",			3, _order, false] call AXE_fnc_addItem;
 			[_unit, "ACE_morphine",			2, _order, false] call AXE_fnc_addItem;
-			if (
-				!(missionNamespace getVariable ["ace_medical_healHitPointAfterAdvBandage", false]) && 
-				["adv_aceSplint"] call AXE_fnc_isAddon
-			) then {
+			if (!(missionNamespace getVariable ["ace_medical_healHitPointAfterAdvBandage", false]) && ["adv_aceSplint"] call AXE_fnc_isAddon) then {
 			[_unit, "ADV_aceSplint_splint",	2, _order, false] call AXE_fnc_addItem;
+			};
+			if (missionNamespace getVariable ["axe_medical_consume_tourniquet", false]) then {
+			[_unit, "ACE_tourniquet",		1, _order, false] call AXE_fnc_addItem;
 			};
 		} else {
 			[_unit, "ACE_fieldDressing",	6, _order, false] call AXE_fnc_addItem;
