@@ -31,3 +31,45 @@ if (isNil "GEAR_DEFAULT_TYPE") then { GEAR_DEFAULT_TYPE = "0"; };
 if (isNil "GEAR_KEEP_GOGGLES") then { GEAR_KEEP_GOGGLES = true; };
 
 // -------------------------------------------------------------------------------------------------
+// EVENTHANDLER
+
+[] spawn {
+	
+	waitUntil {(!isNull (findDisplay 46))};
+	waitUntil {(!isNull player) && (time > 1)};
+	
+	if (player in entities "HeadlessClient_F") exitWith {};
+	
+	player addEventHandler ["Respawn", {
+		
+		params ["_unit", "_corpse"];
+		
+		private _insignia = [_unit] call AXE_fnc_getUnitInsignia;
+		if (_insignia != "") then {[_unit, _insignia] call AXE_fnc_setUnitInsignia;};
+		
+		false;
+	}];
+	
+	player addEventHandler ["Take", {
+		
+		params ["_unit", "_container", "_item"];
+		
+		private _insignia = [_unit] call AXE_fnc_getUnitInsignia;
+		if (_insignia != "") then {[_unit, _insignia] call AXE_fnc_setUnitInsignia;};
+		
+		false;
+	}];
+	
+	player addEventHandler ["InventoryClosed", {
+		
+		params ["_unit", "_container"];
+		
+		private _insignia = [_unit] call AXE_fnc_getUnitInsignia;
+		if (_insignia != "") then {[_unit, _insignia] call AXE_fnc_setUnitInsignia;};
+		
+		false;
+	}];
+	
+};
+
+// -------------------------------------------------------------------------------------------------
