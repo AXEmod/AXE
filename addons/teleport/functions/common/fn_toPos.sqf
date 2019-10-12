@@ -3,7 +3,7 @@
  *	\axe_teleport\functions\common\fn_toPos.sqf
  *	by Ojemineh
  *	
- *	teleport unit to a position
+ *	teleport a unit to a position
  *	
  *	Arguments:
  *	0: unit			- <OBJECT>
@@ -54,9 +54,8 @@ if (Not local _unit) exitWith {
 	};
 	
 	if (missionNamespace getVariable ["axe_teleport_safeMode", true]) then {
-		//_unit setVariable ["ACE_allowDamage", false, true];
-		//_unit allowDamage false;
-		[_unit, "blockDamage", "axe_teleport_toPos", true] call ACE_common_fnc_statusEffect_set;
+		_unit setVariable ["ACE_allowDamage", false, true];
+		_unit allowDamage false;
 	};
 	
 	_unit setVariable ["AXE_Teleport_InProgress", true, true];
@@ -121,9 +120,8 @@ if (Not local _unit) exitWith {
 			
 			uiSleep _time;
 			
-			//_unit setVariable ["ACE_allowDamage", true, true];
-			//_unit allowDamage true;
-			[_unit, "blockDamage", "axe_teleport_toPos", false] call ACE_common_fnc_statusEffect_set;
+			_unit setVariable ["ACE_allowDamage", true, true];
+			_unit allowDamage true;
 			
 		};
 		
@@ -136,9 +134,11 @@ if (Not local _unit) exitWith {
 	if (missionNamespace getVariable ["axe_teleport_hint", true]) then {
 		if (_success) then {
 			private _hintToPos = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_toPos"];
+			//private _hintToPos = format [hint_tpl_liner_2, toUpper(localize "STR_AXE_Teleport_Hint_Title"), localize "STR_AXE_Teleport_Hint_toPos"];
 			[_hintToPos, 0] call axe_fnc_hint;
 		} else {
 			private _hintToPos = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_Failure"];
+			//private _hintToPos = format [hint_tpl_liner_2, toUpper(localize "STR_AXE_Teleport_Hint_Title"), localize "STR_AXE_Teleport_Hint_Failure"];
 			[_hintToPos, 2] call axe_fnc_hint;
 		};
 	};
