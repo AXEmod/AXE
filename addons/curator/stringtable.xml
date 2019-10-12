@@ -435,6 +435,41 @@
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Module_Messages">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_MMSG_Ping_ShowUnit">
+				<Original>Last ping from &quot;%1&quot;</Original>
+				<German>Letzter Ping von &quot;%1&quot;</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_MMSG_Ping_Failure">
+				<Original>No ping available</Original>
+				<German>Kein Ping vorhanden</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_MMSG_Zeus_Visible">
+				<Original>You are visible now</Original>
+				<German>Du bist jetzt sichtbar</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_MMSG_Zeus_Invisible">
+				<Original>You are invisible now</Original>
+				<German>Du bist jetzt unsichtbar</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_MMSG_FPS_Show">
+				<Original>Show Player-FPS</Original>
+				<German>Spieler-FPS anzeigen</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_MMSG_FPS_Hide">
+				<Original>Hide Player-FPS</Original>
+				<German>Spieler-FPS ausblenden</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_MMSG_Heal_Player">
+				<Original>Heal player &quot;%1&quot;</Original>
+				<German>Heile Spieler &quot;%1&quot;</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
 	</Package>
 	<!-- ####################################################################################### -->
 	

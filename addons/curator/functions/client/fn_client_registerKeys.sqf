@@ -30,7 +30,7 @@ if !(hasInterface) exitWith {};
 	["STR_AXE_Curator_KEY_JumpToAim_Title", "STR_AXE_Curator_KEY_JumpToAim_Tip"], 
 	{
 		
-		if ((visibleMap)) exitWith {};
+		if (!(isNull curatorCamera) || (visibleMap)) exitWith {};
 		if (
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
@@ -89,7 +89,7 @@ if !(hasInterface) exitWith {};
 	["STR_AXE_Curator_KEY_JumpToPing_Title", "STR_AXE_Curator_KEY_JumpToPing_Tip"], 
 	{
 		
-		if ((visibleMap)) exitWith {};
+		if (!(isNull curatorCamera) || (visibleMap)) exitWith {};
 		if (
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
@@ -102,15 +102,10 @@ if !(hasInterface) exitWith {};
 			
 			if (_time > (time - 300)) then {
 				
-				if !(isNull curatorCamera) then {
-					private _cameraPos = _unit modelToWorld [0, 10, 5];
-					[_cameraPos, _unit, 0] spawn BIS_fnc_setCuratorCamera;
-				} else {
-					private _unitPos = _unit modelToWorld [0, -2, 0];
-					private _jumpPos = _unitPos findEmptyPosition [0, 20, (typeOf player)];
-					if (!(_jumpPos isEqualTo [])) then {
-						player setPos _jumpPos;
-					};
+				private _unitPos = _unit modelToWorld [0, -2, 0];
+				private _jumpPos = _unitPos findEmptyPosition [0, 20, (typeOf player)];
+				if (!(_jumpPos isEqualTo [])) then {
+					player setPos _jumpPos;
 				};
 				
 			};
@@ -131,7 +126,7 @@ if !(hasInterface) exitWith {};
 	["STR_AXE_Curator_KEY_HideZeus_Title", "STR_AXE_Curator_KEY_HideZeus_Tip"], 
 	{
 		
-		if (visibleMap) exitWith {};
+		if (!(isNull curatorCamera) || (visibleMap)) exitWith {};
 		if (
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
@@ -175,7 +170,7 @@ if !(hasInterface) exitWith {};
 	["STR_AXE_Curator_KEY_AttachTo_Title", "STR_AXE_Curator_KEY_AttachTo_Tip"], 
 	{
 		
-		if ((visibleMap) || (vehicle player != player)) exitWith {};
+		if (!(isNull curatorCamera) || (visibleMap) || (vehicle player != player)) exitWith {};
 		if (
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
@@ -243,13 +238,13 @@ if !(hasInterface) exitWith {};
 	["STR_AXE_Curator_KEY_PlayerFPS_Title", "STR_AXE_Curator_KEY_PlayerFPS_Tip"], 
 	{
 		
-		if (visibleMap) exitWith {};
+		if (!(isNull curatorCamera) || (visibleMap)) exitWith {};
 		if (
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
 		) then {
 			
-			if ((missionNamespace getVariable ["axe_curator_fps_inZeus", false]) && (isNull curatorCamera)) exitWith {
+			if (missionNamespace getVariable ["axe_curator_fps_inZeus", false]) exitWith {
 				private _hint = format [hint_tpl_liner_1, localize "STR_AXE_Curator_Hint_FPS_OnlyInZeus"];
 				[_hint] call AXE_fnc_hint;
 			};
@@ -286,7 +281,7 @@ if !(hasInterface) exitWith {};
 	["STR_AXE_Curator_KEY_HealPlayer_Title", "STR_AXE_Curator_KEY_HealPlayer_Tip"], 
 	{
 		
-		if ((visibleMap) || (vehicle player != player)) exitWith {};
+		if (!(isNull curatorCamera) || (visibleMap) || (vehicle player != player)) exitWith {};
 		if (
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
@@ -326,7 +321,7 @@ if !(hasInterface) exitWith {};
 	["STR_AXE_Curator_KEY_DeleteObject_Title", "STR_AXE_Curator_KEY_DeleteObject_Tip"], 
 	{
 		
-		if ((visibleMap) || (vehicle player != player)) exitWith {};
+		if (!(isNull curatorCamera) || (visibleMap) || (vehicle player != player)) exitWith {};
 		if (
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
