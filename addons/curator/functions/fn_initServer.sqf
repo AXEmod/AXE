@@ -1,9 +1,9 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\axe_curator\functions\common\fn_server.sqf
+ *	\axe_curator\functions\fn_initServer.sqf
  *	by Ojemineh
  *	
- *	setup server
+ *	initialize server
  *	
  *	Arguments:
  *	nothing
@@ -12,7 +12,7 @@
  *	nothing
  *	
  *	Example:
- *	[] call AXE_curator_fnc_server;
+ *	[] call AXE_curator_fnc_initServer;
  *	
  */
 

@@ -3,7 +3,7 @@
  *	\axe_teleport\functions\common\fn_toGroup.sqf
  *	by Ojemineh
  *	
- *	teleport a unit to a group
+ *	teleport unit to a group
  *	
  *	Arguments:
  *	0: unit		- <OBJECT>
@@ -56,8 +56,9 @@ if (Not local _unit) exitWith {
 	};
 	
 	if (missionNamespace getVariable ["axe_teleport_safeMode", true]) then {
-		_unit setVariable ["ACE_allowDamage", false, true];
-		_unit allowDamage false;
+		//_unit setVariable ["ACE_allowDamage", false, true];
+		//_unit allowDamage false;
+		[_unit, "blockDamage", "axe_teleport_toGroup", true] call ACE_common_fnc_statusEffect_set;
 	};
 	
 	_unit setVariable ["AXE_Teleport_InProgress", true, true];
@@ -174,8 +175,9 @@ if (Not local _unit) exitWith {
 			
 			uiSleep _time;
 			
-			_unit setVariable ["ACE_allowDamage", true, true];
-			_unit allowDamage true;
+			//_unit setVariable ["ACE_allowDamage", true, true];
+			//_unit allowDamage true;
+			[_unit, "blockDamage", "axe_teleport_toGroup", false] call ACE_common_fnc_statusEffect_set;
 			
 		};
 		
@@ -191,11 +193,9 @@ if (Not local _unit) exitWith {
 			private _groupName = groupId _group;
 			private _textToGroup = format [localize "STR_AXE_Teleport_Hint_toGroup", _targetName, _groupName];
 			private _hintToGroup = format [hint_tpl_liner_1, _textToGroup];
-			//private _hintToGroup = format [hint_tpl_liner_2, toUpper(localize "STR_AXE_Teleport_Hint_Title"), _textToGroup];
 			[_hintToGroup, 0] call AXE_fnc_hint;
 		} else {
 			private _hintToGroup = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_Failure"];
-			//private _hintToGroup = format [hint_tpl_liner_2, toUpper(localize "STR_AXE_Teleport_Hint_Title"), localize "STR_AXE_Teleport_Hint_Failure"];
 			[_hintToGroup, 2] call AXE_fnc_hint;
 		};
 	};

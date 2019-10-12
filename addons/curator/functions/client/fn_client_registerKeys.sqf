@@ -22,7 +22,7 @@
 if !(hasInterface) exitWith {};
 
 // -------------------------------------------------------------------------------------------------
-// KEY: ZEUS JUMP TO
+// KEY: JUMP TO AIM
 
 [
 	"STR_AXE_Curator_CBA_Category", 
@@ -30,34 +30,89 @@ if !(hasInterface) exitWith {};
 	["STR_AXE_Curator_KEY_JumpToAim_Title", "STR_AXE_Curator_KEY_JumpToAim_Tip"], 
 	{
 		
-		if ((visibleMap) || (vehicle player != player)) exitWith {};
+		if ((visibleMap)) exitWith {};
 		if (
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
 			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
 		) then {
 			
-			private _intersections = lineIntersectsWith [eyePos player, AGLtoASL screenToWorld [0.5,0.5], player, objNull, true];
-			private _position = [0,0,0];
+			private _posTarget = getPos player;
+			private _intersections = [];
+			
+			if (vehicle player != player) then {
+				_intersections = lineIntersectsWith [eyePos player, AGLtoASL screenToWorld [0.5, 0.5], player, (vehicle player), true];
+			} else {
+				_intersections = lineIntersectsWith [eyePos player, AGLtoASL screenToWorld [0.5, 0.5], player, objNull, true];
+			};
 			
 			if (count _intersections > 0) then {
+				private _object = _intersections select ((count _intersections)-1);
+				private _objectDiameter = (sizeOf (typeOf _object)) / 2;
+				private _objectRelDir = _object getDir player;
+				_posTarget = [_object, _objectDiameter, _objectRelDir] call BIS_fnc_relPos;
+			} else {
+				_posTarget = screenToWorld [0.5, 0.5];
+			};
+			
+			if ((player distance2d _posTarget) > 1000) then {
+				private _relDir = player getDir _posTarget;
+				_posTarget = [player, 1000, _relDir] call BIS_fnc_relPos;
+			};
+			
+			_posTarget = _posTarget findEmptyPosition [0, 30, (typeOf player)];
+			
+			if (!(_posTarget isEqualTo [])) then {
 				
-				private _count = count _intersections;
-				private _intersection = _intersections select (_count-1);
-				
-				if (_intersection isKindOf "House") then {
-					_position = (getPos _intersection) findEmptyPosition [0, 30];
-				} else {
-					_position = (getPos _intersection) findEmptyPosition [0, 10];
+				if (vehicle player != player) then {
+					unassignVehicle player;
+					moveOut player;
 				};
 				
-			} else {
-				
-				_position = (screenToWorld [0.5,0.5]);
+				player setVelocity [0, 0, 0];
+				player setPos [(_posTarget select 0), (_posTarget select 1), 0];
 				
 			};
 			
-			if (!(_position isEqualTo []) && !(_position isEqualTo [0,0,0])) then {
-				player setPos _position;
+		};
+		
+	}, 
+	{}, 
+	[DIK_NUMPAD0, [false, true, false]]
+] call CBA_fnc_addKeybind;
+
+// -------------------------------------------------------------------------------------------------
+// KEY: JUMP TO PING
+
+[
+	"STR_AXE_Curator_CBA_Category", 
+	"AXE_Curator_KEY_JumpToPing", 
+	["STR_AXE_Curator_KEY_JumpToPing_Title", "STR_AXE_Curator_KEY_JumpToPing_Tip"], 
+	{
+		
+		if ((visibleMap)) exitWith {};
+		if (
+			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 1) && ([] call AXE_fnc_isAdmin)) ||
+			((missionNamespace getVariable ["axe_curator_keys_enableFor", 0] == 2) && ([] call AXE_fnc_isAdmin || [] call AXE_fnc_isCurator))
+		) then {
+			
+			if (isNull AXE_CURATOR_PING_LASTUNIT) exitWith {};
+			
+			private _time = AXE_CURATOR_PING_LASTTIME;
+			private _unit = AXE_CURATOR_PING_LASTUNIT;
+			
+			if (_time > (time - 300)) then {
+				
+				if !(isNull curatorCamera) then {
+					private _cameraPos = _unit modelToWorld [0, 10, 5];
+					[_cameraPos, _unit, 0] spawn BIS_fnc_setCuratorCamera;
+				} else {
+					private _unitPos = _unit modelToWorld [0, -2, 0];
+					private _jumpPos = _unitPos findEmptyPosition [0, 20, (typeOf player)];
+					if (!(_jumpPos isEqualTo [])) then {
+						player setPos _jumpPos;
+					};
+				};
+				
 			};
 			
 		};
@@ -84,6 +139,8 @@ if !(hasInterface) exitWith {};
 			
 			if (Not isObjectHidden player) then {
 				
+				[player, "blockDamage", "axe_curator_hidden", true] call ACE_common_fnc_statusEffect_set;
+				
 				[player, true] remoteExecCall ["hideObjectGlobal", 2];
 				player setCaptive true;
 				
@@ -94,6 +151,8 @@ if !(hasInterface) exitWith {};
 				
 				[player, false] remoteExecCall ["hideObjectGlobal", 2];
 				player setCaptive false;
+				
+				[player, "blockDamage", "axe_curator_hidden", false] call ACE_common_fnc_statusEffect_set;
 				
 				private _hint = format [hint_tpl_liner_1, localize "STR_AXE_Curator_Hint_Visible"];
 				[_hint] call AXE_fnc_hint;
@@ -126,9 +185,18 @@ if !(hasInterface) exitWith {};
 				
 				if (Not isNull cursorObject) then {
 					
+					[player, "blockDamage", "axe_curator_attached", true] call ACE_common_fnc_statusEffect_set;
+					
 					[player, cursorObject] call AXE_fnc_attachToRel;
 					
-					private _hint = format [hint_tpl_liner_1, localize "STR_AXE_Curator_Hint_Attached"];
+					private _name = "";
+					if (isPlayer cursorObject) then {
+						_name = format [hint_tpl_var_1, [cursorObject] call ACE_common_fnc_getName];
+					} else {
+						_name = format [hint_tpl_var_1, (typeOf cursorObject)];
+					};
+					private _text = format [localize "STR_AXE_Curator_Hint_Attached", _name];
+					private _hint = format [hint_tpl_liner_1, _text];
 					[_hint] call AXE_fnc_hint;
 					
 				};
@@ -142,10 +210,15 @@ if !(hasInterface) exitWith {};
 				
 				if (!(_posNew isEqualTo [])) then {
 					
+					_posNew set [2, 0];
 					detach player;
 					
-					_posNew set [2, 0];
+					player setVelocity [0, 0, 0];
 					player setPos _posNew;
+					
+					missionNamespace setVariable ["ace_advanced_fatigue_anReserve", 2300];
+					
+					[player, "blockDamage", "axe_curator_attached", false] call ACE_common_fnc_statusEffect_set;
 					
 					private _hint = format [hint_tpl_liner_1, localize "STR_AXE_Curator_Hint_Detached"];
 					[_hint] call AXE_fnc_hint;
@@ -221,17 +294,16 @@ if !(hasInterface) exitWith {};
 			
 			if (isPlayer cursorObject) then {
 				
-				["ACE_medical_treatmentAdvanced_fullHealLocal", [cursorObject, cursorObject], cursorObject] call CBA_fnc_targetEvent;
+				["axe_curator_playerHeal", [player, cursorObject], [cursorObject]] call CBA_fnc_targetEvent;
 				
-				private _hint = format [hint_tpl_liner_1, localize "STR_AXE_Curator_Hint_Heal_Player"];
+				private _name = format [hint_tpl_var_1, [cursorObject] call ACE_common_fnc_getName];
+				private _text = format [localize "STR_AXE_Curator_Hint_Heal_Player", _name];
+				private _hint = format [hint_tpl_liner_1, _text];
 				[_hint] call AXE_fnc_hint;
 				
 			} else {
 				
-				["ACE_medical_treatmentAdvanced_fullHealLocal", [player, player], player] call CBA_fnc_targetEvent;
-				missionNamespace setVariable ["ace_advanced_fatigue_anReserve", 2300];
-				player setVariable ["acex_field_rations_thirst", 0];
-				player setVariable ["acex_field_rations_hunger", 0];
+				["axe_curator_playerHeal", [player, player], [player]] call CBA_fnc_targetEvent;
 				
 				private _hint = format [hint_tpl_liner_1, localize "STR_AXE_Curator_Hint_Heal_Zeus"];
 				[_hint] call AXE_fnc_hint;
@@ -276,10 +348,16 @@ if !(hasInterface) exitWith {};
 						
 						if (_result) then {
 							
-							deleteVehicle cursorObject;
+							deleteVehicle _object;
 							
-							private _hint = format [hint_tpl_liner_1, localize "STR_AXE_Curator_Hint_Object_Deleted"];
+							private _name = format [hint_tpl_var_1, (typeOf _object)];
+							private _text = format [localize "STR_AXE_Curator_Hint_Object_Deleted", _name];
+							private _hint = format [hint_tpl_liner_1, _text];
 							[_hint] call AXE_fnc_hint;
+							
+							private _callerType = ["Admin", "Zeus"] select !(isNull getAssignedCuratorLogic player);
+							private _callerName = [player] call ACE_common_fnc_getName;
+							[4, "%1 (%2) removed object '%3' at %4", [_callerType, _callerName, (typeOf _object), (getPos _object)], "curator"] call AXE_fnc_diagLogGlobal;
 							
 						};
 						

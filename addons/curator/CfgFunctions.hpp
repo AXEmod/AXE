@@ -7,13 +7,9 @@ class CfgFunctions {
 		class Curator {
 			file = "\axe_curator\functions";
 			class initialize {};
+			class initClient {};
+			class initServer {};
 			class initSettings {};
-		};
-		
-		class Common {
-			file = "\axe_curator\functions\common";
-			class client {};
-			class server {};
 		};
 		
 		class Server {

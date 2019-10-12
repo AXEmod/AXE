@@ -1,9 +1,9 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\axe_curator\functions\common\fn_client.sqf
+ *	\axe_curator\functions\fn_initClient.sqf
  *	by Ojemineh
  *	
- *	setup client
+ *	initialize client
  *	
  *	Arguments:
  *	nothing
@@ -12,7 +12,7 @@
  *	nothing
  *	
  *	Example:
- *	[] call AXE_curator_fnc_client;
+ *	[] call AXE_curator_fnc_initClient;
  *	
  */
 
@@ -23,10 +23,19 @@ if  (is3DEN) exitWith {};
 
 // -------------------------------------------------------------------------------------------------
 
+AXE_CURATOR_FPS_SHOW = false;
+
+AXE_CURATOR_PING_TIMEOUT = 10;
+AXE_CURATOR_PING_LASTTIME = 0;
+AXE_CURATOR_PING_LASTUNIT = objNull;
+
+// -------------------------------------------------------------------------------------------------
+
 [] call AXE_curator_fnc_client_registerEvents;
 
 [] call AXE_curator_fnc_client_registerChat;
 [] call AXE_curator_fnc_client_registerKeys;
+
 [] call AXE_curator_fnc_client_registerModules;
 
 // -------------------------------------------------------------------------------------------------
