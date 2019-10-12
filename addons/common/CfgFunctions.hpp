@@ -38,9 +38,11 @@ class CfgFunctions {
 			class attachToRel {};
 			class createLitter {};
 			class createLitterServer {};
+			class getUnitInsignia {};
 			class isAdmin {};
 			class isCurator {};
 			class isInBuilding {};
+			class setUnitInsignia {};
 		};
 		
 		class Diagnostic {
