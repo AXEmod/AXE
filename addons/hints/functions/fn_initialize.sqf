@@ -43,7 +43,7 @@ hint_tpl_image_4 	= "<t align='center' font='PuristaBold' size='0.92' color='#ff
 hint_tpl_liner_1 	= "<t align='center' font='RobotoCondensedLight' size='0.92' color='#ffffff'>%1<br/></t>"; 
 hint_tpl_liner_2 	= "<t align='center' font='PuristaBold' size='0.92' color='#ffffff' shadow='1' shadowColor='#202020'>%1<br/><br/></t><t align='center' font='RobotoCondensedLight' size='0.92' color='#ffffff'>%2<br/><br/></t>"; 
 
-hint_tpl_var_1 		= "<t font='EtelkaMonospacePro' size='0.78' color='#ffffff'>%1</t>"; 
+hint_tpl_var_1 		= "<t font='EtelkaMonospacePro' size='0.78' color='#ffeeca'>%1</t>"; 
 
 // -------------------------------------------------------------------------------------------------
 
