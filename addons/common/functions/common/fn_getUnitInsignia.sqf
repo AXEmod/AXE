@@ -28,6 +28,6 @@ if (isNull _unit) exitWith {""};
 
 // -------------------------------------------------------------------------------------------------
 
-private _return = [_unit] call BIS_fnc_getUnitInsignia;
+private _return = _unit getVariable ["BIS_fnc_setUnitInsignia_class", ""];
 
 _return

@@ -31,18 +31,33 @@ if ((uniform _unit) isEqualTo "") exitWith {};
 
 // -------------------------------------------------------------------------------------------------
 
-[_unit, ""] call BIS_fnc_setUnitInsignia;
-[_unit, _insignia] call BIS_fnc_setUnitInsignia;
-
-private _index = -1;
-private _class = getText (configFile >> "CfgWeapons" >> uniform _unit >> "ItemInfo" >> "uniformClass");
-
-{
-	if (_x == "insignia") exitWith {_index = _foreachindex;};
-} foreach getArray (configFile >> "CfgVehicles" >> _class >> "hiddenSelections");
-
+private _selectionIndex = -1;
+private _uniformClass = getText (configFile >> "CfgWeapons" >> (uniform _unit) >> "ItemInfo" >> "uniformClass");
+private _material = getText (configFile >> "CfgUnitInsignia" >> _insignia >> "material");
 private _texture = getText (configFile >> "CfgUnitInsignia" >> _insignia >> "texture");
 
-if ((_index > -1) && (_texture != "")) then {
-	_unit setObjectTextureGlobal [_index, _texture];
+{
+	if (_x == "insignia") exitWith {_selectionIndex = _forEachIndex;};
+} foreach getArray (configFile >> "CfgVehicles" >> _uniformClass >> "hiddenSelections");
+
+if (_selectionIndex > -1) then {
+	
+	if (_material != "") then {
+		_unit setObjectMaterialGlobal [_selectionIndex, _material];
+	} else {
+		_unit setObjectMaterialGlobal [_selectionIndex, "\a3\data_f\default.rvmat"];
+	};
+	
+	if (_texture != "") then {
+		_unit setObjectTextureGlobal [_selectionIndex, _texture];
+	} else {
+		_unit setObjectTextureGlobal [_selectionIndex, "#(rgb,8,8,3)color(0,0,0,0)"];
+	};
+	
+	_unit setVariable ["BIS_fnc_setUnitInsignia_uniformClass", _insignia, true];
+	
+} else {
+	
+	_unit setVariable ["BIS_fnc_setUnitInsignia_uniformClass", nil, true];
+	
 };
