@@ -32,6 +32,10 @@
 				<Original>Common Settings</Original>
 				<German>Allgemeines</German>
 			</Key>
+			<Key ID="STR_AXE_Common_CBA_Category_Options">
+				<Original>Options</Original>
+				<German>Optionen</German>
+			</Key>
 			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -55,6 +59,15 @@
 			<Key ID="STR_AXE_Common_CBA_Show_News_Tip">
 				<Original>Show news in the main menu.</Original>
 				<German>Zeige Neuigkeiten im Hauptmenü an.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Common_CBA_Tactical_View_Title">
+				<Original>Tactical View</Original>
+				<German>Taktische Ansicht</German>
+			</Key>
+			<Key ID="STR_AXE_Common_CBA_Tactical_View_Tip">
+				<Original>Allow the use of Tactical View.</Original>
+				<German>Erlaube die Nutzung von der Taktischen Ansicht.</German>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container>
