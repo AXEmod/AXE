@@ -1,4 +1,4 @@
-#include "\a3\ui_f\hpp\defineDIKCodes.inc"
+#include "\a3\ui_f\hpp\definedikcodes.inc"
 /*
  *	ARMA EXTENDED ENVIRONMENT
  *	\axe_curator\functions\client\fn_client_registerKeys.sqf
