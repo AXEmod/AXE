@@ -35,3 +35,16 @@ AXE_COMMON_HELPER_OBJECT = "Sign_Sphere10cm_Geometry_F";
 ] call CBA_fnc_addEventHandler;
 
 // -------------------------------------------------------------------------------------------------
+
+[] spawn {
+	
+	waitUntil {(!isNull (findDisplay 46))};
+	
+	(findDisplay 46) displayAddEventHandler [
+		"KeyDown", 
+		"_this call AXE_fnc_keyHandler"
+	];
+	
+};
+
+// -------------------------------------------------------------------------------------------------
