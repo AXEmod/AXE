@@ -35,8 +35,9 @@ if (isNull _unit) exitWith {false};
 	_unit playAction "MedicStart";
 	
 	private _isInBuilding = [_unit] call AXE_fnc_isInBuilding;
-	private _pos = getPosATL _unit;
-	if (_isInBuilding) then {_pos = _pos vectorAdd [0,0,0.01];};
+	private _isOnWater = (surfaceIsWater (getPosASL _unit));
+	
+	private _pos = getPosASL _unit;
 	private _dir = getDir _unit;
 	private _objects = [];
 	
@@ -45,20 +46,24 @@ if (isNull _unit) exitWith {false};
 	private _heading = (_dir + _direction) mod 360;
 	private _newX = (_pos select 0) + (sin _heading * _distance);
 	private _newY = (_pos select 1) + (cos _heading * _distance);
-	private _newPos = [_newX, _newY, (_pos select 2) + 0];
+	private _newPos = [0,0,0];
+	if (!_isInBuilding && !_isOnWater) then {
+		_newPos = [_newX, _newY, (getTerrainHeightASL [_newX, _newY])];
+	} else {
+		_newPos = [_newX, _newY, (_pos select 2)];
+	};
 	
-	/*private _medArea = createVehicle ["Land_FirstAidKit_01_closed_F", (position _unit), [], 0, "CAN_COLLIDE"];*/
-	private _medArea = createVehicle ["Item_Medikit", (position _unit), [], 0, "CAN_COLLIDE"];
+	private _medArea = createVehicle ["Item_Medikit", [0,0,0], [], 0, "CAN_COLLIDE"];
 	_medArea setDir _dir;
-	_medArea setPos _newPos;
-	if (!_isInBuilding) then {
+	_medArea setPosASL _newPos;
+	if (!_isInBuilding && !_isOnWater) then {
 		_medArea setVectorUp surfaceNormal position _medArea;
 	} else {
 		_medArea setVectorUp [0,0,1];
 	};
 	_medArea setDamage 1;
 	
-	if (!_isInBuilding) then {
+	if (!_isInBuilding && !_isOnWater) then {
 		private _cltPos = +_newPos;
 		_cltPos set [2,0];
 		private _cutter = createVehicle ["Land_ClutterCutter_medium_F", _cltPos, [], 0, "CAN_COLLIDE"];
@@ -67,19 +72,19 @@ if (isNull _unit) exitWith {false};
 	
 	[_medArea, "AXE_Medical_Area_Construct_1", 100, 300] call AXE_fnc_play3dGlobal;
 	
-	private _medHpad = createVehicle ["Land_HelipadEmpty_F", (position _unit), [], 0, "CAN_COLLIDE"];
+	private _medHpad = createVehicle ["Land_HelipadEmpty_F", [0,0,0], [], 0, "CAN_COLLIDE"];
 	_medHpad setDir _dir;
-	_medHpad setPos _newPos;
-	if (!_isInBuilding) then {
+	_medHpad setPosASL _newPos;
+	if (!_isInBuilding && !_isOnWater) then {
 		_medHpad setVectorUp surfaceNormal position _medHpad;
 	} else {
 		_medHpad setVectorUp [0,0,1];
 	};
 	_objects pushBack _medHpad;
 	
-	private _medMenu = "Sign_Sphere10cm_F" createVehicle (position _unit); 
+	private _medMenu = "Sign_Sphere10cm_F" createVehicle [0,0,0]; 
 	_medMenu setDir _dir;
-	_medMenu setPos (_medArea modelToWorld [0,0,-0.5]);
+	_medMenu setPosASL (AGLtoASL (_medArea modelToWorld [0,0,-0.5]));
 	_medMenu setObjectTextureGlobal [0, "#(argb,8,8,3)color(1.0,0.6,0.1,0,ca)"];
 	_objects pushBack _medMenu;
 	
@@ -102,13 +107,13 @@ if (isNull _unit) exitWith {false};
 		["isNotInside", "isNotSitting", "isNotSwimming"]
 	] call ACE_common_fnc_progressBar;
 	
-	[_unit, _isInBuilding, _pos, _dir, _objects, _medArea, _construct_time, _section_time] spawn {
+	[_unit, _isInBuilding, _isOnWater, _pos, _dir, _objects, _medArea, _construct_time, _section_time] spawn {
 		
-		params ["_unit", "_isInBuilding", "_pos", "_dir", "_objects", "_medArea", "_construct_time", "_section_time"];
+		params ["_unit", "_isInBuilding", "_isOnWater", "_pos", "_dir", "_objects", "_medArea", "_construct_time", "_section_time"];
 		
 		private ["_direction", "_distance", "_heading", "_newX", "_newY", "_newPos"];
 		
-		if (Not AXE_MEDICAL_AREA_CONSTRUCT_FAILURE) then { sleep (2*_section_time); };
+		if (Not AXE_MEDICAL_AREA_CONSTRUCT_FAILURE) then { sleep (2 * _section_time); };
 		
 		if (Not AXE_MEDICAL_AREA_CONSTRUCT_FAILURE) then {
 			
@@ -120,16 +125,24 @@ if (isNull _unit) exitWith {false};
 				_heading = (_dir + _direction) mod 360;
 				_newX = (_pos select 0) + (sin _heading * _distance);
 				_newY = (_pos select 1) + (cos _heading * _distance);
-				_newPos = [_newX, _newY, (_pos select 2) + 0.02];
-				_tarp1 = createSimpleObject ["Tarp_01_Small_Green_F", (position _unit)];
+				if (!_isOnWater) then {
+					_newPos = [_newX, _newY, (getTerrainHeightASL [_newX, _newY])];
+				} else {
+					_newPos = [_newX, _newY, (_pos select 2) + 0.00];
+				};
+				_tarp1 = createSimpleObject ["Tarp_01_Small_Green_F", [0,0,0]];
 				_tarp1 setDir (_dir + 0);
-				_tarp1 setPos _newPos;
-				_tarp1 setVectorUp surfaceNormal position _tarp1;
+				_tarp1 setPosASL _newPos;
+				if (!_isOnWater) then {
+					_tarp1 setVectorUp surfaceNormal position _tarp1;
+				} else {
+					_tarp1 setVectorUp [0,0,1];
+				};
 			};
 			
 			_objects pushBack _tarp1;
 			
-			if (!_isInBuilding) then {
+			if (!_isInBuilding && !_isOnWater) then {
 				private _cltPos = +_newPos;
 				_cltPos set [2,0];
 				private _cutter = createVehicle ["Land_ClutterCutter_medium_F", _cltPos, [], 0, "CAN_COLLIDE"];
@@ -151,11 +164,19 @@ if (isNull _unit) exitWith {false};
 				_heading = (_dir + _direction) mod 360;
 				_newX = (_pos select 0) + (sin _heading * _distance);
 				_newY = (_pos select 1) + (cos _heading * _distance);
-				_newPos = [_newX, _newY, (_pos select 2) + 0.062];
-				_bodybag1 = createSimpleObject ["Land_Sleeping_bag_blue_F", (position _unit)];
+				if (!_isOnWater) then {
+					_newPos = [_newX, _newY, (getTerrainHeightASL [_newX, _newY])];
+				} else {
+					_newPos = [_newX, _newY, (_pos select 2) + 0.005];
+				};
+				_bodybag1 = createSimpleObject ["Land_Sleeping_bag_blue_F", [0,0,0]];
 				_bodybag1 setDir (_dir + 180);
-				_bodybag1 setPos _newPos;
-				_bodybag1 setVectorUp surfaceNormal position _bodybag1;
+				_bodybag1 setPosASL _newPos;
+				if (!_isOnWater) then {
+					_bodybag1 setVectorUp surfaceNormal position _bodybag1;
+				} else {
+					_bodybag1 setVectorUp [0,0,1];
+				};
 			};
 			
 			_objects pushBack _bodybag1;
@@ -175,16 +196,24 @@ if (isNull _unit) exitWith {false};
 				_heading = (_dir + _direction) mod 360;
 				_newX = (_pos select 0) + (sin _heading * _distance);
 				_newY = (_pos select 1) + (cos _heading * _distance);
-				_newPos = [_newX, _newY, (_pos select 2) + 0.02];
-				_tarp2 = createSimpleObject ["Tarp_01_Small_Green_F", (position _unit)];
+				if (!_isOnWater) then {
+					_newPos = [_newX, _newY, (getTerrainHeightASL [_newX, _newY])];
+				} else {
+					_newPos = [_newX, _newY, (_pos select 2) + 0.005];
+				};
+				_tarp2 = createSimpleObject ["Tarp_01_Small_Green_F", [0,0,0]];
 				_tarp2 setDir (_dir + 0);
-				_tarp2 setPos _newPos;
-				_tarp2 setVectorUp surfaceNormal position _tarp2;
+				_tarp2 setPosASL _newPos;
+				if (!_isOnWater) then {
+					_tarp2 setVectorUp surfaceNormal position _tarp2;
+				} else {
+					_tarp2 setVectorUp [0,0,1];
+				};
 			};
 			
 			_objects pushBack _tarp2;
 			
-			if (!_isInBuilding) then {
+			if (!_isInBuilding && !_isOnWater) then {
 				private _cltPos = +_newPos;
 				_cltPos set [2,0];
 				private _cutter = createVehicle ["Land_ClutterCutter_medium_F", _cltPos, [], 0, "CAN_COLLIDE"];
@@ -206,11 +235,19 @@ if (isNull _unit) exitWith {false};
 				_heading = (_dir + _direction) mod 360;
 				_newX = (_pos select 0) + (sin _heading * _distance);
 				_newY = (_pos select 1) + (cos _heading * _distance);
-				_newPos = [_newX, _newY, (_pos select 2) + 0.062];
-				_bodybag2 = createSimpleObject ["Land_Sleeping_bag_blue_F", (position _unit)];
+				if (!_isOnWater) then {
+					_newPos = [_newX, _newY, (getTerrainHeightASL [_newX, _newY])];
+				} else {
+					_newPos = [_newX, _newY, (_pos select 2) + 0.012];
+				};
+				_bodybag2 = createSimpleObject ["Land_Sleeping_bag_blue_F", [0,0,0]];
 				_bodybag2 setDir (_dir + 0);
-				_bodybag2 setPos _newPos;
-				_bodybag2 setVectorUp surfaceNormal position _bodybag2;
+				_bodybag2 setPosASL _newPos;
+				if (!_isOnWater) then {
+					_bodybag2 setVectorUp surfaceNormal position _bodybag2;
+				} else {
+					_bodybag2 setVectorUp [0,0,1];
+				};
 			};
 			
 			_objects pushBack _bodybag2;
@@ -227,11 +264,15 @@ if (isNull _unit) exitWith {false};
 			_heading = (_dir + _direction) mod 360;
 			_newX = (_pos select 0) + (sin _heading * _distance); 
 			_newY = (_pos select 1) + (cos _heading * _distance); 
-			_newPos = [_newX, _newY, (_pos select 2) + 0.14]; 
-			private _firstaid = createSimpleObject ["Land_FirstAidKit_01_open_F", (position _unit)];
+			if (!_isInBuilding && !_isOnWater) then {
+				_newPos = [_newX, _newY, (getTerrainHeightASL [_newX, _newY])];
+			} else {
+				_newPos = [_newX, _newY, (_pos select 2) + 0.00]; 
+			};
+			private _firstaid = createSimpleObject ["Land_FirstAidKit_01_open_F", [0,0,0]];
 			_firstaid setDir (_dir + 50); 
-			_firstaid setPos _newPos;
-			if (!_isInBuilding) then {
+			_firstaid setPosASL _newPos;
+			if (!_isInBuilding && !_isOnWater) then {
 				_firstaid setVectorUp surfaceNormal position _firstaid;
 			} else {
 				_firstaid setVectorUp [0,0,1];
@@ -250,18 +291,22 @@ if (isNull _unit) exitWith {false};
 			_heading = (_dir + _direction) mod 360;
 			_newX = (_pos select 0) + (sin _heading * _distance);
 			_newY = (_pos select 1) + (cos _heading * _distance);
-			_newPos = [_newX, _newY, (_pos select 2) + 0.015];
+			if (!_isInBuilding && !_isOnWater) then {
+				_newPos = [_newX, _newY, (getTerrainHeightASL [_newX, _newY])];
+			} else {
+				_newPos = [_newX, _newY, (_pos select 2) + 0.000];
+			};
 			private _defibrillator = objNull;
 			if ((["adv_aceCPR"] call AXE_fnc_isAddon) && (missionNamespace getVariable ["axe_medical_area_enable_defibrillator", false])) then {
-				private _defPos = _medArea modelToWorld [0.10,-0.55,-0.40];
-				_defibrillator = createVehicle ["Land_Defibrillator_F", _defPos, [], 0, "CAN_COLLIDE"];
+				_defibrillator = createVehicle ["Land_Defibrillator_F", [0,0,0], [], 0, "CAN_COLLIDE"];
 				_defibrillator setDir (_dir + 60);
+				_defibrillator setPosASL (AGLtoASL (_medArea modelToWorld [0.10,-0.55,-0.30]));
 				[_defibrillator, false] call ACE_dragging_fnc_setCarryable;
 			} else {
-				_defibrillator = createSimpleObject ["Land_Defibrillator_F", (position _unit)];
+				_defibrillator = createSimpleObject ["Land_Defibrillator_F", [0,0,0]];
 				_defibrillator setDir (_dir + 60);
-				_defibrillator setPos _newPos;
-				if (!_isInBuilding) then {
+				_defibrillator setPosASL _newPos;
+				if (!_isInBuilding && !_isOnWater) then {
 					_defibrillator setVectorUp surfaceNormal position _defibrillator;
 				} else {
 					_defibrillator setVectorUp [0,0,1];
@@ -281,11 +326,15 @@ if (isNull _unit) exitWith {false};
 			_heading = (_dir + _direction) mod 360;
 			_newX = (_pos select 0) + (sin _heading * _distance);
 			_newY = (_pos select 1) + (cos _heading * _distance);
-			_newPos = [_newX, _newY, (_pos select 2) + 0.05];
-			private _bloodbag = createSimpleObject ["Land_BloodBag_F", (position _unit)];
+			if (!_isInBuilding && !_isOnWater) then {
+				_newPos = [_newX, _newY, (getTerrainHeightASL [_newX, _newY])];
+			} else {
+				_newPos = [_newX, _newY, (_pos select 2) + 0.00];
+			};
+			private _bloodbag = createSimpleObject ["Land_BloodBag_F", [0,0,0]];
 			_bloodbag setDir (_dir + 110);
-			_bloodbag setPos _newPos;
-			if (!_isInBuilding) then {
+			_bloodbag setPosASL _newPos;
+			if (!_isInBuilding && !_isOnWater) then {
 				_bloodbag setVectorUp surfaceNormal position _bloodbag;
 			} else {
 				_bloodbag setVectorUp [0,0,1];
@@ -297,11 +346,15 @@ if (isNull _unit) exitWith {false};
 			_heading = (_dir + _direction) mod 360;
 			_newX = (_pos select 0) + (sin _heading * _distance);
 			_newY = (_pos select 1) + (cos _heading * _distance);
-			_newPos = [_newX, _newY, (_pos select 2) + 0.06];
-			private _gloves = createSimpleObject ["MedicalGarbage_01_Gloves_F", (position _unit)];
+			if (!_isInBuilding && !_isOnWater) then {
+				_newPos = [_newX, _newY, (getTerrainHeightASL [_newX, _newY])];
+			} else {
+				_newPos = [_newX, _newY, (_pos select 2) + 0.00];
+			};
+			private _gloves = createSimpleObject ["MedicalGarbage_01_Gloves_F", [0,0,0]];
 			_gloves setDir (_dir + 270);
-			_gloves setPos _newPos;
-			if (!_isInBuilding) then {
+			_gloves setPosASL _newPos;
+			if (!_isInBuilding && !_isOnWater) then {
 				_gloves setVectorUp surfaceNormal position _gloves;
 			} else {
 				_gloves setVectorUp [0,0,1];
@@ -313,11 +366,15 @@ if (isNull _unit) exitWith {false};
 			_heading = (_dir + _direction) mod 360;
 			_newX = (_pos select 0) + (sin _heading * _distance);
 			_newY = (_pos select 1) + (cos _heading * _distance);
-			_newPos = [_newX, _newY, (_pos select 2) + 0.02];
-			private _bandage1 = createSimpleObject ["Land_Bandage_F", (position _unit)];
+			if (!_isInBuilding && !_isOnWater) then {
+				_newPos = [_newX, _newY, (getTerrainHeightASL [_newX, _newY])];
+			} else {
+				_newPos = [_newX, _newY, (_pos select 2) + 0.00];
+			};
+			private _bandage1 = createSimpleObject ["Land_Bandage_F", [0,0,0]];
 			_bandage1 setDir (_dir + 180);
-			_bandage1 setPos _newPos;
-			if (!_isInBuilding) then {
+			_bandage1 setPosASL _newPos;
+			if (!_isInBuilding && !_isOnWater) then {
 				_bandage1 setVectorUp surfaceNormal position _bandage1;
 			} else {
 				_bandage1 setVectorUp [0,0,1];
@@ -329,11 +386,15 @@ if (isNull _unit) exitWith {false};
 			_heading = (_dir + _direction) mod 360;
 			_newX = (_pos select 0) + (sin _heading * _distance);
 			_newY = (_pos select 1) + (cos _heading * _distance);
-			_newPos = [_newX, _newY, (_pos select 2) + 0.02];
-			private _bandage2 = createSimpleObject ["Land_Bandage_F", (position _unit)];
+			if (!_isInBuilding && !_isOnWater) then {
+				_newPos = [_newX, _newY, (getTerrainHeightASL [_newX, _newY])];
+			} else {
+				_newPos = [_newX, _newY, (_pos select 2) + 0.00];
+			};
+			private _bandage2 = createSimpleObject ["Land_Bandage_F", [0,0,0]];
 			_bandage2 setDir (_dir + 60);
-			_bandage2 setPos _newPos;
-			if (!_isInBuilding) then {
+			_bandage2 setPosASL _newPos;
+			if (!_isInBuilding && !_isOnWater) then {
 				_bandage2 setVectorUp surfaceNormal position _bandage2;
 			} else {
 				_bandage2 setVectorUp [0,0,1];
