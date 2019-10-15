@@ -54,10 +54,10 @@ if (_selectionIndex > -1) then {
 		_unit setObjectTextureGlobal [_selectionIndex, "#(rgb,8,8,3)color(0,0,0,0)"];
 	};
 	
-	_unit setVariable ["BIS_fnc_setUnitInsignia_uniformClass", _insignia, true];
+	_unit setVariable ["BIS_fnc_setUnitInsignia_class", _insignia, true];
 	
 } else {
 	
-	_unit setVariable ["BIS_fnc_setUnitInsignia_uniformClass", nil, true];
+	_unit setVariable ["BIS_fnc_setUnitInsignia_class", nil, true];
 	
 };
