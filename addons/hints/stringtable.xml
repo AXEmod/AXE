@@ -112,6 +112,15 @@
 				<German>Typ 4</German>
 			</Key>
 			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Hints_CBA_Color_Background_Title">
+				<Original>Background</Original>
+				<German>Hintergrund</German>
+			</Key>
+			<Key ID="STR_AXE_Hints_CBA_Color_Background_Tip">
+				<Original>Color for the background</Original>
+				<German>Farbe für den Hintergrund</German>
+			</Key>
+			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Hints_CBA_Color_Default_Title">
 				<Original>Default</Original>
 				<German>Standard</German>

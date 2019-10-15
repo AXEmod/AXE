@@ -32,4 +32,6 @@ _position	= [_this, 4, -1, [0]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
-[_text, _color, _sound, _delay, _position] remoteExec ["axe_fnc_hint", 0];
+[_text, _color, _sound, _delay, _position] remoteExecCall ["axe_fnc_hint", 0];
+
+// -------------------------------------------------------------------------------------------------

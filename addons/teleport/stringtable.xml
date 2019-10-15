@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+	
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Teleport">
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Teleport">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Title">
+				<Original>AXE Teleport</Original>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Teleport_URL">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Categories">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_CBA_Category">
+				<Original>AXE Teleport</Original>
+				<German>AXE Teleport</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_CBA_Category_Common">
+				<Original>Common Settings</Original>
+				<German>Allgemeines</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_CBA_Category_Safemode">
+				<Original>Safemode</Original>
+				<German>Sicherheitsmodus</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Settings">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_CBA_Hint_Title">
+				<Original>Show Hint</Original>
+				<German>Zeige Hinweis</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_CBA_Hint_Tip">
+				<Original>Shows a hint to the player when teleported.</Original>
+				<German>Zeige dem Spieler einen Hinweis, wenn er teleportiert wurde.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_CBA_SafeMode_Title">
+				<Original>Enable</Original>
+				<German>Aktiviert</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_CBA_SafeMode_Tip">
+				<Original>The player can not be harmed during a teleport.</Original>
+				<German>Der Spieler kann während des Teleports keinen Schaden nehmen.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_CBA_SafeTime_Title">
+				<Original>Duration</Original>
+				<German>Zeitraum</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_CBA_SafeTime_Tip">
+				<Original>The duration in which the player can not be harmed after the teleport.</Original>
+				<German>Der Zeitraum in dem der Spieler nach dem Teleport keinen Schaden bekommen kann.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_CBA_SafeInfo_Title">
+				<Original>Show Info</Original>
+				<German>Zeige Info</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_CBA_SafeInfo_Tip">
+				<Original>Shows a note to the player when safemode is active.</Original>
+				<German>Zeigt dem Spieler einen Hinweis, wärend der Sicherheitsmodus aktiv ist.</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Hints">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Hint_Title">
+				<Original>Teleport</Original>
+				<German>Teleport</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Hint_InProgress">
+				<Original>Teleport is still running!</Original>
+				<German>Teleport läuft noch!</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Hint_NoMembers">
+				<Original>You are alone in the group.&lt;br/&gt;Teleport aborted!</Original>
+				<German>Du bist alleine in der Gruppe.&lt;br/&gt;Teleport abgebrochen!</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Hint_Success">
+				<Original>You were teleported!</Original>
+				<German>Du wurdest teleportiert!</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Hint_Failure">
+				<Original>You could not be teleported!</Original>
+				<German>Teleport fehlgeschlagen!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Hint_toGroup">
+				<Original>You were teleported to the group of&lt;br/&gt;%1!</Original>
+				<German>Du wurdest zur Gruppe von&lt;br/&gt;&quot;%1&quot; (%2)&lt;br/&gt;teleportiert!</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Hint_toPos">
+				<Original>You were teleported!</Original>
+				<German>Du wurdest teleportiert!</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Hint_toUnit">
+				<Original>You were teleported to&lt;br/&gt;&quot;%1&quot;!</Original>
+				<German>Du wurdest zu&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;teleportiert!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Hint_SafeMode_Title">
+				<Original>Safemode</Original>
+				<German>Sicherheitsmodus</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Hint_SafeMode_Message">
+				<Original>%1 seconds no damage possible!</Original>
+				<German>%1 Sekunden kein Schaden möglich!</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+	</Package>
+	<!-- ####################################################################################### -->
+	
+</Project>

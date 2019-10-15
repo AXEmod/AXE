@@ -38,16 +38,22 @@ class CfgFunctions {
 			class attachToRel {};
 			class createLitter {};
 			class createLitterServer {};
+			class getUnitInsignia {};
 			class isAdmin {};
 			class isCurator {};
 			class isInBuilding {};
+			class setUnitInsignia {};
 		};
 		
 		class Diagnostic {
 			file = "\axe_common\functions\diagnostics";
 			class diagLog {};
+			class diagLogGlobal {};
+			class diagLogServer {};
 			class isDebug {};
 			class log {};
+			class logGlobal {};
+			class logServer {};
 		};
 		
 		class SafeMode {
@@ -60,6 +66,7 @@ class CfgFunctions {
 		class Settings {
 			file = "\axe_common\functions\settings";
 			class getKeybindString {};
+			class keyHandler {};
 			class needRestart {};
 			class needRestartLocal {};
 		};

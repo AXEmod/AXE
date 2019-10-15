@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+	
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Curator">
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Curator">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Title">
+				<Original>AXE Curator</Original>
+			</Key>
+			<Key ID="STR_AXE_Curator_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Curator_URL">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Debriefing">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Debriefing_Mission_Done_Title">
+				<Original>Mission accomplished</Original>
+				<German>Mission abgeschlossen</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Debriefing_Mission_Done_SubTitle">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Debriefing_Mission_Done_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Debriefing_Mission_Fail_Title">
+				<Original>Mission failed</Original>
+				<German>Mission gescheitert</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Debriefing_Mission_Fail_SubTitle">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Debriefing_Mission_Fail_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Categories">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_CBA_Category">
+				<Original>AXE Zeus</Original>
+				<German>AXE Zeus</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_CBA_Category_Common">
+				<Original>Common Settings</Original>
+				<German>Allgemeines</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_CBA_Category_FPS">
+				<Original>Framerate</Original>
+				<German>Framerate</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Settings">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_CBA_Chat_EnableFor_Title">
+				<Original>Enable chat-commands</Original>
+				<German>Chat-Befehle aktivieren</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_CBA_Chat_EnableFor_Tip">
+				<Original>Activates the chat-commands.</Original>
+				<German>Aktiviert die Chat-Befehle.</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_CBA_Chat_EnableFor_0">
+				<Original>deactivated</Original>
+				<German>Deaktiviert</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_CBA_Chat_EnableFor_1">
+				<Original>logged in Admin</Original>
+				<German>eingeloggter Admin</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_CBA_Chat_EnableFor_2">
+				<Original>Admin &amp; every Zeus</Original>
+				<German>Admin &amp; jeder Zeus</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_CBA_Keys_EnableFor_Title">
+				<Original>Enable shortcut keys</Original>
+				<German>Schnelltasten aktivieren</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_CBA_Keys_EnableFor_Tip">
+				<Original>Activates the shortcuts.</Original>
+				<German>Aktiviert die Schnelltasten.</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_CBA_Keys_EnableFor_0">
+				<Original>deactivated</Original>
+				<German>Deaktiviert</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_CBA_Keys_EnableFor_1">
+				<Original>logged in Admin</Original>
+				<German>eingeloggter Admin</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_CBA_Keys_EnableFor_2">
+				<Original>Admin &amp; every Zeus</Original>
+				<German>Admin &amp; jeder Zeus</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_CBA_DeleteEmpty_Title">
+				<Original>Delete empty modules</Original>
+				<German>Leere Module löschen</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_CBA_DeleteEmpty_Tip">
+				<Original>Automatically removes all unused Zeus modules.</Original>
+				<German>Entfernt automatisch alle ungenutzte Zeus-Module.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_CBA_AddPlayers_Title">
+				<Original>Add Players</Original>
+				<German>Spieler hinzufügen</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_CBA_AddPlayers_Tip">
+				<Original>Automatically adds all players to the object list.</Original>
+				<German>Fügt automatisch alle Spieler der Objekt-Liste hinzu.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_CBA_FPS_Interval_Title">
+				<Original>FPS Interval</Original>
+				<German>FPS Intervall</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_CBA_FPS_Interval_Tip">
+				<Original>Update interval in seconds.</Original>
+				<German>Aktualisierungsintervall in Sekunden.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_CBA_FPS_Distance_Title">
+				<Original>FPS Radius</Original>
+				<German>FPS Radius</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_CBA_FPS_Distance_Tip">
+				<Original>Radius around the camera in meters.</Original>
+				<German>Radius um die Kamera in Meter.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_CBA_FPS_inZeus_Title">
+				<Original>Only in Zeus</Original>
+				<German>Nur in Zeus</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_CBA_FPS_inZeus_Tip">
+				<Original>Display only within the Zeus interface.</Original>
+				<German>Anzeige nur innerhalb der Zeus-Oberfläche.</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="KEY_Settings">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_KEY_JumpToAim_Title">
+				<Original>Jump To Target</Original>
+				<German>Zum Ziel springen</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_KEY_JumpToAim_Tip">
+				<Original>Teleport Zeus to the targeted position.</Original>
+				<German>Teleportiert Zeus zu der anvisierten Position.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_KEY_JumpToPing_Title">
+				<Original>Jump To Ping</Original>
+				<German>Zum Ping springen</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_KEY_JumpToPing_Tip">
+				<Original>Teleport Zeus to the last player ping.</Original>
+				<German>Teleportiert Zeus zum letzten Spieler-Ping.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_KEY_HideZeus_Title">
+				<Original>Show/Hide Zeus</Original>
+				<German>Zeus ein-/ausblenden</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_KEY_HideZeus_Tip">
+				<Original>Hide Zeus from the players.</Original>
+				<German>Versteckt Zeus vor den Spielern.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_KEY_AttachTo_Title">
+				<Original>Attach/Detach Zeus</Original>
+				<German>Zeus an-/abheften</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_KEY_AttachTo_Tip">
+				<Original>Attach Zeus to targeted objects/players.</Original>
+				<German>Heftet Zeus an anvisierte Objekte/Spieler.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_KEY_PlayerFPS_Title">
+				<Original>Show/Hide FPS</Original>
+				<German>FPS ein-/ausblenden</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_KEY_PlayerFPS_Tip">
+				<Original>Shows zeus the FPS of all players.</Original>
+				<German>Blendet Zeus die FPS aller Spieler ein.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_KEY_HealPlayer_Title">
+				<Original>Heal player</Original>
+				<German>Heile Spieler</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_KEY_HealPlayer_Tip">
+				<Original>Zeus heals the targeted player or himself.</Original>
+				<German>Zeus heilt den anvisierten Spieler oder sich selbst.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_KEY_DeleteObject_Title">
+				<Original>Delete object</Original>
+				<German>Objekt entfernen</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_KEY_DeleteObject_Tip">
+				<Original>Zeus removes targeted objects from the mission.</Original>
+				<German>Zeus entfernt anvisierte Objekte aus der Mission.</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="GUI_Messages">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_GUI_DeleteObject_Title">
+				<Original>Remove Object</Original>
+				<German>Objekt entfernen</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_GUI_DeleteObject_Message">
+				<Original>Remove &quot;%1&quot;?</Original>
+				<German>&quot;%1&quot; entfernen?</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_GUI_DeleteObject_Yes">
+				<Original>YES</Original>
+				<German>JA</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_GUI_DeleteObject_No">
+				<Original>NO</Original>
+				<German>NEIN</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Chat_Messages">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Chat_Access_Denied">
+				<Original>This command is not usable for you!</Original>
+				<German>Dieser Befehl ist für dich nicht nutzbar!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Not_An_Admin">
+				<Original>You are not an administrator!</Original>
+				<German>Du bist kein Administrator!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Unknown_Target">
+				<Original>&quot;%1&quot; is unknown!</Original>
+				<German>&quot;%1&quot; ist unbekannt!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Open_Interface">
+				<Original>Press %1 to open the interface ...</Original>
+				<German>Drücke %1 um die Oberfläche zu öffnen ...</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Chat_Not_Available">
+				<Original>There is no active Zeus!</Original>
+				<German>Es gibt keinen aktiven Zeus!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Available">
+				<Original>Following units have Zeus:</Original>
+				<German>Folgende Einheiten haben Zeus:</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Listing">
+				<Original>[%1] - &quot;%2&quot;</Original>
+				<German>[%1] - &quot;%2&quot;</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Chat_Create">
+				<Original>Zeus is being prepared ...</Original>
+				<German>Zeus wird vorbereitet ...</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Create_For">
+				<Original>Zeus is prepared for &quot;%1&quot; ...</Original>
+				<German>Zeus wird für &quot;%1&quot; vorbereitet ...</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Create_Failed">
+				<Original>Zeus can not be created!</Original>
+				<German>Zeus kann nicht erstellt werden!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Chat_Created_Player">
+				<Original>You were promoted to Zeus!</Original>
+				<German>Du wurdest zum Zeus befördert!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Created_Target">
+				<Original>&quot;%1&quot; has promoted &quot;%2&quot; to Zeus!</Original>
+				<German>&quot;%1&quot; hat &quot;%2&quot; zum Zeus befördert!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Chat_Remove">
+				<Original>Zeus is removed ...</Original>
+				<German>Zeus wird entfernt ...</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Remove_For">
+				<Original>Zeus is removed from &quot;%1&quot; ...</Original>
+				<German>Zeus wird von &quot;%1&quot; entfernt ...</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Remove_Failed">
+				<Original>Zeus can not be removed!</Original>
+				<German>Zeus kann nicht entfernt werden!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Chat_Removed_Player">
+				<Original>Xou are no longer a Zeus!</Original>
+				<German>Du bist kein Zeus mehr!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Removed_Target">
+				<Original>&quot;%1&quot; removed Zeus from &quot;%2&quot;!</Original>
+				<German>&quot;%1&quot; hat Zeus von &quot;%2&quot; entfernt!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Chat_Healing">
+				<Original>Healing your wounds!</Original>
+				<German>Heile deine Wunden!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Healing_For">
+				<Original>Heal the wounds of &quot;%1&quot;!</Original>
+				<German>Heile die Wunden von &quot;%1&quot;!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Healing_Failed">
+				<Original>Healing failed!</Original>
+				<German>Heilung fehlgeschlagen!</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Hints">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Hint_Ping_Message">
+				<Original>&quot;%1&quot; [%2]&lt;br/&gt;needs help!</Original>
+				<German>&quot;%1&quot; [%2]&lt;br/&gt;braucht Hilfe!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Hint_Visible">
+				<Original>You are visible now!</Original>
+				<German>Du bist jetzt sichtbar!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Hint_Invisible">
+				<Original>You are invisible now!</Original>
+				<German>Du bist jetzt unsichtbar!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Hint_Attached">
+				<Original>You are attached to&lt;br/&gt;&quot;%1&quot;!</Original>
+				<German>Du bist mit&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;fest verbunden!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Hint_Detached">
+				<Original>You are detached!</Original>
+				<German>Du bist nicht mehr verbunden!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Hint_FPS_OnlyInZeus">
+				<Original>The FPS display can only be switched in the Zeus interface!</Original>
+				<German>Die FPS-Anzeige kann nur in der Zeus-Oberfläche umgeschaltet werden!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Hint_FPS_Show">
+				<Original>Show Player-FPS!</Original>
+				<German>Spieler-FPS anzeigen!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Hint_FPS_Hide">
+				<Original>Hide Player-FPS!</Original>
+				<German>Spieler-FPS ausblenden!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Hint_Heal_Player">
+				<Original>The player&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;was healed!</Original>
+				<German>Der Spieler&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;wurde geheilt!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Hint_Heal_Zeus">
+				<Original>You healed yourself!</Original>
+				<German>Du hat dich selbst geheilt!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Hint_Object_Deleted">
+				<Original>The object&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;has been removed!</Original>
+				<German>Das Objekt&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;wurde entfernt!</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Modules">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Module_ZeusTeleport">
+				<Original>Zeus Teleport</Original>
+				<German>Zeus teleportieren</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Module_ZeusToPing">
+				<Original>Zeus To Ping</Original>
+				<German>Zeus zum Ping</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Module_ZeusVisible">
+				<Original>Zeus visible/invisible</Original>
+				<German>Zeus sichtbar/unsichtbar</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Module_PlayerFPS">
+				<Original>Show/Hide FPS</Original>
+				<German>FPS anzeigen/ausblenden</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Module_PlayerHeal">
+				<Original>Heal Player</Original>
+				<German>Spieler heilen</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Module_Messages">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_MMSG_Ping_ShowUnit">
+				<Original>Last ping from &quot;%1&quot;</Original>
+				<German>Letzter Ping von &quot;%1&quot;</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_MMSG_Ping_Failure">
+				<Original>No ping available</Original>
+				<German>Kein Ping vorhanden</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_MMSG_Zeus_Visible">
+				<Original>You are visible now</Original>
+				<German>Du bist jetzt sichtbar</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_MMSG_Zeus_Invisible">
+				<Original>You are invisible now</Original>
+				<German>Du bist jetzt unsichtbar</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_MMSG_FPS_Show">
+				<Original>Show Player-FPS</Original>
+				<German>Spieler-FPS anzeigen</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_MMSG_FPS_Hide">
+				<Original>Hide Player-FPS</Original>
+				<German>Spieler-FPS ausblenden</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_MMSG_Heal_Player">
+				<Original>Heal player &quot;%1&quot;</Original>
+				<German>Heile Spieler &quot;%1&quot;</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+	</Package>
+	<!-- ####################################################################################### -->
+	
+</Project>

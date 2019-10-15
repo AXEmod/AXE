@@ -7,22 +7,22 @@
  *	
  *	Arguments:
  *	0: setting		- <STRING>
- *	1: mission		- <BOOLEAN>
+ *	1: restartID	- <NUMBER>
  *	
  *	Return:
  *	nothing
  *	
  *	Example:
- *	["axe_debug_enabled", false] call AXE_fnc_needRestart;
+ *	["axe_debug_enabled", 2] call AXE_fnc_needRestart;
  *	
  */
 
 // -------------------------------------------------------------------------------------------------
 
-private ["_setting", "_mission"];
+private ["_setting", "_restartID"];
 
 _setting	= [_this, 0, "", [""]] call BIS_fnc_param;
-_mission	= [_this, 1, true, [true]] call BIS_fnc_param;
+_restartID	= [_this, 1, 0, [0]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
@@ -31,8 +31,26 @@ if (time < 1) exitWith {};
 
 // -------------------------------------------------------------------------------------------------
 
-if (_mission) then {
-	[_setting, _mission] remoteExec ["AXE_fnc_needRestartLocal", 0];
-} else {
-	[_setting, _mission] remoteExec ["AXE_fnc_needRestartLocal", player];
+switch (_restartID) do {
+	
+	// RESTART MISSION
+	case 1: {
+		[_setting, _restartID] remoteExec ["AXE_fnc_needRestartLocal", 0];
+	};
+	
+	// RESTART SESSION (GLOBAL)
+	case 2: {
+		[_setting, _restartID] remoteExec ["AXE_fnc_needRestartLocal", 0];
+	};
+	
+	// RESTART SESSION (PLAYER)
+	case 3: {
+		[_setting, _restartID] remoteExec ["AXE_fnc_needRestartLocal", player];
+	};
+	
+	// RESTART ENGINE
+	default {
+		[_setting, _restartID] remoteExec ["AXE_fnc_needRestartLocal", 0];
+	};
+	
 };

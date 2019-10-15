@@ -88,7 +88,7 @@
 		localize "STR_AXE_Hints_CBA_Category", 
 		localize "STR_AXE_Hints_CBA_Category_Common"
 	],
-	[0.0,0.8,0.4,1],
+	[0.0,0.8,0.4,2],
 	0,
 	{}
 ] call CBA_Settings_fnc_init;
@@ -120,6 +120,22 @@
 ] call CBA_Settings_fnc_init;
 
 // -------------------------------------------------------------------------------------------------
+
+[
+	"axe_hint_color_background",
+	"COLOR",
+	[
+		localize "STR_AXE_Hints_CBA_Color_Background_Title", 
+		localize "STR_AXE_Hints_CBA_Color_Background_Tip"
+	],
+	[
+		localize "STR_AXE_Hints_CBA_Category", 
+		localize "STR_AXE_Hints_CBA_Category_Colors"
+	],
+	[0.000,0.000,0.000,0.5],
+	0,
+	{}
+] call CBA_Settings_fnc_init;
 
 [
 	"axe_hint_color_default",

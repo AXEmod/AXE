@@ -31,7 +31,7 @@
 		localize "STR_AXE_Medical_Area_CBA_Category", 
 		localize "STR_AXE_Medical_Area_CBA_Category_Common"
 	],
-	[3,60,20,0],
+	[3,90,30,0],
 	0,
 	{}
 ] call CBA_Settings_fnc_init;
@@ -47,7 +47,7 @@
 		localize "STR_AXE_Medical_Area_CBA_Category", 
 		localize "STR_AXE_Medical_Area_CBA_Category_Common"
 	],
-	[3,60,30,0],
+	[3,90,30,0],
 	0,
 	{}
 ] call CBA_Settings_fnc_init;

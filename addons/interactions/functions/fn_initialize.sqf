@@ -36,8 +36,8 @@ if ((Not hasInterface) || (is3DEN)) exitWith {};
 		params ["_unit", "_container"];
 		
 		if (Not (simulationEnabled _container)) then {
-			closeDialog 0;
 			[ format [hint_tpl_default, localize "STR_AXE_Interactions_Inventory_Disabled"] ] call AXE_fnc_hint;
+			closeDialog 0;
 			true;
 		} else {
 			false;

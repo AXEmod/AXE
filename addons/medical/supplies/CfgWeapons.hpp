@@ -17,7 +17,7 @@ class CfgWeapons {
 		icon = "iconObject_1x1";
 		mapSize = 0.015;
 		class ItemInfo: CBA_MiscItem_ItemInfo {
-			mass = 5;
+			mass = 10;
 		};
 	};
 	
@@ -32,7 +32,7 @@ class CfgWeapons {
 		icon = "iconObject_1x1";
 		mapSize = 0.015;
 		class ItemInfo: CBA_MiscItem_ItemInfo {
-			mass = 10;
+			mass = 50;
 		};
 	};
 	

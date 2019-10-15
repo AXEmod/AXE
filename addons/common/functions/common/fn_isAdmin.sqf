@@ -18,6 +18,23 @@
 
 // -------------------------------------------------------------------------------------------------
 
-private _return = serverCommandAvailable "#logout";
+private _return = false;
+
+if (isMultiplayer) then {
+	
+	if (hasInterface && isServer) then {
+		// HOSTED
+		_return = true;
+	} else {
+		if ((call BIS_fnc_admin) > 0) then {
+			// DEDICATED
+			_return = true;
+		};
+	};
+	
+} else {
+	// SINGLEPLAYER
+	_return = true;
+};
 
 _return

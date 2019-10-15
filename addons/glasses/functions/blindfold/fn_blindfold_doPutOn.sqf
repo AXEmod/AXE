@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\axe_glasses\functions\fn_blindfold_doPutOn.sqf
+ *	\axe_glasses\functions\blindfold\fn_blindfold_doPutOn.sqf
  *	by Ojemineh
  *	
  *	put blindfold on

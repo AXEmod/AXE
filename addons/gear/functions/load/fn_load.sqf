@@ -58,7 +58,7 @@ if (_team isEqualTo "") then { _team = _gear_team; };
 
 if (GEAR_KEEP_GOGGLES) then {
 	if ((goggles _unit) != "") then {
-		_unit setVariable ["gear_user_goggles", (goggles _unit)];
+		_unit setVariable ["axe_gear_goggles", (goggles _unit)];
 	};
 };
 

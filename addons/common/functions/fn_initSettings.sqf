@@ -62,3 +62,21 @@
 ] call CBA_Settings_fnc_init;
 
 // -------------------------------------------------------------------------------------------------
+
+[
+	"axe_tactical_view_enabled",
+	"CHECKBOX",
+	[
+		localize "STR_AXE_Common_CBA_Tactical_View_Title", 
+		localize "STR_AXE_Common_CBA_Tactical_View_Tip"
+	],
+	[
+		localize "STR_AXE_Common_CBA_Category", 
+		localize "STR_AXE_Common_CBA_Category_Options"
+	],
+	false,
+	0,
+	{}
+] call CBA_Settings_fnc_init;
+
+// -------------------------------------------------------------------------------------------------

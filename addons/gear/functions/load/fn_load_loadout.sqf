@@ -58,7 +58,10 @@ if (_team isEqualTo "") then { _team = _gear_team; };
 private _file = format ["%1\%2\%3\%4\loadout.hpp", _loadout_path, _team, _role, _type];
 private _data = [] call compile preprocessFileLineNumbers _file;
 
+if (isNil "_data") exitWith {[4, "Can't read unit-loadout from file (%1)", [_file], "gear"] call AXE_fnc_log;};
 [5, "'%1' loading gear '%2' (File: %3) - Data: %4", [_unit, _role, _file, _data], "gear"] call AXE_fnc_diagLog;
+
+// -------------------------------------------------------------------------------------------------
 
 _unit setUnitLoadout [_data, false];
 
@@ -66,11 +69,11 @@ _unit setUnitLoadout [_data, false];
 // LOAD PLAYERS DEFAULT GOGGLES
 
 if (GEAR_KEEP_GOGGLES) then {
-	private _unit_goggles = _unit getVariable ["gear_user_goggles", ""];
+	private _unit_goggles = _unit getVariable ["axe_gear_goggles", ""];
 	if (_unit_goggles != "") then {
 		if ((goggles _unit) != "") then {removeGoggles _unit;};
 		_unit addGoggles _unit_goggles;
-		_unit setVariable ["gear_user_goggles", nil];
+		_unit setVariable ["axe_gear_goggles", nil];
 	};
 };
 

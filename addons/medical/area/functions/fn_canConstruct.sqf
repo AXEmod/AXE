@@ -37,8 +37,11 @@ _return = (
 	!(_unit getVariable ["ace_captives_isHandcuffed", false]) && 
 	!(_unit getVariable ["ace_isUnconscious", false]) && 
 	(isNull (objectParent _unit)) && 
-	!(surfaceIsWater (getPos _unit)) && 
-	(Not visibleMap)
+	(
+		( (surfaceIsWater (getPosASL _unit)) && (isTouchingGround _unit)) && (((getPosASL _unit) select 2) > 1) || 
+		(!(surfaceIsWater (getPosASL _unit)) && (isTouchingGround _unit)) 
+	) && 
+	!(visibleMap)
 );
 
 _return

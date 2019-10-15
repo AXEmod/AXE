@@ -1,4 +1,4 @@
-#include "\axe_main\script_macros.hpp"
+#include "script_component.hpp"
 #include "BIS_AddonInfo.hpp"
 
 class CfgPatches {

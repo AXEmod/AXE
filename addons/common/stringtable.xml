@@ -32,6 +32,10 @@
 				<Original>Common Settings</Original>
 				<German>Allgemeines</German>
 			</Key>
+			<Key ID="STR_AXE_Common_CBA_Category_Options">
+				<Original>Options</Original>
+				<German>Optionen</German>
+			</Key>
 			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -57,19 +61,32 @@
 				<German>Zeige Neuigkeiten im Hauptmenü an.</German>
 			</Key>
 			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Common_CBA_Tactical_View_Title">
+				<Original>Tactical View</Original>
+				<German>Taktische Ansicht</German>
+			</Key>
+			<Key ID="STR_AXE_Common_CBA_Tactical_View_Tip">
+				<Original>Allow the use of Tactical View.</Original>
+				<German>Erlaube die Nutzung der Taktischen Ansicht.</German>
+			</Key>
+			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Extended_Hints">
 			<!-- =============================================================================== -->
-			<Key ID="STR_AXE_Common_Hint_Need_Restart_Mission">
-				<Original>The setting&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;has been changed.&lt;br/&gt;For the change to take effect, the mission must be restarted!&lt;br/&gt;</Original>
-				<German>Die Einstellung&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;wurde geändert.&lt;br/&gt;Damit die Änderung in Kraft treten kann, muss die Mission neu gestartet werden!&lt;br/&gt;</German>
+			<Key ID="STR_AXE_Common_Hint_Need_Restart_Engine">
+				<Original>The setting&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;has been changed.&lt;br/&gt;For the change to take effect, ArmA 3 must be restarted!</Original>
+				<German>Die Einstellung&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;wurde geändert.&lt;br/&gt;Damit die Änderung in Kraft treten kann, muss ArmA 3 neu gestartet werden!</German>
 			</Key>
-			<Key ID="STR_AXE_Common_Hint_Need_Restart_Client">
-				<Original>The setting&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;has been changed.&lt;br/&gt;Please restart ArmA!&lt;br/&gt;</Original>
-				<German>Die Einstellung&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;wurde geändert.&lt;br/&gt;Bitte ArmA neu starten!&lt;br/&gt;</German>
+			<Key ID="STR_AXE_Common_Hint_Need_Restart_Mission">
+				<Original>The setting&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;has been changed.&lt;br/&gt;For the change to take effect, the mission must be restarted!</Original>
+				<German>Die Einstellung&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;wurde geändert.&lt;br/&gt;Damit die Änderung in Kraft treten kann, muss die Mission neu gestartet werden!</German>
+			</Key>
+			<Key ID="STR_AXE_Common_Hint_Need_Restart_Session">
+				<Original>The setting&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;has been changed.&lt;br/&gt;For the change to take effect, the mission must be re-entered!</Original>
+				<German>Die Einstellung&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;wurde geändert.&lt;br/&gt;Damit die Änderung in Kraft treten kann, muss die Mission neu betreten werden!</German>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container>

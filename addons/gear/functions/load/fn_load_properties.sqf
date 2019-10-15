@@ -58,6 +58,8 @@ if (_team isEqualTo "") then { _team = _gear_team; };
 private _file = format ["%1\%2\%3\%4\properties.hpp", _loadout_path, _team, _role, _type];
 private _data = [] call compile preprocessFileLineNumbers _file;
 
+if (isNil "_data") exitWith {[4, "Can't read unit-properties from file (%1)", [_file], "gear"] call AXE_fnc_log;};
+
 private _data_insignia	= (_data select 0);
 private _data_rank		= (_data select 1);
 private _data_medic		= (_data select 2);
@@ -69,8 +71,7 @@ private _data_safety	= (_data select 5);
 
 // INSIGNIA
 if (_data_insignia != "") then {
-	[_unit, ""] call BIS_fnc_setUnitInsignia;
-	[_unit, _data_insignia] call BIS_fnc_setUnitInsignia;
+	[_unit, _data_insignia] call AXE_fnc_setUnitInsignia;
 };
 
 // -------------------------------------------------------------------------------------------------

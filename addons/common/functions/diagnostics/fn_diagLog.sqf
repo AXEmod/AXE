@@ -35,3 +35,5 @@ _modification	= [_this, 4, "AXE", [""]] call BIS_fnc_param;
 if (missionNamespace getVariable ["axe_debug_enabled", false]) then {
 	[_level, _message, _params, _extension, _modification] call AXE_fnc_log;
 };
+
+// -------------------------------------------------------------------------------------------------

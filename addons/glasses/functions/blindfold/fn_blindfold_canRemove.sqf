@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\axe_glasses\functions\fn_blindfold_canRemove.sqf
+ *	\axe_glasses\functions\blindfold\fn_blindfold_canRemove.sqf
  *	by Ojemineh
  *	
  *	check if blindfold can be removed from unit

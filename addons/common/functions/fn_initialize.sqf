@@ -26,3 +26,25 @@ private _version = ["axe_common"] call AXE_fnc_getAddonVersion;
 AXE_COMMON_HELPER_OBJECT = "Sign_Sphere10cm_Geometry_F";
 
 // -------------------------------------------------------------------------------------------------
+
+[
+	"axe_common_log", 
+	{
+		_this call AXE_fnc_log;
+	}
+] call CBA_fnc_addEventHandler;
+
+// -------------------------------------------------------------------------------------------------
+
+[] spawn {
+	
+	waitUntil {(!isNull (findDisplay 46))};
+	
+	(findDisplay 46) displayAddEventHandler [
+		"KeyDown", 
+		"_this call AXE_fnc_keyHandler"
+	];
+	
+};
+
+// -------------------------------------------------------------------------------------------------
