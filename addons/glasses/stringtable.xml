@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Arma_Extended_Environment">
-
+	
 	<!-- ####################################################################################### -->
 	<Package name="AXE_Glasses">
-
+		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Glasses">
 			<!-- =============================================================================== -->
@@ -19,7 +19,7 @@
 			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
+		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Interactions">
 			<!-- =============================================================================== -->
@@ -34,9 +34,51 @@
 			<!-- =============================================================================== -->
 		</Container >
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
+		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Items">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Glasses_RegulatorMask_DisplayName">
+				<Original>Regulator Facepiece</Original>
+				<German>Regulierer-Gesichtsmaske</German>
+			</Key>
+			<Key ID="STR_AXE_Glasses_RegulatorMask_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Glasses_Respirator_DisplayName">
+				<Original>APR</Original>
+				<German>Atemschutzgerät</German>
+			</Key>
+			<Key ID="STR_AXE_Glasses_Respirator_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<Key ID="STR_AXE_Glasses_Respirator_Black_DisplayName">
+				<Original>APR (Black)</Original>
+				<German>Atemschutzgerät (Schwarz)</German>
+			</Key>
+			<Key ID="STR_AXE_Glasses_Respirator_Black__Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<Key ID="STR_AXE_Glasses_Respirator_Olive_DisplayName">
+				<Original>APR (Olive)</Original>
+				<German>Atemschutzgerät (Oliv)</German>
+			</Key>
+			<Key ID="STR_AXE_Glasses_Respirator_Olive_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<Key ID="STR_AXE_Glasses_Respirator_Sand_DisplayName">
+				<Original>APR (Sand)</Original>
+				<German>Atemschutzgerät (Sand)</German>
+			</Key>
+			<Key ID="STR_AXE_Glasses_Respirator_Sand_Description">
+				<Original></Original>
+				<German></German>
+			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Glasses_Blindfold_Black_DisplayName">
 				<Original>Blindfold (fabric, black)</Original>
@@ -67,8 +109,8 @@
 			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
+		
 	</Package>
 	<!-- ####################################################################################### -->
-
+	
 </Project>
