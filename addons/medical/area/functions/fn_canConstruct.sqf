@@ -44,4 +44,4 @@ _return = (
 	!(visibleMap)
 );
 
-_return
+_return;

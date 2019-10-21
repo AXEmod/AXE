@@ -39,4 +39,4 @@ _return = (
 	(Not visibleMap)
 );
 
-_return
+_return;

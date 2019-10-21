@@ -34,6 +34,8 @@ if (isNull _unit) exitWith {false};
 	
 	_unit playAction "MedicStart";
 	
+	[_unit, "AXE_Medical_Area_Construct_1", [], 50, 1000] call AXE_fnc_play3dSound;
+	
 	private _isInBuilding = [_unit] call AXE_fnc_isInBuilding;
 	private _isOnWater = (surfaceIsWater (getPosASL _unit));
 	
@@ -69,8 +71,6 @@ if (isNull _unit) exitWith {false};
 		private _cutter = createVehicle ["Land_ClutterCutter_medium_F", _cltPos, [], 0, "CAN_COLLIDE"];
 		_objects pushBack _cutter;
 	};
-	
-	[_medArea, "AXE_Medical_Area_Construct_1", 100, 300] call AXE_fnc_play3dGlobal;
 	
 	private _medHpad = createVehicle ["Land_HelipadEmpty_F", [0,0,0], [], 0, "CAN_COLLIDE"];
 	_medHpad setDir _dir;
@@ -412,21 +412,19 @@ if (isNull _unit) exitWith {false};
 	
 	if (AXE_MEDICAL_AREA_CONSTRUCT_SUCCESS) exitWith {
 		
-		[_medArea, "AXE_Medical_Area_Construct_1"] call AXE_fnc_stop3dGlobal;
-		
 		[_medArea, _medMenu] remoteExec ["AXE_medical_area_fnc_createActions", 0];
 		_medHpad setVariable ["ACE_medical_isMedicalFacility", true, true];
 		
 		_unit removeItem "AXE_MedicArea";
 		_unit playActionNow "MedicStop";
 		
+		[_unit, "AXE_Medical_Area_Construct_1"] call AXE_fnc_stop3dSound;
+		
 		["axe_medical_area_constructed", [_unit, _medArea]] call CBA_fnc_globalEvent;
 		
 	};
 	
 	if (AXE_MEDICAL_AREA_CONSTRUCT_FAILURE) exitWith {
-		
-		[_medArea, "AXE_Medical_Area_Construct_1"] call AXE_fnc_stop3dGlobal;
 		
 		private _delObjects = +_objects;
 		reverse _delObjects;
@@ -439,6 +437,8 @@ if (isNull _unit) exitWith {false};
 		deleteVehicle _medArea;
 		
 		_unit playActionNow "MedicStop";
+		
+		[_unit, "AXE_Medical_Area_Construct_1"] call AXE_fnc_stop3dSound;
 		
 	};
 	

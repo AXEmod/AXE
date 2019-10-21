@@ -30,4 +30,5 @@ class CfgPatches {
 	
 };
 
+#include "CfgVehicleIcons.hpp"
 #include "CfgVehicles.hpp"

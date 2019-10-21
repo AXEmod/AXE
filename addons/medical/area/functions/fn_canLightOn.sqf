@@ -35,4 +35,4 @@ _return = (
 	((_area getVariable ["AXE_MedicalArea_Lights", []]) isEqualTo [])
 );
 
-_return
+_return;
