@@ -106,11 +106,26 @@ addMissionEventHandler ["Draw3D", {
 		private _curatorKeyName = actionKeysNames "curatorInterface";
 		
 		if (_caller isEqualTo _target) then {
-			systemChat format [localize "STR_AXE_Curator_Chat_Created_Player", _callerName, _targetName];
-			systemChat format [localize "STR_AXE_Curator_Chat_Open_Interface", _curatorKeyName];
+			systemChat format [localize "STR_AXE_Curator_Chat_Zeus_Created_Player", _callerName, _targetName];
+			systemChat format [localize "STR_AXE_Curator_Chat_Zeus_Open_Interface", _curatorKeyName];
 		} else {
-			systemChat format [localize "STR_AXE_Curator_Chat_Created_Target", _callerName, _targetName];
-			systemChat format [localize "STR_AXE_Curator_Chat_Open_Interface", _curatorKeyName];
+			systemChat format [localize "STR_AXE_Curator_Chat_Zeus_Created_Target", _callerName, _targetName];
+			systemChat format [localize "STR_AXE_Curator_Chat_Zeus_Open_Interface", _curatorKeyName];
+		};
+		
+		if (isServer && hasInterface) then {
+			(getAssignedCuratorLogic _target) addEventHandler ["curatorObjectDoubleClicked", {
+				(_this select 1) call BIS_fnc_showCuratorAttributes;
+			}];
+			(getAssignedCuratorLogic _target) addEventHandler ["curatorGroupDoubleClicked", {
+				(_this select 1) call BIS_fnc_showCuratorAttributes;
+			}];
+			(getAssignedCuratorLogic _target) addEventHandler ["curatorWaypointDoubleClicked", {
+				(_this select 1) call BIS_fnc_showCuratorAttributes;
+			}];
+			(getAssignedCuratorLogic _target) addEventHandler ["curatorMarkerDoubleClicked", {
+				(_this select 1) call BIS_fnc_showCuratorAttributes;
+			}];
 		};
 		
 	}
@@ -132,9 +147,9 @@ addMissionEventHandler ["Draw3D", {
 		private _targetName = [_target] call ACE_common_fnc_getName;
 		
 		if (_caller isEqualTo _target) then {
-			systemChat format [localize "STR_AXE_Curator_Chat_Removed_Player", _callerName, _targetName];
+			systemChat format [localize "STR_AXE_Curator_Chat_Zeus_Removed_Player", _callerName, _targetName];
 		} else {
-			systemChat format [localize "STR_AXE_Curator_Chat_Removed_Target", _callerName, _targetName];
+			systemChat format [localize "STR_AXE_Curator_Chat_Zeus_Removed_Target", _callerName, _targetName];
 		};
 		
 	}
@@ -188,6 +203,8 @@ addMissionEventHandler ["Draw3D", {
 		
 		params ["_param"];
 		
+		[player, "blockDamage", "axe_curator_interface", true] call ACE_common_fnc_statusEffect_set;
+		
 	}
 ] call CBA_fnc_addEventHandler;
 
@@ -199,6 +216,8 @@ addMissionEventHandler ["Draw3D", {
 	{
 		
 		params ["_param"];
+		
+		[player, "blockDamage", "axe_curator_interface", false] call ACE_common_fnc_statusEffect_set;
 		
 	}
 ] call CBA_fnc_addEventHandler;
@@ -220,11 +239,104 @@ addMissionEventHandler ["Draw3D", {
 		player setVariable ["acex_field_rations_thirst", 0];
 		player setVariable ["acex_field_rations_hunger", 0];
 		
-		private _callerType = ["Admin", "Zeus"] select !(isNull getAssignedCuratorLogic _caller);
-		private _callerName = [_caller] call ACE_common_fnc_getName;
-		private _targetName = [_target] call ACE_common_fnc_getName;
+	}
+] call CBA_fnc_addEventHandler;
+
+// -------------------------------------------------------------------------------------------------
+// EVENT: SET MEDIC LEVEL
+
+[
+	"axe_curator_setMedicLevel", 
+	{
 		
-		[4, "%1 (%2) healed player '%3'", [_callerType, _callerName, _targetName], "curator"] call AXE_fnc_diagLogGlobal;
+		params ["_caller", "_target", "_level"];
+		
+		private _targetName = [_target] call ACE_common_fnc_getName;
+		private _levelStr = "";
+		
+		switch (_level) do {
+			case 0: {_levelStr = localize "STR_AXE_Curator_Chat_Medic_Level_0";};
+			case 1: {_levelStr = localize "STR_AXE_Curator_Chat_Medic_Level_1";};
+			case 2: {_levelStr = localize "STR_AXE_Curator_Chat_Medic_Level_2";};
+			default {_levelStr = "";};
+		};
+		
+		if ((player isEqualTo _target) && (isPlayer _target) && (_target isKindOf "Man")) then {
+			_target setVariable ["ACE_medical_medicClass", _level, true];
+		};
+		
+		if (_caller isEqualTo _target) then {
+			systemChat format [localize "STR_AXE_Curator_Chat_Medic_Level_Player", _levelStr, _level];
+		} else {
+			systemChat format [localize "STR_AXE_Curator_Chat_Medic_Level_Target", _targetName, _levelStr, _level];
+		};
+		
+	}
+] call CBA_fnc_addEventHandler;
+
+// -------------------------------------------------------------------------------------------------
+// EVENT: SET ENGINEER LEVEL
+
+[
+	"axe_curator_setEngineerLevel", 
+	{
+		
+		params ["_caller", "_target", "_level"];
+		
+		private _targetName = [_target] call ACE_common_fnc_getName;
+		private _levelStr = "";
+		
+		switch (_level) do {
+			case 0: {_levelStr = localize "STR_AXE_Curator_Chat_Engineer_Level_0";};
+			case 1: {_levelStr = localize "STR_AXE_Curator_Chat_Engineer_Level_1";};
+			case 2: {_levelStr = localize "STR_AXE_Curator_Chat_Engineer_Level_2";};
+			default {_levelStr = "";};
+		};
+		
+		if ((player isEqualTo _target) && (isPlayer _target) && (_target isKindOf "Man")) then {
+			_target setVariable ["ACE_isEngineer", _level, true];
+		};
+		
+		if (_caller isEqualTo _target) then {
+			systemChat format [localize "STR_AXE_Curator_Chat_Engineer_Level_Player", _levelStr, _level];
+		} else {
+			systemChat format [localize "STR_AXE_Curator_Chat_Engineer_Level_Target", _targetName, _levelStr, _level];
+		};
+		
+	}
+] call CBA_fnc_addEventHandler;
+
+// -------------------------------------------------------------------------------------------------
+// EVENT: SET EOD LEVEL
+
+[
+	"axe_curator_setEODLevel", 
+	{
+		
+		params ["_caller", "_target", "_level"];
+		
+		private _targetName = [_target] call ACE_common_fnc_getName;
+		private _levelStr = "";
+		
+		switch (_level) do {
+			case 0: {_levelStr = localize "STR_AXE_Curator_Chat_EOD_Level_0";};
+			case 1: {_levelStr = localize "STR_AXE_Curator_Chat_EOD_Level_1";};
+			default {_levelStr = "";};
+		};
+		
+		if ((player isEqualTo _target) && (isPlayer _target) && (_target isKindOf "Man")) then {
+			if (_level == 1) then {
+				_target setVariable ["ACE_isEOD", true, true];
+			} else {
+				_target setVariable ["ACE_isEOD", false, true];
+			};
+		};
+		
+		if (_caller isEqualTo _target) then {
+			systemChat format [localize "STR_AXE_Curator_Chat_EOD_Level_Player", _levelStr, _level];
+		} else {
+			systemChat format [localize "STR_AXE_Curator_Chat_EOD_Level_Target", _targetName, _levelStr, _level];
+		};
 		
 	}
 ] call CBA_fnc_addEventHandler;
@@ -243,9 +355,9 @@ addMissionEventHandler ["Draw3D", {
 		private _callerType = ["Admin", "Zeus"] select !(isNull getAssignedCuratorLogic _caller);
 		
 		if (_endName != "") then {
-			[4, "%1 has finished the mission (victory=%2, class=%3)", [_callerType, _isVictory, _endName], "curator"] call AXE_fnc_logGlobal;
+			[4, "%1 has finished the mission (victory=%2, class=%3)", [_callerType, _isVictory, _endName], "curator"] call AXE_fnc_logServer;
 		} else {
-			[4, "%1 has finished the mission (victory=%2)", [_callerType, _isVictory, ""], "curator"] call AXE_fnc_logGlobal;
+			[4, "%1 has finished the mission (victory=%2)", [_callerType, _isVictory, ""], "curator"] call AXE_fnc_logServer;
 		};
 		
 	}
