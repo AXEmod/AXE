@@ -69,7 +69,7 @@ private _soundPlayed = if (_consumeAnim != "" && {vehicle _player == _player && 
     // No animation to sync sound to
     if (_consumeSound != "") then {
 		if (missionNamespace getVariable ["axe_field_rations_global_sounds", false]) then {
-			[_player, _consumeSound, 30, 1.7] call AXE_fnc_playSound3d;
+			[_consumeSound, _player, [], 30, 1.7] call AXE_fnc_playSound3d;
 		} else {
 			playSound _consumeSound;
 		};
@@ -137,7 +137,7 @@ private _fnc_condition = {
     // Attempt to sync sound with animation start
     if (!_soundPlayed && {_consumeSound != "" && {_consumeAnim == "" || {animationState _player == _consumeAnim}}}) then {
 		if (missionNamespace getVariable ["axe_field_rations_global_sounds", false]) then {
-			[_player, _consumeSound, 30, 1.7] call AXE_fnc_playSound3d;
+			[_consumeSound, _player, [], 30, 1.7] call AXE_fnc_playSound3d;
 		} else {
 			playSound _consumeSound;
 		};
