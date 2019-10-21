@@ -53,4 +53,4 @@ if (Not isNull _building) then {
 	
 };
 
-_return
+_return;

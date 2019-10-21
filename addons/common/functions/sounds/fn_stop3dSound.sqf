@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\axe_common\functions\sounds\fn_stop3dGlobal.sqf
+ *	\axe_common\functions\sounds\fn_stop3dSound.sqf
  *	by Ojemineh
  *
  *	stop 3d sound
@@ -13,7 +13,7 @@
  *	nothing
  *
  *	Example:
- *	[player, "BattlefieldFirefight1_3D"] call AXE_fnc_stop3dGlobal;
+ *	[player, "AlarmBell"] call AXE_fnc_stop3dSound;
  *
  */
 
@@ -30,4 +30,4 @@ if (isNull _object) exitWith {};
 
 // -------------------------------------------------------------------------------------------------
 
-[_object, _soundClass] remoteExecCall ["AXE_fnc_stop3d", 0];
+[_object, _soundClass] remoteExecCall ["AXE_fnc_stop3dSoundLocal", 0, true];

@@ -32,8 +32,4 @@ _modification	= [_this, 4, "AXE", [""]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
-if (missionNamespace getVariable ["axe_debug_enabled", false]) then {
-	["axe_common_log", [_level, _message, _params, _extension, _modification]] call CBA_fnc_globalEvent;
-};
-
-// -------------------------------------------------------------------------------------------------
+["axe_common_diagLog", [_level, _message, _params, _extension, _modification]] call CBA_fnc_globalEvent;

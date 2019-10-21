@@ -47,7 +47,6 @@ if (Not (missionNamespace getVariable ["ace_medical_allowLitterCreation", false]
 	private _posASL = AGLtoASL (_unit modelToWorld _offset);
 	private _litter = createSimpleObject [_className, _posASL];
 	
-	//_litter setDir (getDir _unit);
 	_litter setDir (random 360);
 	
 	if ([_unit] call AXE_fnc_isInBuilding) then {

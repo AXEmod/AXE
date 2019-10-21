@@ -86,4 +86,4 @@ private _return = [_filename, _canSkip, _showSkip, _showTime] spawn {
 	
 };
 
-_return
+_return;

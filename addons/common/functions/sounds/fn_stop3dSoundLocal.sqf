@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\axe_common\functions\sounds\fn_stop3d.sqf
+ *	\axe_common\functions\sounds\fn_stop3dSoundLocal.sqf
  *	by Ojemineh
  *
  *	stop 3d sound
@@ -13,7 +13,7 @@
  *	nothing
  *
  *	Example:
- *	[player, "BattlefieldFirefight1_3D"] call AXE_fnc_stop3d;
+ *	[player, "AlarmBell"] call AXE_fnc_stop3dSoundLocal;
  *
  */
 
@@ -53,8 +53,6 @@ if (_soundClass != "") then {
 	
 	if (_soundInUse) then {
 		
-		[5, "Stop sound '%1' on object '%2'", [_soundClass, _soundObject], "common"] call AXE_fnc_diagLog;
-		
 		private _index = _soundArray find [_soundClass, _soundObject];
 		
 		if (_index >= 0) then {
@@ -72,8 +70,6 @@ if (_soundClass != "") then {
 			
 			private _sndClass = (_x select 0);
 			private _sndObject = (_x select 1);
-			
-			[5, "Stop sound '%1' on object '%2'", [_soundClass, _soundObject], "common"] call AXE_fnc_diagLog;
 			
 			if (Not isNull _sndObject) then {deleteVehicle _sndObject;};
 			

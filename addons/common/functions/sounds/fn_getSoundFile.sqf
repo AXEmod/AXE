@@ -1,18 +1,18 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\axe_common\functions\sounds\fn_getSoundPath.sqf
+ *	\axe_common\functions\sounds\fn_getSoundFile.sqf
  *	by Ojemineh
  *
- *	get the path of a soundclass
+ *	get filename (incl. path) of a sound-class
  *
  *	Arguments:
- *	0: soundClass	- <STRING>
+ *	0: soundClass - <STRING>
  *
  *	Return:
  *	<STRING>
  *
  *	Example:
- *	["horn"] call axe_fnc_getSoundPath;
+ *	["AlarmBell"] call AXE_fnc_getSoundFile;
  *
  */
 
@@ -64,4 +64,4 @@ if ((_soundFile != "") && ((_soundFile find ".") == -1)) then {
 	_return = _soundFile;
 };
 
-_return
+_return;

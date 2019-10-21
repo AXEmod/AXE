@@ -34,16 +34,26 @@ AXE_COMMON_HELPER_OBJECT = "Sign_Sphere10cm_Geometry_F";
 	}
 ] call CBA_fnc_addEventHandler;
 
+[
+	"axe_common_diagLog", 
+	{
+		if (missionNamespace getVariable ["axe_debug_enabled", false]) then {
+			_this call AXE_fnc_log;
+		};
+	}
+] call CBA_fnc_addEventHandler;
+
+// -------------------------------------------------------------------------------------------------
+
+if !(hasInterface) exitWith {};
+
 // -------------------------------------------------------------------------------------------------
 
 [] spawn {
 	
 	waitUntil {(!isNull (findDisplay 46))};
 	
-	(findDisplay 46) displayAddEventHandler [
-		"KeyDown", 
-		"_this call AXE_fnc_keyHandler"
-	];
+	(findDisplay 46) displayAddEventHandler ["KeyDown", "_this call AXE_fnc_keyDownHandler"];
 	
 };
 

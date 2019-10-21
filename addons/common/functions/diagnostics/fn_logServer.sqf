@@ -32,10 +32,4 @@ _modification	= [_this, 4, "AXE", [""]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
-if (!isServer) then {
-	[_level, _message, _params, _extension, _modification] call AXE_fnc_log;
-};
-
 ["axe_common_log", [_level, _message, _params, _extension, _modification]] call CBA_fnc_serverEvent;
-
-// -------------------------------------------------------------------------------------------------

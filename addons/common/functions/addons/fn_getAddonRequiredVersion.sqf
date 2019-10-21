@@ -30,4 +30,4 @@ if (isClass (configfile >> "CfgPatches" >> _classname)) then {
 	_return = getNumber (configfile >> "CfgPatches" >> _classname >> "requiredVersion");
 };
 
-_return
+_return;

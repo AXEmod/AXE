@@ -1,33 +1,33 @@
-﻿/*
+/*
  *	ARMA EXTENDED ENVIRONMENT
- *	\axe_common\functions\common\fn_isCurator.sqf
+ *	\axe_common\functions\sounds\fn_gainToDecibel.sqf
  *	by Ojemineh
  *	
- *	check if unit is curator/zeus
+ *	convert gain to decibel
  *	
  *	Arguments:
- *	0: unit - <OBJECT>
+ *	0: gain - <NUMBER>
  *	
  *	Return:
- *	<BOOLEAN>
+ *	<NUMBER>
  *	
  *	Example:
- *	[player] call AXE_fnc_isCurator;
+ *	[1] call AXE_fnc_gainToDecibel;
  *	
  */
 
 // -------------------------------------------------------------------------------------------------
 
-private ["_unit"];
+private ["_gain"];
 
-_unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-
-// -------------------------------------------------------------------------------------------------
-
-if (isNull _unit) then {_unit = player};
+_gain = [_this, 0, 1, [0]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
-private _return = _unit in (allCurators apply {getAssignedCuratorUnit _x});
+if (_gain <= 0) exitWith {0};
+
+// -------------------------------------------------------------------------------------------------
+
+private _return = 20 * (log _gain);
 
 _return;
