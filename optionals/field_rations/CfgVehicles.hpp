@@ -15,7 +15,7 @@ class CfgVehicles {
 		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_PaperBox_01_small_closed_brown_F.jpg";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\axe_field_rations\data\textures\box_mre_co.paa"};
-		icon = "iconObject_1x1";
+		icon = "AXE_iconCrateDefault";
 		maximumLoad = 250;
 		ace_cargo_canLoad = 1;
 		ace_cargo_size = 1;
