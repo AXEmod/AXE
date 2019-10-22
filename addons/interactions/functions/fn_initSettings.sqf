@@ -116,7 +116,7 @@
 			"STR_AXE_Interactions_CBA_Backpack_Access_Friendly_0", 
 			"STR_AXE_Interactions_CBA_Backpack_Access_Friendly_1"
 		], 
-		0
+		1
 	],
 	0,
 	{}
