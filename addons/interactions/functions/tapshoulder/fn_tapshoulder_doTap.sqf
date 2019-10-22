@@ -56,7 +56,7 @@ if ((_shoulder < 0) || (_shoulder > 1)) exitWith {};
 	
 	if (missionNamespace getVariable ["axe_interactions_global_sounds", false]) then {
 		private _pitch = random [0.8, 1.0, 1.2];
-		[_target, "AXE_Action_Shoulder_Tap_1", 20, 1, _pitch, false, AGLToASL (_target modelToWorld (_target selectionPosition _selectionName))] call AXE_fnc_playSound3d;
+		["AXE_Action_Shoulder_Tap_1", _target, AGLToASL (_target modelToWorld (_target selectionPosition _selectionName)), 20, 1, _pitch, false] call AXE_fnc_playSound3d;
 	} else {
 		playSound "AXE_Action_Shoulder_Tap_1";
 	};

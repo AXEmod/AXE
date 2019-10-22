@@ -39,7 +39,7 @@
 			"STR_AXE_Hints_CBA_Position_2", 
 			"STR_AXE_Hints_CBA_Position_3"
 		], 
-		0
+		3
 	],
 	0,
 	{}

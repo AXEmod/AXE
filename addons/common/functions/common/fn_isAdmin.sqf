@@ -37,4 +37,4 @@ if (isMultiplayer) then {
 	_return = true;
 };
 
-_return
+_return;

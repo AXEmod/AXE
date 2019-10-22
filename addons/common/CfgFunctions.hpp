@@ -66,29 +66,34 @@ class CfgFunctions {
 		class Settings {
 			file = "\axe_common\functions\settings";
 			class getKeybindString {};
-			class keyHandler {};
+			class keyDownHandler {};
 			class needRestart {};
 			class needRestartLocal {};
 		};
 		
 		class Sounds {
 			file = "\axe_common\functions\sounds";
+			class decibelToGain {};
+			class gainToDecibel {};
+			class getSoundDistance {};
 			class getSoundDuration {};
-			class getSoundPath {};
+			class getSoundFile {};
+			class getSoundPitch {};
+			class getSoundVolume {};
 			class isSpeaking {};
-			class loop3d {};
-			class loop3dGlobal {};
-			class play3d {};
-			class play3dGlobal {};
+			class loop3dSound {};
+			class loop3dSoundLocal {};
+			class play3dSound {};
+			class play3dSoundLocal {};
 			class playSound {};
-			class playSoundGlobal {};
+			class playSoundLocal {};
 			class playSound3d {};
 			class say3d {};
-			class say3dGlobal {};
+			class say3dLocal {};
 			class speak3d {};
-			class speak3dGlobal {};
-			class stop3d;
-			class stop3dGlobal;
+			class speak3dLocal {};
+			class stop3dSound {};
+			class stop3dSoundLocal {};
 		};
 		
 		class Videos {

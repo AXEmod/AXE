@@ -30,4 +30,4 @@ if (isNull _unit) then {_unit = player};
 
 private _return = _unit in (allCurators apply {getAssignedCuratorUnit _x});
 
-_return
+_return;

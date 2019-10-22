@@ -30,4 +30,4 @@ if (isClass (configfile >> "CfgPatches" >> _classname)) then {
 	_return = getArray (configfile >> "CfgPatches" >> _classname >> "units");
 };
 
-_return
+_return;

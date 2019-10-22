@@ -42,4 +42,4 @@ _return = (
 	!(_area getVariable ["AXE_MedicalArea_DismantleInProgress", false])
 );
 
-_return
+_return;

@@ -73,4 +73,4 @@ _return = (
 	!(_target getVariable ["ACE_isUnconscious", false])
 );
 
-_return
+_return;

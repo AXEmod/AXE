@@ -30,4 +30,4 @@ if (isClass (configfile >> "CfgPatches" >> _classname)) then {
 	_return = getText (configfile >> "CfgPatches" >> _classname >> "name");
 };
 
-_return
+_return;

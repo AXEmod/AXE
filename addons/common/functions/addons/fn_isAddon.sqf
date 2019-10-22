@@ -26,4 +26,4 @@ _classname = [_this, 0, "", [""]] call BIS_fnc_param;
 
 private _return = isClass (configfile >> "CfgPatches" >> _classname);
 
-_return
+_return;

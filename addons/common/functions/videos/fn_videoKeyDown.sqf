@@ -6,7 +6,11 @@
  *	video key handler
  *	
  *	Arguments:
- *	nothing
+ *	0: Control		- <DISPLAY>
+ *	1: DikCode		- <NUMBER>
+ *	2: shiftState	- <BOOLEAN>
+ *	3: ctrlState	- <BOOLEAN>
+ *	4: altState		- <BOOLEAN>
  *	
  *	Return:
  *	nothing
@@ -22,19 +26,21 @@ if (Not hasInterface) exitWith {};
 
 // -------------------------------------------------------------------------------------------------
 
-private ["_ctrl", "_code", "_shift", "_ctrlKey", "_alt", "_handled"];
+private ["_Control", "_DikCode", "_shiftState", "_ctrlState", "_altState"];
 
-_ctrl 		= _this select 0;
-_code 		= _this select 1;
-_shift 		= _this select 2;
-_ctrlKey	= _this select 3;
-_alt 		= _this select 4;
+_Control	= _this select 0;
+_DikCode	= _this select 1;
+_shiftState	= _this select 2;
+_ctrlState	= _this select 3;
+_altState	= _this select 4;
 
 // -------------------------------------------------------------------------------------------------
 
+private _handled = false;
+
 if (missionNamespace getVariable ["BIS_fnc_playVideo_canSkip", false]) then {
 	
-	switch (_code) do {
+	switch (_DikCode) do {
 		
 		// ESC
 		case  1: { 

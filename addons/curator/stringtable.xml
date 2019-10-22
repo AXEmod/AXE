@@ -215,7 +215,7 @@
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Curator_KEY_HealPlayer_Title">
 				<Original>Heal player</Original>
-				<German>Heile Spieler</German>
+				<German>Spieler heilen</German>
 			</Key>
 			<Key ID="STR_AXE_Curator_KEY_HealPlayer_Tip">
 				<Original>Zeus heals the targeted player or himself.</Original>
@@ -270,82 +270,198 @@
 				<German>Du bist kein Administrator!</German>
 			</Key>
 			<Key ID="STR_AXE_Curator_Chat_Unknown_Target">
-				<Original>&quot;%1&quot; is unknown!</Original>
-				<German>&quot;%1&quot; ist unbekannt!</German>
+				<Original>Mission-Object &quot;%1&quot; is unknown!</Original>
+				<German>Missions-Objekt &quot;%1&quot; ist unbekannt!</German>
 			</Key>
-			<Key ID="STR_AXE_Curator_Chat_Open_Interface">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Chat_Zeus_Open_Interface">
 				<Original>Press %1 to open the interface ...</Original>
 				<German>Drücke %1 um die Oberfläche zu öffnen ...</German>
 			</Key>
 			<!-- =============================================================================== -->
-			<Key ID="STR_AXE_Curator_Chat_Not_Available">
+			<Key ID="STR_AXE_Curator_Chat_Zeus_NotPresent">
 				<Original>There is no active Zeus!</Original>
 				<German>Es gibt keinen aktiven Zeus!</German>
 			</Key>
-			<Key ID="STR_AXE_Curator_Chat_Available">
-				<Original>Following units have Zeus:</Original>
-				<German>Folgende Einheiten haben Zeus:</German>
+			<Key ID="STR_AXE_Curator_Chat_Zeus_Available">
+				<Original>Following players have Zeus:</Original>
+				<German>Folgende Spieler haben Zeus:</German>
 			</Key>
-			<Key ID="STR_AXE_Curator_Chat_Listing">
+			<Key ID="STR_AXE_Curator_Chat_Zeus_Listing">
 				<Original>[%1] - &quot;%2&quot;</Original>
 				<German>[%1] - &quot;%2&quot;</German>
 			</Key>
-			<!-- =============================================================================== -->
-			<Key ID="STR_AXE_Curator_Chat_Create">
+			<Key ID="STR_AXE_Curator_Chat_Zeus_Create">
 				<Original>Zeus is being prepared ...</Original>
 				<German>Zeus wird vorbereitet ...</German>
 			</Key>
-			<Key ID="STR_AXE_Curator_Chat_Create_For">
+			<Key ID="STR_AXE_Curator_Chat_Zeus_Create_For">
 				<Original>Zeus is prepared for &quot;%1&quot; ...</Original>
 				<German>Zeus wird für &quot;%1&quot; vorbereitet ...</German>
 			</Key>
-			<Key ID="STR_AXE_Curator_Chat_Create_Failed">
+			<Key ID="STR_AXE_Curator_Chat_Zeus_Create_Failed">
 				<Original>Zeus can not be created!</Original>
 				<German>Zeus kann nicht erstellt werden!</German>
 			</Key>
-			<!-- =============================================================================== -->
-			<Key ID="STR_AXE_Curator_Chat_Created_Player">
+			<Key ID="STR_AXE_Curator_Chat_Zeus_Created_Player">
 				<Original>You were promoted to Zeus!</Original>
 				<German>Du wurdest zum Zeus befördert!</German>
 			</Key>
-			<Key ID="STR_AXE_Curator_Chat_Created_Target">
+			<Key ID="STR_AXE_Curator_Chat_Zeus_Created_Target">
 				<Original>&quot;%1&quot; has promoted &quot;%2&quot; to Zeus!</Original>
 				<German>&quot;%1&quot; hat &quot;%2&quot; zum Zeus befördert!</German>
 			</Key>
-			<!-- =============================================================================== -->
-			<Key ID="STR_AXE_Curator_Chat_Remove">
+			<Key ID="STR_AXE_Curator_Chat_Zeus_Remove">
 				<Original>Zeus is removed ...</Original>
 				<German>Zeus wird entfernt ...</German>
 			</Key>
-			<Key ID="STR_AXE_Curator_Chat_Remove_For">
+			<Key ID="STR_AXE_Curator_Chat_Zeus_Remove_For">
 				<Original>Zeus is removed from &quot;%1&quot; ...</Original>
 				<German>Zeus wird von &quot;%1&quot; entfernt ...</German>
 			</Key>
-			<Key ID="STR_AXE_Curator_Chat_Remove_Failed">
+			<Key ID="STR_AXE_Curator_Chat_Zeus_Remove_Failed">
 				<Original>Zeus can not be removed!</Original>
 				<German>Zeus kann nicht entfernt werden!</German>
 			</Key>
-			<!-- =============================================================================== -->
-			<Key ID="STR_AXE_Curator_Chat_Removed_Player">
+			<Key ID="STR_AXE_Curator_Chat_Zeus_Removed_Player">
 				<Original>Xou are no longer a Zeus!</Original>
 				<German>Du bist kein Zeus mehr!</German>
 			</Key>
-			<Key ID="STR_AXE_Curator_Chat_Removed_Target">
+			<Key ID="STR_AXE_Curator_Chat_Zeus_Removed_Target">
 				<Original>&quot;%1&quot; removed Zeus from &quot;%2&quot;!</Original>
 				<German>&quot;%1&quot; hat Zeus von &quot;%2&quot; entfernt!</German>
 			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Curator_Chat_Healing">
-				<Original>Healing your wounds!</Original>
-				<German>Heile deine Wunden!</German>
+				<Original>Your wounds have been healed!</Original>
+				<German>Deine Wunden wurden versorgt!</German>
 			</Key>
 			<Key ID="STR_AXE_Curator_Chat_Healing_For">
-				<Original>Heal the wounds of &quot;%1&quot;!</Original>
-				<German>Heile die Wunden von &quot;%1&quot;!</German>
+				<Original>&quot;%1&quot; was healed!</Original>
+				<German>&quot;%1&quot; wurde geheilt!</German>
 			</Key>
 			<Key ID="STR_AXE_Curator_Chat_Healing_Failed">
 				<Original>Healing failed!</Original>
 				<German>Heilung fehlgeschlagen!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Chat_Medic_NotPresent">
+				<Original>There is no medical personnel!</Original>
+				<German>Es gibt kein medizinisches Personal!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Medic_Available">
+				<Original>Following players are medics:</Original>
+				<German>Folgende Spieler sind Mediziner:</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Medic_Listing">
+				<Original>[%1] - &quot;%2&quot; (%3=%4)</Original>
+				<German>[%1] - &quot;%2&quot; (%3=%4)</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Medic_Level_0">
+				<Original>none</Original>
+				<German>keine</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Medic_Level_1">
+				<Original>Medic</Original>
+				<German>Sanitäter</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Medic_Level_2">
+				<Original>Doctor</Original>
+				<German>Arzt</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Medic_Level_Prepare">
+				<Original>Try to change medic-level ...</Original>
+				<German>Versuche Mediziner-Klasse zu ändern ...</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Medic_Level_Failed">
+				<Original>Can't change medic-level for &quot;%1&quot;!</Original>
+				<German>Mediziner-Klasse von &quot;%1&quot; kann nicht geändert werden!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Medic_Level_Player">
+				<Original>Your medic-level is now &quot;%1&quot; (Level %2)!</Original>
+				<German>Deine Mediziner-Klasse ist nun &quot;%1&quot; (Level %2)!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Medic_Level_Target">
+				<Original>The medic-level of &quot;%1&quot; was set to &quot;%2&quot; (Level %3)!</Original>
+				<German>Die Mediziner-Klasse von &quot;%1&quot; wurde auf &quot;%2&quot; (Level %3) gesetzt!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Chat_Engineer_NotPresent">
+				<Original>There are no engineers!</Original>
+				<German>Es gibt keine Ingenieure!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Engineer_Available">
+				<Original>Following players are engineers:</Original>
+				<German>Folgende Spieler sind Ingenieure:</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Engineer_Listing">
+				<Original>[%1] - &quot;%2&quot; (%3=%4)</Original>
+				<German>[%1] - &quot;%2&quot; (%3=%4)</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Engineer_Level_0">
+				<Original>none</Original>
+				<German>keine</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Engineer_Level_1">
+				<Original>Engineer</Original>
+				<German>Ingenieur</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Engineer_Level_2">
+				<Original>Advanced Engineer</Original>
+				<German>Instandhalter</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Engineer_Level_Prepare">
+				<Original>Try to change engineer-level ...</Original>
+				<German>Versuche Ingenieur-Klasse zu ändern ...</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Engineer_Level_Failed">
+				<Original>Can't change engineer-level for &quot;%1&quot;!</Original>
+				<German>Ingenieur-Klasse von &quot;%1&quot; kann nicht geändert werden!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Engineer_Level_Player">
+				<Original>Your engineer-level is now &quot;%1&quot; (Level %2)!</Original>
+				<German>Deine Ingenieur-Klasse ist nun &quot;%1&quot; (Level %2)!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_Engineer_Level_Target">
+				<Original>The engineer-level of &quot;%1&quot; was set to &quot;%2&quot; (Level %3)!</Original>
+				<German>Die Ingenieur-Klasse von &quot;%1&quot; wurde auf &quot;%2&quot; (Level %3) gesetzt!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Curator_Chat_EOD_NotPresent">
+				<Original>There are no explosive specialists!</Original>
+				<German>Es gibt keine Sprengstoffexperten!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_EOD_Available">
+				<Original>Following players are explosive specialists:</Original>
+				<German>Folgende Spieler sind Sprengstoffexperten:</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_EOD_Listing">
+				<Original>[%1] - &quot;%2&quot; (%3=%4)</Original>
+				<German>[%1] - &quot;%2&quot; (%3=%4)</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_EOD_Level_0">
+				<Original>none</Original>
+				<German>keine</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_EOD_Level_1">
+				<Original>Explosive Specialist</Original>
+				<German>Sprengstoffexperte</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_EOD_Level_Prepare">
+				<Original>Try to change EOD-level ...</Original>
+				<German>Versuche EOD-Klasse zu ändern ...</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_EOD_Level_Failed">
+				<Original>Can't change EOD-level for &quot;%1&quot;!</Original>
+				<German>EOD-Klasse von &quot;%1&quot; kann nicht geändert werden!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_EOD_Level_Player">
+				<Original>Your EOD-level is now &quot;%1&quot; (Level %2)!</Original>
+				<German>Deine EOD-Klasse ist nun &quot;%1&quot; (Level %2)!</German>
+			</Key>
+			<Key ID="STR_AXE_Curator_Chat_EOD_Level_Target">
+				<Original>The EOD-level of &quot;%1&quot; was set to &quot;%2&quot; (Level %3)!</Original>
+				<German>Die EOD-Klasse von &quot;%1&quot; wurde auf &quot;%2&quot; (Level %3) gesetzt!</German>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container>
@@ -414,18 +530,22 @@
 				<Original>Zeus Teleport</Original>
 				<German>Zeus teleportieren</German>
 			</Key>
-			<Key ID="STR_AXE_Curator_Module_ZeusToPing">
-				<Original>Zeus To Ping</Original>
-				<German>Zeus zum Ping</German>
+			<Key ID="STR_AXE_Curator_Module_ZeusTeleportToCam">
+				<Original>Zeus To Camera</Original>
+				<German>Zeus zur Kamera</German>
 			</Key>
 			<Key ID="STR_AXE_Curator_Module_ZeusVisible">
 				<Original>Zeus visible/invisible</Original>
 				<German>Zeus sichtbar/unsichtbar</German>
 			</Key>
+			<Key ID="STR_AXE_Curator_Module_ZeusToPing">
+				<Original>Show Last Ping</Original>
+				<German>Letzten Ping zeigen</German>
+			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Curator_Module_PlayerFPS">
 				<Original>Show/Hide FPS</Original>
-				<German>FPS anzeigen/ausblenden</German>
+				<German>FPS ein-/ausblenden</German>
 			</Key>
 			<Key ID="STR_AXE_Curator_Module_PlayerHeal">
 				<Original>Heal Player</Original>
@@ -446,6 +566,10 @@
 				<Original>No ping available</Original>
 				<German>Kein Ping vorhanden</German>
 			</Key>
+			<Key ID="STR_AXE_Curator_MMSG_Zeus_Teleported">
+				<Original>You have been teleported</Original>
+				<German>Du wurdest teleportiert</German>
+			</Key>
 			<Key ID="STR_AXE_Curator_MMSG_Zeus_Visible">
 				<Original>You are visible now</Original>
 				<German>Du bist jetzt sichtbar</German>
@@ -455,16 +579,16 @@
 				<German>Du bist jetzt unsichtbar</German>
 			</Key>
 			<Key ID="STR_AXE_Curator_MMSG_FPS_Show">
-				<Original>Show Player-FPS</Original>
-				<German>Spieler-FPS anzeigen</German>
+				<Original>Show FPS</Original>
+				<German>FPS einblenden</German>
 			</Key>
 			<Key ID="STR_AXE_Curator_MMSG_FPS_Hide">
-				<Original>Hide Player-FPS</Original>
-				<German>Spieler-FPS ausblenden</German>
+				<Original>Hide FPS</Original>
+				<German>FPS ausblenden</German>
 			</Key>
 			<Key ID="STR_AXE_Curator_MMSG_Heal_Player">
-				<Original>Heal player &quot;%1&quot;</Original>
-				<German>Heile Spieler &quot;%1&quot;</German>
+				<Original>&quot;%1&quot; was healed!</Original>
+				<German>&quot;%1&quot; wurde geheilt!</German>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container>

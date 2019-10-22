@@ -35,4 +35,4 @@ _return = (
 	(count (_area getVariable ["AXE_MedicalArea_Lights", []]) > 0)
 );
 
-_return
+_return;

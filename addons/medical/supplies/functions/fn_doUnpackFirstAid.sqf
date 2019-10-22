@@ -38,7 +38,7 @@ if (isNull _unit) exitWith {};
 		playSound "AXE_Medical_FirstAid_Open_1";
 	} else {
 		private _pitch = random [0.6, 1, 1.4];
-		[_unit, "AXE_Medical_FirstAid_Open_1", 30, 300, -1, _pitch] call AXE_fnc_play3dGlobal;
+		[_unit, "AXE_Medical_FirstAid_Open_1", [], 30, 1000, -1, _pitch] call AXE_fnc_play3dSound;
 	};
 	
 	AXE_MEDICAL_SUPPLIES_UNPACK_SUCCESS = false;
@@ -88,7 +88,7 @@ if (isNull _unit) exitWith {};
 	
 	if (AXE_MEDICAL_SUPPLIES_UNPACK_FAILURE) exitWith {
 		
-		[_unit, "AXE_Medical_FirstAid_Open_1"] call AXE_fnc_stop3dGlobal;
+		[_unit, "AXE_Medical_FirstAid_Open_1"] call AXE_fnc_stop3dSound;
 		
 		_unit playActionNow "Stand";
 		

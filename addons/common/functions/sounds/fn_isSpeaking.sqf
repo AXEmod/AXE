@@ -3,7 +3,7 @@
  *	\axe_common\functions\sounds\fn_isSpeaking.sqf
  *	by Ojemineh
  *	
- *	check local speaking unit
+ *	check if unit is speaking (speak3d)
  *	
  *	Arguments:
  *	0: unit - <OBJECT>
@@ -12,7 +12,7 @@
  *	<BOOLEAN>
  *	
  *	Example:
- *	[men1] call AXE_fnc_isSpeaking;
+ *	[player] call AXE_fnc_isSpeaking;
  *	
  */
 
@@ -31,8 +31,8 @@ if (isNull _unit) exitWith {};
 private _return = false;
 
 _return = (
-	(alive _unit) &&
-	(_unit getVariable ["axe_speak3d_active", false])
+	(alive _unit) && 
+	(_unit getVariable ["axe_speak3d", false])
 );
 
-_return
+_return;

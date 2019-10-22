@@ -100,7 +100,7 @@ if !(hasInterface) exitWith {};
 			private _time = AXE_CURATOR_PING_LASTTIME;
 			private _unit = AXE_CURATOR_PING_LASTUNIT;
 			
-			if (_time > (time - 300)) then {
+			if (_time > (time - AXE_CURATOR_PING_MAXTIME)) then {
 				
 				private _unitPos = _unit modelToWorld [0, -2, 0];
 				private _jumpPos = _unitPos findEmptyPosition [0, 20, (typeOf player)];
@@ -352,7 +352,7 @@ if !(hasInterface) exitWith {};
 							
 							private _callerType = ["Admin", "Zeus"] select !(isNull getAssignedCuratorLogic player);
 							private _callerName = [player] call ACE_common_fnc_getName;
-							[4, "%1 (%2) removed object '%3' at %4", [_callerType, _callerName, (typeOf _object), (getPos _object)], "curator"] call AXE_fnc_diagLogGlobal;
+							[4, "%1 (%2) removed object '%3' at %4", [_callerType, _callerName, (typeOf _object), (getPos _object)], "curator"] call AXE_fnc_logServer;
 							
 						};
 						

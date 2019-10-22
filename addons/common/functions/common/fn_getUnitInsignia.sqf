@@ -30,4 +30,4 @@ if (isNull _unit) exitWith {""};
 
 private _return = _unit getVariable ["BIS_fnc_setUnitInsignia_class", ""];
 
-_return
+_return;

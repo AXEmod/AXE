@@ -35,10 +35,10 @@ if (isNull _area) exitWith {false};
 	
 	params ["_unit", "_area"];
 	
-	[_area, "AXE_Medical_Area_Dismantle_1", 100, 300] call AXE_fnc_play3dGlobal;
-	
 	_area setVariable ["AXE_MedicalArea_DismantleInProgress", true, true];
 	_unit playAction "MedicStart";
+	
+	[_unit, "AXE_Medical_Area_Dismantle_1", [], 50, 1000] call AXE_fnc_play3dSound;
 	
 	private _objects = _area getVariable ["AXE_MedicalArea_Objects", []];
 	private _lights = _area getVariable ["AXE_MedicalArea_Lights", []];
@@ -71,8 +71,6 @@ if (isNull _area) exitWith {false};
 			
 			params ["_unit", "_area", "_objects", "_lights"];
 			
-			[_area, "AXE_Medical_Area_Dismantle_1"] call AXE_fnc_stop3dGlobal;
-			
 			if (count _lights > 0) then {
 				{deleteVehicle _x;} forEach _lights;
 			};
@@ -98,14 +96,16 @@ if (isNull _area) exitWith {false};
 		
 		_unit playActionNow "MedicStop";
 		
+		[_unit, "AXE_Medical_Area_Dismantle_1"] call AXE_fnc_stop3dSound;
+		
 	};
 	
 	if (AXE_MEDICAL_AREA_DISMANTLE_FAILURE) exitWith {
 		
-		[_area, "AXE_Medical_Area_Dismantle_1"] call AXE_fnc_stop3dGlobal;
-		
 		_area setVariable ["AXE_MedicalArea_DismantleInProgress", nil, true];
 		_unit playActionNow "MedicStop";
+		
+		[_unit, "AXE_Medical_Area_Dismantle_1"] call AXE_fnc_stop3dSound;
 		
 	};
 	

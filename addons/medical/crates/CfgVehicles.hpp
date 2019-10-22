@@ -12,6 +12,8 @@ class CfgVehicles {
 		displayName = "$STR_AXE_Crate_Medical_Default";
 		editorPreview = "\axe_medical\crates\data\previews\medical_crate.jpg";
 		vehicleClass = "Ammo";
+		icon = "AXE_iconCrateMedical";
+		maximumLoad = 1300;
 		ace_cookoff_probability = 0;
 		ace_cargo_canLoad = 1;
 		ace_cargo_size = 2;
@@ -19,11 +21,8 @@ class CfgVehicles {
 		ace_dragging_carryDirection = 180;
 		ace_dragging_carryPosition[] = {0,0.8,1};
 		ace_dragging_canDrag = 1;
-		/*ace_dragging_dragDirection = 270;*/
-		/*ace_dragging_dragPosition[] = {0,1.4,0};*/
 		ace_dragging_dragDirection = 180;
 		ace_dragging_dragPosition[] = {0,0.8,0};
-		maximumLoad = 1300;
 		class TransportBackpacks {};
 		class TransportItems {};
 		class TransportMagazines {};

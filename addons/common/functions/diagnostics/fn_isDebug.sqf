@@ -20,4 +20,4 @@
 
 private _return = (missionNamespace getVariable ["axe_debug_enabled", false]);
 
-_return
+_return;

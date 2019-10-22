@@ -61,11 +61,12 @@ addMissionEventHandler ["PlayerDisconnected",
 		
 		params ["_player"];
 		
-		if !((isPlayer _player) && !(_player in entities "HeadlessClient_F")) exitWith {};
+		if ((isPlayer _player) && (_player in entities "HeadlessClient_F")) exitWith {};
 		
 		if ((count allCurators) > 0) then {
 			if (missionNamespace getVariable ["axe_curator_players_autoAdd", false]) then {
-				{_x addCuratorEditableObjects [(allPlayers - entities "HeadlessClient_F"), false];} forEach allCurators;
+				//{_x addCuratorEditableObjects [(allPlayers - entities "HeadlessClient_F"), false];} forEach allCurators;
+				{_x addCuratorEditableObjects [[_player], false];} forEach allCurators;
 			};
 		};
 		
@@ -81,14 +82,29 @@ addMissionEventHandler ["PlayerDisconnected",
 		
 		params ["_player"];
 		
-		if !((isPlayer _player) && !(_player in entities "HeadlessClient_F")) exitWith {};
-		/*
+		if ((isPlayer _player) && (_player in entities "HeadlessClient_F")) exitWith {};
+		
 		if ((count allCurators) > 0) then {
 			if (missionNamespace getVariable ["axe_curator_players_autoAdd", false]) then {
 				{_x removeCuratorEditableObjects [[_player], false];} forEach allCurators;
 			};
 		};
-		*/
+		
+	}
+] call CBA_fnc_addEventHandler;
+
+// -------------------------------------------------------------------------------------------------
+// EVENT: REFRESH PLAYERS
+
+[
+	"axe_curator_refreshPlayers", 
+	{
+		
+		if (missionNamespace getVariable ["axe_curator_players_autoAdd", false]) then {
+			private _allPlayers = (allPlayers - entities "HeadlessClient_F");
+			{_x addCuratorEditableObjects [_allPlayers, false];} forEach allCurators;
+		};
+		
 	}
 ] call CBA_fnc_addEventHandler;
 
@@ -109,15 +125,17 @@ addMissionEventHandler ["PlayerDisconnected",
 		_curator setVariable ["addons", 3, true];
         _curator setVariable ["birdType", "", true];
         _curator setVariable ["showNotification", false, true];
-		_curator setVariable ["curatorUnitOwner", str (owner _target), true];
 		_curator setVariable ["owner", str (owner _target), true];
+		_curator setVariable ["curatorUnitOwner", str (owner _target)];
 		
 		if (missionNamespace getVariable ["axe_curator_players_autoAdd", false]) then {
-			_curator addCuratorEditableObjects [(allPlayers - entities "HeadlessClient_F"), false];
+			private _allPlayers = (allPlayers - entities "HeadlessClient_F");
+			_curator addCuratorEditableObjects [_allPlayers, false];
 		};
 		
 		[_curator, [-1, -2, 0]] call BIS_fnc_setCuratorVisionModes;
 		
+		_curator synchronizeObjectsAdd [_target];
 		_target assignCurator _curator;
 		
 		private _callerType = ["Admin", "Zeus"] select !(isNull getAssignedCuratorLogic _caller);
@@ -126,10 +144,10 @@ addMissionEventHandler ["PlayerDisconnected",
 		
 		if (_caller isEqualTo _target) then {
 			["axe_curator_moduleCreated", [_caller, _target], [_caller]] call CBA_fnc_targetEvent;
-			[4, "%1 (%2) created a new module", [_callerType, _callerName, _targetName], "curator"] call AXE_fnc_logGlobal;
+			[4, "%1 (%2) created a new zeus-module", [_callerType, _callerName, _targetName], "curator"] call AXE_fnc_log;
 		} else {
 			["axe_curator_moduleCreated", [_caller, _target], [_caller, _target]] call CBA_fnc_targetEvent;
-			[4, "%1 (%2) created a new module for '%3'", [_callerType, _callerName, _targetName], "curator"] call AXE_fnc_logGlobal;
+			[4, "%1 (%2) created a new zeus-module for '%3'", [_callerType, _callerName, _targetName], "curator"] call AXE_fnc_log;
 		};
 		
 		["axe_curator_modulePing", [], [_target]] call CBA_fnc_targetEvent;
@@ -167,10 +185,10 @@ addMissionEventHandler ["PlayerDisconnected",
 			
 			if (_caller isEqualTo _target) then {
 				["axe_curator_moduleRemoved", [_caller, _target], [_caller]] call CBA_fnc_targetEvent;
-				[4, "%1 (%2) removed module", [_callerType, _callerName, _targetName], "curator"] call AXE_fnc_logGlobal;
+				[4, "%1 (%2) removed zeus-module", [_callerType, _callerName, _targetName], "curator"] call AXE_fnc_log;
 			} else {
 				["axe_curator_moduleRemoved", [_caller, _target], [_caller, _target]] call CBA_fnc_targetEvent;
-				[4, "%1 (%2) removed module from '%3'", [_callerType, _callerName, _targetName], "curator"] call AXE_fnc_logGlobal;
+				[4, "%1 (%2) removed zeus-module from '%3'", [_callerType, _callerName, _targetName], "curator"] call AXE_fnc_log;
 			};
 			
 		};

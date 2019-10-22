@@ -42,15 +42,17 @@ if !(["achilles_functions_f_ares"] call AXE_fnc_isAddon) exitWith {};
 		player setVelocity [0, 0, 0];
 		player setPos _position;
 		
+		[objNull, format [localize "STR_AXE_Curator_MMSG_Zeus_Teleported"]] call BIS_fnc_showCuratorFeedbackMessage;
+		
 	}
 ] call Ares_fnc_RegisterCustomModule;
 
 // -------------------------------------------------------------------------------------------------
-// MODULE: ZEUS TO PING
+// MODULE: ZEUS TELEPORT TO CAMERA
 
 [
 	localize "STR_AMAE_ZEUS", 
-	localize "STR_AXE_Curator_Module_ZeusToPing", 
+	localize "STR_AXE_Curator_Module_ZeusTeleportToCam", 
 	{
 		
 		params [
@@ -58,20 +60,16 @@ if !(["achilles_functions_f_ares"] call AXE_fnc_isAddon) exitWith {};
 			["_objectUnderCursor", objNull, [objNull]]
 		];
 		
-		if (isNull AXE_CURATOR_PING_LASTUNIT) exitWith {
-			[objNull, format [localize "STR_AXE_Curator_MMSG_Ping_Failure"]] call BIS_fnc_showCuratorFeedbackMessage;
+		if (vehicle player != player) then {
+			unassignVehicle player;
+			moveOut player;
 		};
 		
-		private _time = AXE_CURATOR_PING_LASTTIME;
-		private _unit = AXE_CURATOR_PING_LASTUNIT;
+		private _posASL = AGLtoASL (positionCameraToWorld [0,0,1]);
+		player setVelocity [0, 0, 0];
+		player setPosASL _posASL;
 		
-		if (_time > (time - 300)) then {
-			private _cameraPos = _unit modelToWorld [0, 10, 5];
-			[_cameraPos, _unit, 3] spawn BIS_fnc_setCuratorCamera;
-			[objNull, format [localize "STR_AXE_Curator_MMSG_Ping_ShowUnit", [_unit] call ACE_common_fnc_getName]] call BIS_fnc_showCuratorFeedbackMessage;
-		} else {
-			[objNull, format [localize "STR_AXE_Curator_MMSG_Ping_Failure"]] call BIS_fnc_showCuratorFeedbackMessage;
-		};
+		[objNull, format [localize "STR_AXE_Curator_MMSG_Zeus_Teleported"]] call BIS_fnc_showCuratorFeedbackMessage;
 		
 	}
 ] call Ares_fnc_RegisterCustomModule;
@@ -144,6 +142,37 @@ if !(["achilles_functions_f_ares"] call AXE_fnc_isAddon) exitWith {};
 		if (!(isNull _objectUnderCursor) && (isPlayer _objectUnderCursor)) then {
 			["axe_curator_playerHeal", [player, _objectUnderCursor], [_objectUnderCursor]] call CBA_fnc_targetEvent;
 			[objNull, format [localize "STR_AXE_Curator_MMSG_Heal_Player", [_objectUnderCursor] call ACE_common_fnc_getName]] call BIS_fnc_showCuratorFeedbackMessage;
+		};
+		
+	}
+] call Ares_fnc_RegisterCustomModule;
+
+// -------------------------------------------------------------------------------------------------
+// MODULE: SHOW LAST PING
+
+[
+	localize "STR_AMAE_PLAYERS", 
+	localize "STR_AXE_Curator_Module_ZeusToPing", 
+	{
+		
+		params [
+			["_position", [0,0,0], [[]], 3], 
+			["_objectUnderCursor", objNull, [objNull]]
+		];
+		
+		if (isNull AXE_CURATOR_PING_LASTUNIT) exitWith {
+			[objNull, format [localize "STR_AXE_Curator_MMSG_Ping_Failure"]] call BIS_fnc_showCuratorFeedbackMessage;
+		};
+		
+		private _time = AXE_CURATOR_PING_LASTTIME;
+		private _unit = AXE_CURATOR_PING_LASTUNIT;
+		
+		if (_time > (time - AXE_CURATOR_PING_MAXTIME)) then {
+			private _cameraPos = _unit modelToWorld [0, 16, 8];
+			[_cameraPos, _unit, 3] spawn BIS_fnc_setCuratorCamera;
+			[objNull, format [localize "STR_AXE_Curator_MMSG_Ping_ShowUnit", [_unit] call ACE_common_fnc_getName]] call BIS_fnc_showCuratorFeedbackMessage;
+		} else {
+			[objNull, format [localize "STR_AXE_Curator_MMSG_Ping_Failure"]] call BIS_fnc_showCuratorFeedbackMessage;
 		};
 		
 	}
