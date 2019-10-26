@@ -11,10 +11,10 @@ class CfgPatches {
 			"axe_medical"
 		};
 		units[] = {
-			"AXE_Item_MedicalArea"
+			"AXE_Item_MedicArea"
 		};
 		weapons[] = {
-			"AXE_MedicalArea"
+			"AXE_MedicArea"
 		};
 		author = "$STR_AXE_Medical_Area_Author";
 		authors[] = {
