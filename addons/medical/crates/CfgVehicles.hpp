@@ -1,9 +1,10 @@
 class CBA_Extended_EventHandlers;
 class CfgVehicles {
 	
+	// MEDICAL CRATE (DEFAULT)
+	
 	class ACE_medicalSupplyCrate;
 	
-	// MEDICAL CRATE (DEFAULT)
 	class AXE_Crate_Medical_Default: ACE_medicalSupplyCrate {
 		scope = 2;
 		scopeArsenal = 2;
@@ -11,6 +12,8 @@ class CfgVehicles {
 		author = "$STR_AXE_Medical_Crates_Author";
 		displayName = "$STR_AXE_Crate_Medical_Default";
 		editorPreview = "\axe_medical\crates\data\previews\medical_crate.jpg";
+		editorCategory = "EdCat_Supplies";
+		editorSubcategory = "EdSubcat_Medicine";
 		vehicleClass = "Ammo";
 		icon = "AXE_iconCrateMedical";
 		maximumLoad = 1300;
@@ -61,6 +64,7 @@ class CfgVehicles {
 	};
 	
 	// MEDICAL CRATE (EQUIPMENT)
+	
 	class AXE_Crate_Medical_Equipment: AXE_Crate_Medical_Default {
 		displayName = "$STR_AXE_Crate_Medical_Equipment";
 		class TransportBackpacks {};
@@ -107,6 +111,7 @@ class CfgVehicles {
 	};
 	
 	// MEDICAL CRATE (DRESSING)
+	
 	class AXE_Crate_Medical_Dressing: AXE_Crate_Medical_Default {
 		displayName = "$STR_AXE_Crate_Medical_Dressing";
 		class TransportBackpacks {};
@@ -154,6 +159,7 @@ class CfgVehicles {
 	};
 	
 	// MEDICAL CRATE (MEDICINE)
+	
 	class AXE_Crate_Medical_Medicine: AXE_Crate_Medical_Default {
 		displayName = "$STR_AXE_Crate_Medical_Medicine";
 		class TransportBackpacks {};
@@ -199,6 +205,7 @@ class CfgVehicles {
 	};
 	
 	// MEDICAL CRATE (TRANSFUSION)
+	
 	class AXE_Crate_Medical_Transfusion: AXE_Crate_Medical_Default {
 		displayName = "$STR_AXE_Crate_Medical_Transfusion";
 		class TransportBackpacks {};
@@ -243,6 +250,7 @@ class CfgVehicles {
 	};
 	
 	// MEDICAL CRATE (TRANSFUSION COMPLETE)
+	
 	class AXE_Crate_Medical_TransfusionEx: AXE_Crate_Medical_Default {
 		displayName = "$STR_AXE_Crate_Medical_TransfusionEx";
 		class TransportBackpacks {};
@@ -293,6 +301,7 @@ class CfgVehicles {
 	};
 	
 	// MEDICAL CRATE (ORDNANCE)
+	
 	class AXE_Crate_Medical_Ordnance: AXE_Crate_Medical_Default {
 		displayName = "$STR_AXE_Crate_Medical_Ordnance";
 		class TransportBackpacks {};
@@ -348,6 +357,7 @@ class CfgVehicles {
 	};
 	
 	// MEDICAL CRATE (SUPPLIES)
+	
 	class AXE_Crate_Medical_Supplies: AXE_Crate_Medical_Default {
 		displayName = "$STR_AXE_Crate_Medical_Supplies";
 		class TransportBackpacks {};
