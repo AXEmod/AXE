@@ -95,7 +95,7 @@ if (_soundInUse) exitWith {
 	_unit setVariable ["axe_speak3d", true, true];
 	_unit setRandomLip true;
 	
-	private _timer = time + _duration;
+	private _timer = CBA_missionTime + _duration;
 	
 	_helper say3d [_soundClass, _distance, _pitch, _isSpeech];
 	
@@ -103,7 +103,7 @@ if (_soundInUse) exitWith {
 		(_unit getVariable ["ACE_isUnconscious", false]) ||
 		(Not alive _unit) ||
 		(isNull _helper) ||
-		(_timer < time)
+		(_timer < CBA_missionTime)
 	};
 	
 	_unit setRandomLip false;

@@ -48,7 +48,7 @@ if (_soundClass isEqualTo "") exitWith {};
 if (_position isEqualTo []) then {_position = [0,0,0];};
 if (_distance <= 0) then {_distance = [_soundClass] call AXE_fnc_getSoundDistance;};
 if (_distance <= 0) then {_distance = 100;};
-if ((_maxDistance > 0) && ((player distance _object) > _maxDistance)) exitWith {};
+//if ((_maxDistance > 0) && ((player distance _object) > _maxDistance)) exitWith {};
 
 if (_duration <= 0) then {_duration = [_soundClass] call AXE_fnc_getSoundDuration;};
 if (_duration <= 0) exitWith {};
@@ -90,8 +90,8 @@ _object setVariable ["axe_sound3d", _soundArray];
 private _handler = [_object, _soundObject, _soundClass, _distance, _maxDistance, _duration, _pitch, _isSpeech] spawn {
 	params ["_object", "_soundObject", "_soundClass", "_distance", "_maxDistance", "_duration", "_pitch", "_isSpeech"];
 	[_soundObject, _soundClass, _distance, _maxDistance, _pitch, _isSpeech] call AXE_fnc_say3dLocal;
-	private _time = time + _duration;
-	waitUntil {!(alive _object) || (isNull _soundObject) || (_time < time)};
+	private _time = CBA_missionTime + _duration;
+	waitUntil {!(alive _object) || (isNull _soundObject) || (_time < CBA_missionTime)};
 	[_object, _soundClass] call AXE_fnc_stop3dSoundLocal;
 };
 
