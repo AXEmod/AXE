@@ -43,4 +43,4 @@ if (_soundClass isEqualTo "") exitWith {};
 
 // -------------------------------------------------------------------------------------------------
 
-[_object, _soundClass, _position, _distance, _maxDistance, _duration, _pitch, _isSpeech] remoteExecCall ["AXE_fnc_loop3dSoundLocal", 0, true];
+[_object, _soundClass, _position, _distance, _maxDistance, _duration, _pitch, _isSpeech] remoteExecCall ["AXE_fnc_loop3dSoundLocal", 0, false];
