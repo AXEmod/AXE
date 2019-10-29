@@ -74,6 +74,21 @@
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="KEY_Settings">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Common_KEY_Screenshot_Title">
+				<Original>Screenshot</Original>
+				<German>Screenshot</German>
+			</Key>
+			<Key ID="STR_AXE_Common_KEY_Screenshot_Tip">
+				<Original>Create a screenshot (without HUD/GUI) in the ArmA profile.</Original>
+				<German>Erstellt einen Screenshot (ohne HUD/GUI) im ArmA-Profil.</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Extended_Hints">
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Common_Hint_Need_Restart_Engine">

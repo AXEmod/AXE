@@ -42,6 +42,7 @@ class CfgFunctions {
 			class isAdmin {};
 			class isCurator {};
 			class isInBuilding {};
+			class screenshot {};
 			class setUnitInsignia {};
 		};
 		
