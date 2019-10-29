@@ -88,15 +88,41 @@ if !(["achilles_functions_f_ares"] call AXE_fnc_isAddon) exitWith {};
 		];
 		
 		if (Not isObjectHidden player) then {
+			
 			[player, "blockDamage", "axe_curator_hidden", true] call ACE_common_fnc_statusEffect_set;
 			[player, true] remoteExecCall ["hideObjectGlobal", 2];
 			player setCaptive true;
 			[objNull, format [localize "STR_AXE_Curator_MMSG_Zeus_Invisible"]] call BIS_fnc_showCuratorFeedbackMessage;
+			
+			if (AXE_CURATOR_FOOTPRINT_HANDLER > -1) then {
+				[AXE_CURATOR_FOOTPRINT_HANDLER] call CBA_fnc_removePerFrameHandler;
+			};
+			
+			AXE_CURATOR_FOOTPRINT_HANDLER = [{
+				
+				params ["_params", "_pfhHandler"];
+				
+				if (isObjectHidden player) then {
+					private _step = nearestObject [player, "#mark"];
+					if !(isNull _step) then {
+						if ((_step distance player) < 1) then {
+							_step setPos [0,0,0];
+						};
+					};
+				};
+				
+			}, 0, []] call CBA_fnc_addPerFrameHandler;
+			
 		} else {
+			
 			[player, false] remoteExecCall ["hideObjectGlobal", 2];
 			player setCaptive false;
 			[player, "blockDamage", "axe_curator_hidden", false] call ACE_common_fnc_statusEffect_set;
 			[objNull, format [localize "STR_AXE_Curator_MMSG_Zeus_Visible"]] call BIS_fnc_showCuratorFeedbackMessage;
+			
+			[AXE_CURATOR_FOOTPRINT_HANDLER] call CBA_fnc_removePerFrameHandler;
+			AXE_CURATOR_FOOTPRINT_HANDLER = -1;
+			
 		};
 		
 	}

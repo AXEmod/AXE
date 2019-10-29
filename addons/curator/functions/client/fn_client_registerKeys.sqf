@@ -142,6 +142,25 @@ if !(hasInterface) exitWith {};
 				private _hint = format [hint_tpl_liner_1, localize "STR_AXE_Curator_Hint_Invisible"];
 				[_hint] call AXE_fnc_hint;
 				
+				if (AXE_CURATOR_FOOTPRINT_HANDLER > -1) then {
+					[AXE_CURATOR_FOOTPRINT_HANDLER] call CBA_fnc_removePerFrameHandler;
+				};
+				
+				AXE_CURATOR_FOOTPRINT_HANDLER = [{
+					
+					params ["_params", "_pfhHandler"];
+					
+					if (isObjectHidden player) then {
+						private _step = nearestObject [player, "#mark"];
+						if !(isNull _step) then {
+							if ((_step distance player) < 1) then {
+								_step setPos [0,0,0];
+							};
+						};
+					};
+					
+				}, 0, []] call CBA_fnc_addPerFrameHandler;
+				
 			} else {
 				
 				[player, false] remoteExecCall ["hideObjectGlobal", 2];
@@ -151,6 +170,9 @@ if !(hasInterface) exitWith {};
 				
 				private _hint = format [hint_tpl_liner_1, localize "STR_AXE_Curator_Hint_Visible"];
 				[_hint] call AXE_fnc_hint;
+				
+				[AXE_CURATOR_FOOTPRINT_HANDLER] call CBA_fnc_removePerFrameHandler;
+				AXE_CURATOR_FOOTPRINT_HANDLER = -1;
 				
 			};
 			

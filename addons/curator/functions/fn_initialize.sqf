@@ -30,4 +30,6 @@ AXE_CURATOR_PING_MAXTIME = 60;
 AXE_CURATOR_PING_LASTTIME = 0;
 AXE_CURATOR_PING_LASTUNIT = objNull;
 
+AXE_CURATOR_FOOTPRINT_HANDLER = -1;
+
 // -------------------------------------------------------------------------------------------------
