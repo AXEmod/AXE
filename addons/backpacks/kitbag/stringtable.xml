@@ -136,12 +136,12 @@
 				<German>Seesack (UCP MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Kitbag_01_WDL">
-				<Original>Kitbag (Woodland Classic)</Original>
-				<German>Seesack (Waldtarn Klassisch)</German>
+				<Original>Kitbag (Wood Classic)</Original>
+				<German>Seesack (Wald Klassisch)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Kitbag_01_WDL_MEDIC">
-				<Original>Kitbag (Woodland Classic MED)</Original>
-				<German>Seesack (Waldtarn Klassisch MED)</German>
+				<Original>Kitbag (Wood Classic MED)</Original>
+				<German>Seesack (Wald Klassisch MED)</German>
 			</Key>
 			<!-- ------------------------------------------------------------------------------- -->
 		</Container>

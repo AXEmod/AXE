@@ -13,7 +13,7 @@ class CfgVehicles {
 		// maximumLoad = 320;
 		// mass = 60;
 		maximumLoad = 360;
-		mass = 50;
+		mass = 48.5;
 		transportMaxBackpacks = 1;
 		transportMaxMagazines = 30;
 		transportMaxWeapons = 2;

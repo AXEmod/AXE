@@ -136,12 +136,12 @@
 				<German>Großer Rucksack (UCP MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_WDL">
-				<Original>Carryall (Woodland Classic)</Original>
-				<German>Großer Rucksack (Waldtarn Klassisch)</German>
+				<Original>Carryall (Wood Classic)</Original>
+				<German>Großer Rucksack (Wald Klassisch)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_WDL_MEDIC">
-				<Original>Carryall (Woodland Classic MED)</Original>
-				<German>Großer Rucksack (Waldtarn Klassisch MED)</German>
+				<Original>Carryall (Wood Classic MED)</Original>
+				<German>Großer Rucksack (Wald Klassisch MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_WDL2">
 				<Original>Carryall (Woodland)</Original>
