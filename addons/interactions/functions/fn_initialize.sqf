@@ -28,9 +28,9 @@ if ((Not hasInterface) || (is3DEN)) exitWith {};
 // -------------------------------------------------------------------------------------------------
 
 [] spawn {
-
-	waitUntil { ((!isNull player) && (time > 1)) };
-
+	
+	waitUntil {if ((!isNull player) && (time > 1)) exitWith {true}; false};
+	
 	player addEventHandler ["InventoryOpened", {
 		
 		params ["_unit", "_container"];
@@ -56,5 +56,5 @@ if ((Not hasInterface) || (is3DEN)) exitWith {};
 		};
 		
 	}];
-
+	
 };

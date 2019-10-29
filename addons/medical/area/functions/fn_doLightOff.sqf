@@ -48,7 +48,7 @@ if (isNull _area) exitWith {false};
 		localize "STR_AXE_Medical_Area_Progress_LightOff"
 	] call ACE_common_fnc_progressBar;
 	
-	waitUntil { (AXE_MEDICAL_AREA_LIGHT_OFF_SUCCESS) || (AXE_MEDICAL_AREA_LIGHT_OFF_FAILURE) };
+	waitUntil {if ((AXE_MEDICAL_AREA_LIGHT_OFF_SUCCESS) || (AXE_MEDICAL_AREA_LIGHT_OFF_FAILURE)) exitWith {true}; false};
 	
 	if (AXE_MEDICAL_AREA_LIGHT_OFF_SUCCESS) exitWith {
 		{deleteVehicle _x;} forEach _lights;

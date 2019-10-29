@@ -72,7 +72,7 @@ _codeEnd = [_codeEnd] call CBA_fnc_trim;
 	
 	sleep 0.2;
 	
-	waitUntil {!(_target getVariable ["axe_speak3d", false])};
+	waitUntil {if (!(_target getVariable ["axe_speak3d", false])) exitWith {true}; false};
 	
 	[_target, objNull] remoteExecCall ["doWatch", _target];
 	

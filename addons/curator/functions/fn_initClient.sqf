@@ -42,7 +42,7 @@ if (_fpsInterval < 1) then {_fpsInterval = 1;};
 
 [] spawn {
 	
-	waitUntil {(!isNull player)};
+	waitUntil {if (!isNull player) exitWith {true}; false};
 	
 	["axe_curator_refreshPlayers", []] call CBA_fnc_serverEvent;
 	

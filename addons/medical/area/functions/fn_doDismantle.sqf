@@ -61,7 +61,7 @@ if (isNull _area) exitWith {false};
 		["isNotInside", "isNotSitting", "isNotSwimming"]
 	] call ACE_common_fnc_progressBar;
 	
-	waitUntil { (AXE_MEDICAL_AREA_DISMANTLE_SUCCESS) || (AXE_MEDICAL_AREA_DISMANTLE_FAILURE) };
+	waitUntil {if ((AXE_MEDICAL_AREA_DISMANTLE_SUCCESS) || (AXE_MEDICAL_AREA_DISMANTLE_FAILURE)) exitWith {true}; false};
 	
 	if (AXE_MEDICAL_AREA_DISMANTLE_SUCCESS) exitWith {
 		

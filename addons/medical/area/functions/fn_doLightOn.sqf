@@ -47,7 +47,7 @@ if (isNull _area) exitWith {false};
 		localize "STR_AXE_Medical_Area_Progress_LightOn"
 	] call ACE_common_fnc_progressBar;
 	
-	waitUntil { (AXE_MEDICAL_AREA_LIGHT_ON_SUCCESS) || (AXE_MEDICAL_AREA_LIGHT_ON_FAILURE) };
+	waitUntil {if ((AXE_MEDICAL_AREA_LIGHT_ON_SUCCESS) || (AXE_MEDICAL_AREA_LIGHT_ON_FAILURE)) exitWith {true}; false};
 	
 	if (AXE_MEDICAL_AREA_LIGHT_ON_SUCCESS) exitWith {
 		private _light1 = "Chemlight_Blue" createVehicle (position _area); 

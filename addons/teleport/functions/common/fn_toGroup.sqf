@@ -89,7 +89,7 @@ if (Not local _unit) exitWith {
 		} forEach _shuffle;
 	};
 	
-	waitUntil {preloadCamera (getPos _target)};
+	waitUntil {if (preloadCamera (getPos _target)) exitWith {true}; false};
 	
 	if (vehicle _unit != _unit) then {
 		unassignVehicle _unit;

@@ -35,8 +35,8 @@ if (isNil "GEAR_KEEP_GOGGLES") then { GEAR_KEEP_GOGGLES = true; };
 
 [] spawn {
 	
-	waitUntil {(!isNull (findDisplay 46))};
-	waitUntil {(!isNull player) && (time > 1)};
+	waitUntil {if (!isNull (findDisplay 46)) exitWith {true}; false};
+	waitUntil {if ((!isNull player) && (time > 1)) exitWith {true}; false};
 	
 	if (player in entities "HeadlessClient_F") exitWith {};
 	

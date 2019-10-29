@@ -54,7 +54,7 @@ if (isNull _unit) exitWith {};
 		["isNotInside", "isNotSitting", "isNotSwimming"]
 	] call ACE_common_fnc_progressBar;
 	
-	waitUntil { (AXE_MEDICAL_SUPPLIES_UNPACK_SUCCESS) || (AXE_MEDICAL_SUPPLIES_UNPACK_FAILURE) };
+	waitUntil {if ((AXE_MEDICAL_SUPPLIES_UNPACK_SUCCESS) || (AXE_MEDICAL_SUPPLIES_UNPACK_FAILURE)) exitWith {true}; false};
 	
 	if (AXE_MEDICAL_SUPPLIES_UNPACK_SUCCESS) exitWith {
 		

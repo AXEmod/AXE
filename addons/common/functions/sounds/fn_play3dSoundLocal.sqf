@@ -80,7 +80,7 @@ if (_soundInUse) exitWith {
 
 // -------------------------------------------------------------------------------------------------
 
-private _soundObject = AXE_COMMON_HELPER_OBJECT createVehicleLocal [0,0,0];
+private _soundObject = createSimpleObject [AXE_COMMON_HELPER_OBJECT, [0,0,0], true];
 _soundObject hideObject true;
 _soundObject attachTo [_object, _position];
 
@@ -91,7 +91,7 @@ private _handler = [_object, _soundObject, _soundClass, _distance, _maxDistance,
 	params ["_object", "_soundObject", "_soundClass", "_distance", "_maxDistance", "_duration", "_pitch", "_isSpeech"];
 	[_soundObject, _soundClass, _distance, _maxDistance, _pitch, _isSpeech] call AXE_fnc_say3dLocal;
 	private _time = CBA_missionTime + _duration;
-	waitUntil {!(alive _object) || (isNull _soundObject) || (_time < CBA_missionTime)};
+	waitUntil {if (!(alive _object) || (isNull _soundObject) || (_time < CBA_missionTime)) exitWith {true}; false};
 	[_object, _soundClass] call AXE_fnc_stop3dSoundLocal;
 };
 
