@@ -89,6 +89,16 @@ class AXE_ModuleTriggerSpeech: Module_F {
 			control = "EditShort";
 		};
 		
+		class IgnoreStop {
+			displayName = "$STR_AXE_ModuleProperty_Speech_IgnoreStop_Title";
+			tooltip = "$STR_AXE_ModuleProperty_Speech_IgnoreStop_Tip";
+			defaultValue = "false";
+			typeName = "BOOL";
+			expression = "_this setVariable ['%s', _value, true];";
+			property = "AXE_ModuleTriggerSpeech_IgnoreStop";
+			control = "Checkbox";
+		};
+		
 		class Loop {
 			displayName = "$STR_AXE_ModuleProperty_Speech_Loop_Title";
 			tooltip = "$STR_AXE_ModuleProperty_Speech_Loop_Tip";

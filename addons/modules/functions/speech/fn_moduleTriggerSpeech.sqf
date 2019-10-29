@@ -43,6 +43,7 @@ switch _mode do {
 		private _distance			= _logic getVariable ["distance", 30];
 		private _maxDistance		= _logic getVariable ["maxDistance", -1];
 		private _duration			= _logic getVariable ["duration", -1];
+		private _ignoreStop			= _logic getVariable ["ignoreStop", false];
 		private _loop				= _logic getVariable ["loop", false];
 		
 		if ((_sound isEqualTo "") || (_sound isEqualTo "$NONE$")) exitWith {};
@@ -139,13 +140,17 @@ switch _mode do {
 			
 		} else {
 			
-			if (_loop) then {
-				private _pfhHandler = _logic getVariable ["loopHandler", -1];
-				if (_pfhHandler > -1) then {[_pfhHandler] call CBA_fnc_removePerFrameHandler;};
-				_logic setVariable ["loopHandler", nil];
+			if !(_ignoreStop) then {
+				
+				if (_loop) then {
+					private _pfhHandler = _logic getVariable ["loopHandler", -1];
+					if (_pfhHandler > -1) then {[_pfhHandler] call CBA_fnc_removePerFrameHandler;};
+					_logic setVariable ["loopHandler", nil];
+				};
+				
+				[_unit, _sound] call AXE_fnc_stop3dSound;
+				
 			};
-			
-			[_unit, _sound] call AXE_fnc_stop3dSound;
 			
 		};
 		
@@ -164,6 +169,7 @@ switch _mode do {
 		private _distance			= _logic getVariable ["distance", 30];
 		private _maxDistance		= _logic getVariable ["maxDistance", -1];
 		private _duration			= _logic getVariable ["duration", -1];
+		private _ignoreStop			= _logic getVariable ["ignoreStop", false];
 		private _loop				= _logic getVariable ["loop", false];
 		
 		if ((_sound isEqualTo "") || (_sound isEqualTo "$NONE$")) exitWith {};

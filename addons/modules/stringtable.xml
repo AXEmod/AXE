@@ -133,6 +133,15 @@
 				<German>Dauer des Sounds (in Sekunden).\n&quot;-1&quot; übernimmt den Wert von &quot;duration&quot; aus CfgSounds.</German>
 			</Key>
 			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Sound_IgnoreStop_Title">
+				<Original>Ignore Stop</Original>
+				<German>Ignoriere Stop</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Sound_IgnoreStop_Tip">
+				<Original>Ignores the trigger deactivation.</Original>
+				<German>Ignoriert die Trigger-Deaktivierung.</German>
+			</Key>
+			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_ModuleProperty_Sound_Loop_Title">
 				<Original>Loop</Original>
 				<German>Wiederholen</German>
@@ -238,6 +247,15 @@
 			<Key ID="STR_AXE_ModuleProperty_Speech_Duration_Tip">
 				<Original>Duration of the speech (in seconds).\n&quot;-1&quot; takes the value of &quot;duration&quot; from CfgSounds.</Original>
 				<German>Dauer der Ansprache (in Sekunden).\n&quot;-1&quot; übernimmt den Wert von &quot;duration&quot; aus CfgSounds.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_IgnoreStop_Title">
+				<Original>Ignore Stop</Original>
+				<German>Ignoriere Stop</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_IgnoreStop_Tip">
+				<Original>Ignores the trigger deactivation.</Original>
+				<German>Ignoriert die Trigger-Deaktivierung.</German>
 			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_ModuleProperty_Speech_Loop_Title">

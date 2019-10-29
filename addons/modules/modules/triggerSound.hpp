@@ -99,6 +99,16 @@ class AXE_ModuleTriggerSound: Module_F {
 			control = "EditShort";
 		};
 		
+		class IgnoreStop {
+			displayName = "$STR_AXE_ModuleProperty_Sound_IgnoreStop_Title";
+			tooltip = "$STR_AXE_ModuleProperty_Sound_IgnoreStop_Tip";
+			defaultValue = "false";
+			typeName = "BOOL";
+			expression = "_this setVariable ['%s', _value, true];";
+			property = "AXE_ModuleTriggerSound_IgnoreStop";
+			control = "Checkbox";
+		};
+		
 		class Loop {
 			displayName = "$STR_AXE_ModuleProperty_Sound_Loop_Title";
 			tooltip = "$STR_AXE_ModuleProperty_Sound_Loop_Tip";

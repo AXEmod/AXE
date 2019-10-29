@@ -44,6 +44,7 @@ switch _mode do {
 		private _distance			= _logic getVariable ["distance", 100];
 		private _maxDistance		= _logic getVariable ["maxdistance", -1];
 		private _duration			= _logic getVariable ["duration", -1];
+		private _ignoreStop			= _logic getVariable ["ignoreStop", false];
 		private _loop				= _logic getVariable ["loop", false];
 		
 		if ((_sound isEqualTo "") || (_sound isEqualTo "$NONE$")) exitWith {};
@@ -138,7 +139,9 @@ switch _mode do {
 			
 		} else {
 			
-			[_soundSource, _sound] call AXE_fnc_stop3dSound;
+			if !(_ignoreStop) then {
+				[_soundSource, _sound] call AXE_fnc_stop3dSound;
+			};
 			
 		};
 		
@@ -158,6 +161,7 @@ switch _mode do {
 		private _distance			= _logic getVariable ["distance", 100];
 		private _maxDistance		= _logic getVariable ["maxdistance", -1];
 		private _duration			= _logic getVariable ["duration", -1];
+		private _ignoreStop			= _logic getVariable ["ignoreStop", false];
 		private _loop				= _logic getVariable ["loop", false];
 		
 		if ((_sound isEqualTo "") || (_sound isEqualTo "$NONE$")) exitWith {};
