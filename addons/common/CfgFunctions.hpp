@@ -67,7 +67,6 @@ class CfgFunctions {
 		class Settings {
 			file = "\axe_common\functions\settings";
 			class getKeybindString {};
-			class keyDownHandler {};
 			class needRestart {};
 			class needRestartLocal {};
 		};
