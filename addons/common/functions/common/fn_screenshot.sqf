@@ -20,7 +20,8 @@
 
 private ["_filename"];
 
-_filename = [_this, 0, "", [""]] call BIS_fnc_param;
+_filename	= [_this, 0, "", [""]] call BIS_fnc_param;
+_shutter	= [_this, 1, true, [true]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
@@ -37,11 +38,15 @@ _filename = [_this, 0, "", [""]] call BIS_fnc_param;
 	
 	screenshot _filename;
 	
-	playSound ["AXE_Common_Snapshot_1", false];
-	
-	0 cutText ["", "BLACK FADED", 9999];
-	uiSleep 0.2;
-	0 cutText ["", "BLACK IN", 0.01];
+	if (_shutter) then {
+		
+		playSound ["AXE_Common_Snapshot_1", false];
+		
+		0 cutText ["", "BLACK FADED", 9999];
+		uiSleep 0.2;
+		0 cutText ["", "BLACK IN", 0.01];
+		
+	};
 	
 	/*
 	_ppE ppEffectEnable false;
