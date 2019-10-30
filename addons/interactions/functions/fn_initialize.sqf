@@ -28,9 +28,9 @@ if ((Not hasInterface) || (is3DEN)) exitWith {};
 // -------------------------------------------------------------------------------------------------
 
 [] spawn {
-
-	waitUntil { ((!isNull player) && (time > 1)) };
-
+	
+	waitUntil {if ((!isNull player) && (time > 1)) exitWith {true}; false};
+	
 	player addEventHandler ["InventoryOpened", {
 		
 		params ["_unit", "_container"];
@@ -40,9 +40,21 @@ if ((Not hasInterface) || (is3DEN)) exitWith {};
 			closeDialog 0;
 			true;
 		} else {
-			false;
+			
+			if (_container isKindOf "CAManBase") then {
+				if ((missionNamespace getVariable ["axe_interactions_gear_access_enabled", 0]) == 0) then {
+					[ format [hint_tpl_default, localize "STR_AXE_Interactions_Gear_Disabled"] ] call AXE_fnc_hint;
+					closeDialog 0;
+					true;
+				} else {
+					false;
+				};
+			} else {
+				false;
+			};
+			
 		};
 		
 	}];
-
+	
 };

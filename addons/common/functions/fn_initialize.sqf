@@ -1,3 +1,4 @@
+#include "\a3\ui_f\hpp\definedikcodes.inc"
 /*
  *	ARMA EXTENDED ENVIRONMENT
  *	\axe_common\functions\fn_initialize.sqf
@@ -48,10 +49,24 @@ AXE_COMMON_HELPER_OBJECT = "Sign_Sphere10cm_Geometry_F";
 if !(hasInterface) exitWith {};
 
 // -------------------------------------------------------------------------------------------------
+// KEY: SCREENSHOT
+
+[
+	"STR_AXE_Common_CBA_Category", 
+	"AXE_Common_KEY_Screenshot", 
+	["STR_AXE_Common_KEY_Screenshot_Title", "STR_AXE_Common_KEY_Screenshot_Tip"], 
+	{
+		[] call AXE_fnc_screenshot;
+	}, 
+	{}, 
+	[DIK_F12, [false, true, false]]
+] call CBA_fnc_addKeybind;
+
+// -------------------------------------------------------------------------------------------------
 
 [] spawn {
 	
-	waitUntil {(!isNull (findDisplay 46))};
+	waitUntil {if (!isNull (findDisplay 46)) exitWith {true}; false};
 	
 	(findDisplay 46) displayAddEventHandler ["KeyDown", "_this call AXE_fnc_keyDownHandler"];
 	

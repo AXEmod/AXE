@@ -17,7 +17,7 @@ class CfgVehicles {
 				displayName = "$STR_AXE_Interactions_Action_TapShoulder";
 				condition = "[_player, _target] call AXE_interactions_fnc_tapshoulder_canTap";
 				statement = "[_player, _target, 0] call AXE_interactions_fnc_tapshoulder_doTap";
-				exceptions[] = {};
+				exceptions[] = {"isNotSwimming"};
 				selection = "LeftShoulder";
 				showDisabled = 0;
 				distance = 2.0;
@@ -27,7 +27,7 @@ class CfgVehicles {
 				displayName = "$STR_AXE_Interactions_Action_TapShoulder";
 				condition = "[_player, _target] call AXE_interactions_fnc_tapshoulder_canTap";
 				statement = "[_player, _target, 1] call AXE_interactions_fnc_tapshoulder_doTap";
-				exceptions[] = {};
+				exceptions[] = {"isNotSwimming"};
 				selection = "RightShoulder";
 				showDisabled = 0;
 				distance = 2.0;

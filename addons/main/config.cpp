@@ -29,3 +29,4 @@ class CfgPatches {
 
 #include "CfgEditorCategories.hpp"
 #include "CfgFactionClasses.hpp"
+#include "CfgVehicleIcons.hpp"

@@ -408,7 +408,7 @@ if (isNull _unit) exitWith {false};
 		
 	};
 	
-	waitUntil { (AXE_MEDICAL_AREA_CONSTRUCT_SUCCESS) || (AXE_MEDICAL_AREA_CONSTRUCT_FAILURE) };
+	waitUntil {if ((AXE_MEDICAL_AREA_CONSTRUCT_SUCCESS) || (AXE_MEDICAL_AREA_CONSTRUCT_FAILURE)) exitWith {true}; false};
 	
 	if (AXE_MEDICAL_AREA_CONSTRUCT_SUCCESS) exitWith {
 		

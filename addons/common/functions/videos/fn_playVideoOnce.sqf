@@ -91,7 +91,7 @@ private _return = [_filename, _videoID, _canSkip, _showSkip, _showTime] spawn {
 	private _keyHandler = (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call AXE_fnc_videoKeyDown"];
 	private _video = [_filename] spawn BIS_fnc_playVideo;
 	
-	waitUntil { scriptDone _video };
+	waitUntil {if (scriptDone _video) exitWith {true}; false};
 	
 	(findDisplay 46) displayRemoveEventHandler ["KeyDown", _keyHandler];
 	if ( (_canSkip) && (_showSkip) && (!scriptDone _script) ) then { 99 cutFadeOut 0.01; terminate _script; };

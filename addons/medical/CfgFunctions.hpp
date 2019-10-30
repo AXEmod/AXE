@@ -24,6 +24,7 @@ class CfgFunctions {
 			class actionDiagnose {};
 			class actionRemoveTourniquet {};
 			class itemCheck {};
+			class playInjuredSound {};
 			class treatment {};
 			class useItem {};
 		};

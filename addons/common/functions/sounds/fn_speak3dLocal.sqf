@@ -84,7 +84,7 @@ if (_soundInUse) exitWith {
 	
 	params ["_unit", "_soundClass", "_distance", "_maxDistance", "_duration", "_pitch", "_isSpeech"];
 	
-	private _helper = AXE_COMMON_HELPER_OBJECT createVehicleLocal [0,0,0];
+	private _helper = createSimpleObject [AXE_COMMON_HELPER_OBJECT, [0,0,0], true];
 	_helper hideObject true;
 	_helper attachTo [_unit, (_unit selectionPosition "head")];
 	
@@ -95,15 +95,18 @@ if (_soundInUse) exitWith {
 	_unit setVariable ["axe_speak3d", true, true];
 	_unit setRandomLip true;
 	
-	private _timer = time + _duration;
+	private _timer = CBA_missionTime + _duration;
 	
 	_helper say3d [_soundClass, _distance, _pitch, _isSpeech];
 	
 	waitUntil {
-		(_unit getVariable ["ACE_isUnconscious", false]) ||
-		(Not alive _unit) ||
-		(isNull _helper) ||
-		(_timer < time)
+		if (
+			(_unit getVariable ["ACE_isUnconscious", false]) ||
+			(Not alive _unit) ||
+			(isNull _helper) ||
+			(_timer < CBA_missionTime)
+		) exitWith {true};
+		false
 	};
 	
 	_unit setRandomLip false;

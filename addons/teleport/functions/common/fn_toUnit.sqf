@@ -68,7 +68,7 @@ if (Not local _unit) exitWith {
 	
 	_unit hideObjectGlobal true;
 	
-	waitUntil {preloadCamera (getPos _target)};
+	waitUntil {if (preloadCamera (getPos _target)) exitWith {true}; false};
 	
 	_success = false;
 	

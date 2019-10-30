@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+	
+	<!-- ####################################################################################### -->
+	<Package name="AXE_Modules">
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Modules">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Modules_Title">
+				<Original>AXE Modules</Original>
+			</Key>
+			<Key ID="STR_AXE_Modules_Author">
+				<Original>AXE-Team</Original>
+			</Key>
+			<Key ID="STR_AXE_Modules_URL">
+				<Original>https://github.com/AXEmod/AXE</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="ModuleErrors">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleError_VarIsUnknown">
+				<Original>'%1' is unknown!</Original>
+				<German>'%1' ist unbekannt!</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleError_IsNotObject">
+				<Original>'%1' is not an object!</Original>
+				<German>'%1' ist kein Objekt!</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleError_IsNotUnit">
+				<Original>'%1' is not an unit!</Original>
+				<German>'%1' ist keine Einheit!</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleError_OffsetNotValid">
+				<Original>'%1' is not a valid offset!</Original>
+				<German>'%1' ist kein gültiger Offset!</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleError_UnknownInCfgSounds">
+				<Original>'%1' is an unknown class in CfgSounds!</Original>
+				<German>'%1' ist eine unbekannte Klasse in CfgSounds!</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleError_DurationNotDefined">
+				<Original>'%1' has no 'duration' defined in CfgSounds!</Original>
+				<German>'%1' hat keine 'duration' in CfgSounds!</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleError_DistanceGreaterZero">
+				<Original>'Hearing Range' has to be greater than zero!</Original>
+				<German>'Hörreichweite' muss größer als Null sein!</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleError_MaxGreaterDistance">
+				<Original>'Max Distance' has to be greater than 'Hearing Range'!</Original>
+				<German>'Max Reichweite' muss größer sein als 'Hörreichweite'!</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="ModuleProperty_Sound">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Sound_Enabled_Title">
+				<Original>Enabled</Original>
+				<German>Aktiviert</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Sound_Enabled_Tip">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Sound_Enabled_0">
+				<Original>false</Original>
+				<German>false</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Sound_Enabled_1">
+				<Original>true</Original>
+				<German>true</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Sound_Source_Title">
+				<Original>Source</Original>
+				<German>Quelle</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Sound_Source_Tip">
+				<Original>Sound source (object) from which the sound is emitted.\nIf no source is specified, the module will be used.</Original>
+				<German>Sound-Quelle (Objekt), von dem der Sound emittiert wird.\nWird keine Quelle angegeben, wird das Modul benutzt.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Sound_Classname_Title">
+				<Original>Sound</Original>
+				<German>Sound</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Sound_Classname_Tip">
+				<Original>Classname of the sound defined in CfgSounds.</Original>
+				<German>Klassenname des Sounds, der in CfgSounds definiert wurde.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Sound_Offset_Title">
+				<Original>Offset</Original>
+				<German>Offset</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Sound_Offset_Tip">
+				<Original>Sound position (offset) relative to the source.\nDefault: &quot;[0,0,0]&quot;</Original>
+				<German>Sound-Position (Versatz) bezogen auf die Quelle.\nDefault: &quot;[0,0,0]&quot;</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Sound_Distance_Title">
+				<Original>Distance</Original>
+				<German>Reichweite</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Sound_Distance_Tip">
+				<Original>The maximum hearing range (in meters).</Original>
+				<German>Die maximale Hörreichweite (in Meter).</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Sound_MaxDistance_Title">
+				<Original>Max Distance</Original>
+				<German>Max Reichweite</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Sound_MaxDistance_Tip">
+				<Original>Only players within range of the source are considered.\n&quot;-1&quot; ignores this setting.</Original>
+				<German>Es werden nur Spieler berücksichtigt, die sich innerhalb der Reichweite um die Quelle befinden.\n&quot;-1&quot; ignoriert diese Einstellung.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Sound_Duration_Title">
+				<Original>Duration</Original>
+				<German>Dauer</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Sound_Duration_Tip">
+				<Original>Duration of the sound (in seconds).\n&quot;-1&quot; takes the value of &quot;duration&quot; from CfgSounds.</Original>
+				<German>Dauer des Sounds (in Sekunden).\n&quot;-1&quot; übernimmt den Wert von &quot;duration&quot; aus CfgSounds.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Sound_IgnoreStop_Title">
+				<Original>Ignore Stop</Original>
+				<German>Ignoriere Stop</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Sound_IgnoreStop_Tip">
+				<Original>Ignores the trigger deactivation.</Original>
+				<German>Ignoriert die Trigger-Deaktivierung.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Sound_Loop_Title">
+				<Original>Loop</Original>
+				<German>Wiederholen</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Sound_Loop_Tip">
+				<Original>Sound is repeated based on the duration.</Original>
+				<German>Sound wird anhand der eingestellten Dauer wiederholt.</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Module_AmbientSound">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Module_AmbientSound_DisplayName">
+				<Original>Sound (Ambient)</Original>
+				<German>Sound (Ambiente)</German>
+			</Key>
+			<Key ID="STR_AXE_Module_AmbientSound_Description">
+				<Original>Plays a sound for all players within range.</Original>
+				<German>Spielt einen Sound für alle in Reichweite befindlichen Spieler ab.</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Module_TriggerSound">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Module_TriggerSound_DisplayName">
+				<Original>Sound (Trigger)</Original>
+				<German>Sound (Auslöser)</German>
+			</Key>
+			<Key ID="STR_AXE_Module_TriggerSound_Description">
+				<Original>Plays a sound for all players within range.&lt;br/&gt;Needs a synchronized Trigger!</Original>
+				<German>Spielt einen Sound für alle in Reichweite befindlichen Spieler ab.&lt;br/&gt;Benötigt einen synchronisierten Auslöser!</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="ModuleProperty_Speech">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_Enabled_Title">
+				<Original>Enabled</Original>
+				<German>Aktiviert</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Enabled_Tip">
+				<Original></Original>
+				<German></German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Enabled_0">
+				<Original>false</Original>
+				<German>false</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Enabled_1">
+				<Original>true</Original>
+				<German>true</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_Source_Title">
+				<Original>Unit</Original>
+				<German>Einheit</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Source_Tip">
+				<Original>Unit (object) from which the speech is emitted.</Original>
+				<German>Einheit (Objekt), von der die Ansprache emittiert wird.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_Classname_Title">
+				<Original>Sound</Original>
+				<German>Sound</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Classname_Tip">
+				<Original>Classname of the speech defined in CfgSounds.</Original>
+				<German>Klassenname der Ansprache, die in CfgSounds definiert wurde.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_Distance_Title">
+				<Original>Distance</Original>
+				<German>Reichweite</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Distance_Tip">
+				<Original>The maximum hearing range (in meters).</Original>
+				<German>Die maximale Hörreichweite (in Meter).</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_MaxDistance_Title">
+				<Original>Max Distance</Original>
+				<German>Max Reichweite</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_MaxDistance_Tip">
+				<Original>Only players within range of the unit are considered.\n&quot;-1&quot; ignores this setting.</Original>
+				<German>Es werden nur Spieler berücksichtigt, die sich innerhalb der Reichweite um die Einheit befinden.\n&quot;-1&quot; ignoriert diese Einstellung.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_Duration_Title">
+				<Original>Duration</Original>
+				<German>Dauer</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Duration_Tip">
+				<Original>Duration of the speech (in seconds).\n&quot;-1&quot; takes the value of &quot;duration&quot; from CfgSounds.</Original>
+				<German>Dauer der Ansprache (in Sekunden).\n&quot;-1&quot; übernimmt den Wert von &quot;duration&quot; aus CfgSounds.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_IgnoreStop_Title">
+				<Original>Ignore Stop</Original>
+				<German>Ignoriere Stop</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_IgnoreStop_Tip">
+				<Original>Ignores the trigger deactivation.</Original>
+				<German>Ignoriert die Trigger-Deaktivierung.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_Loop_Title">
+				<Original>Loop</Original>
+				<German>Wiederholen</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Loop_Tip">
+				<Original>Sound is repeated based on the duration.</Original>
+				<German>Sound wird anhand der eingestellten Dauer wiederholt.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_OnlyOnce_Title">
+				<Original>Only Once</Original>
+				<German>Nur einmal</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_OnlyOnce_Tip">
+				<Original>Unit can only be addressed once.</Original>
+				<German>Einheit kann nur einmal angesprochen werden.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_CodeStart_Title">
+				<Original>Start of the speech</Original>
+				<German>Start der Ansprache</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_CodeStart_Tip">
+				<Original>Expression that is executed when the speech starts.\nThe following variables are available:\n_logic: This module\n_caller: Player that triggers the unit\n_target: Unit that serves as the sound source</Original>
+				<German>Ausdruck, der bei Start der Ansprache ausgeführt wird.\nFolgende Variablen sind verfügbar:\n_logic: Dieses Modul\n_caller: Spieler, der die Einheit auslöst\n_target: Einheit, die als Sound-Quelle dient</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_CodeEnd_Title">
+				<Original>End of the speech</Original>
+				<German>Ende der Ansprache</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_CodeEnd_Tip">
+				<Original>Expression that is executed when the speech ends.\nThe following variables are available:\n_logic: This module\n_caller: Player that triggers the unit\n_target: Unit that serves as the sound source</Original>
+				<German>Ausdruck, der bei Ende der Ansprache ausgeführt wird.\nFolgende Variablen sind verfügbar:\n_logic: Dieses Modul\n_caller: Spieler, der die Einheit auslöst\n_target: Einheit, die als Sound-Quelle dient</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Module_GlobalSpeech">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Module_GlobalSpeech_DisplayName">
+				<Original>Speech (Global)</Original>
+				<German>Ansprache (Global)</German>
+			</Key>
+			<Key ID="STR_AXE_Module_GlobalSpeech_Description">
+				<Original>Plays a speech for all players within range.</Original>
+				<German>Spielt eine Ansprache für alle in Reichweite befindlichen Spieler ab.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Module_GlobalSpeech_HoldAction">
+				<Original>talk to %1</Original>
+				<German>mit %1 zu reden</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Module_TriggerSpeech">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Module_TriggerSpeech_DisplayName">
+				<Original>Speech (Trigger)</Original>
+				<German>Ansprache (Auslöser)</German>
+			</Key>
+			<Key ID="STR_AXE_Module_TriggerSpeech_Description">
+				<Original>Plays a speech for all players within range.&lt;br/&gt;Needs a synchronized Trigger!</Original>
+				<German>Spielt eine Ansprache für alle in Reichweite befindlichen Spieler ab.&lt;br/&gt;Benötigt einen synchronisierten Auslöser!</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+	</Package>
+	<!-- ####################################################################################### -->
+	
+</Project>

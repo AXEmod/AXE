@@ -33,6 +33,7 @@ params ["_unit", "_fatigue", "_speed", "_overexhausted"];
 private _globalSounds = (missionNamespace getVariable ["axe_fatigue_global_sounds", false]);
 private _breathSound = "";
 private _pain = player getVariable ["ace_medical_pain", 0];
+private _painSuppress = player getVariable ["ace_medical_painSuppress", 0];
 
 if (isNil "axe_advanced_fatigue_breathVoice") then { 
 	axe_advanced_fatigue_breathVoice = selectRandom [0,1,2,3,4,5,6,7];
@@ -45,7 +46,7 @@ if (_fatigue > 0.4 && {ace_advanced_fatigue_lastBreath > (_fatigue * -10 + 9)} &
     switch (true) do {
         case (_fatigue < 0.6): {
 			_breathSound = "AXE_Advanced_Fatigue_BreathLow";
-			if (_pain > 0) then {_breathSound = ["AXE_Advanced_Fatigue_BreathLow", "AXE_Advanced_Fatigue_BreathInjuredLow"] select ((random 1) > 0.5);};
+			if (_pain > _painSuppress) then {_breathSound = ["AXE_Advanced_Fatigue_BreathLow", "AXE_Advanced_Fatigue_BreathInjuredLow"] select ((random 1) > 0.66);};
 			if (_globalSounds) then {
 				[_breathSound + format ["_%1_%2", axe_advanced_fatigue_breathVoice, selectRandom [0,1,2,3,4]], _unit, AGLToASL (_unit modelToWorld (_unit selectionPosition "head")), 60, 1.4, -1, false] call AXE_fnc_playSound3d;
 			} else {
@@ -54,7 +55,7 @@ if (_fatigue > 0.4 && {ace_advanced_fatigue_lastBreath > (_fatigue * -10 + 9)} &
         };
         case (_fatigue < 0.85): {
 			_breathSound = "AXE_Advanced_Fatigue_BreathMid";
-			if (_pain > 0) then {_breathSound = ["AXE_Advanced_Fatigue_BreathMid", "AXE_Advanced_Fatigue_BreathInjuredMid"] select ((random 1) > 0.5);};
+			if (_pain > _painSuppress) then {_breathSound = ["AXE_Advanced_Fatigue_BreathMid", "AXE_Advanced_Fatigue_BreathInjuredMid"] select ((random 1) > 0.66);};
 			if (_globalSounds) then {
 				[_breathSound + format ["_%1_%2", axe_advanced_fatigue_breathVoice, selectRandom [0,1,2,3,4]], _unit, AGLToASL (_unit modelToWorld (_unit selectionPosition "head")), 60, 1.4, -1, false] call AXE_fnc_playSound3d;
 			} else {
@@ -63,7 +64,7 @@ if (_fatigue > 0.4 && {ace_advanced_fatigue_lastBreath > (_fatigue * -10 + 9)} &
         };
         default {
 			_breathSound = "AXE_Advanced_Fatigue_BreathMax";
-			if (_pain > 0) then {_breathSound = ["AXE_Advanced_Fatigue_BreathMax", "AXE_Advanced_Fatigue_BreathInjuredMax"] select ((random 1) > 0.5);};
+			if (_pain > _painSuppress) then {_breathSound = ["AXE_Advanced_Fatigue_BreathMax", "AXE_Advanced_Fatigue_BreathInjuredMax"] select ((random 1) > 0.66);};
 			if (_globalSounds) then {
 				[_breathSound + format ["_%1_%2", axe_advanced_fatigue_breathVoice, selectRandom [0,1,2,3,4]], _unit, AGLToASL (_unit modelToWorld (_unit selectionPosition "head")), 60, 1.4, -1, false] call AXE_fnc_playSound3d;
 			} else {

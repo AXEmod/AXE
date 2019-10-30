@@ -191,8 +191,12 @@
 		<Container name="Messages">
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Interactions_Inventory_Disabled">
-				<Original>Can't use inventory!</Original>
-				<German>Inventar kann nicht benutzt werden!</German>
+				<Original>Can't open inventory!</Original>
+				<German>Inventar kann nicht geöffnet werden!</German>
+			</Key>
+			<Key ID="STR_AXE_Interactions_Gear_Disabled">
+				<Original>Equipment can not be searched!</Original>
+				<German>Ausrüstung kann nicht durchsucht werden!</German>
 			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Interactions_Hint_TapShoulder">
