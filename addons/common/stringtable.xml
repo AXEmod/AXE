@@ -66,8 +66,8 @@
 				<German>Taktische Ansicht</German>
 			</Key>
 			<Key ID="STR_AXE_Common_CBA_Tactical_View_Tip">
-				<Original>Allow the use of Tactical View.</Original>
-				<German>Erlaube die Nutzung der Taktischen Ansicht.</German>
+				<Original>Allow the use of Tactical View when ;&quot;3rd person;&quot; is enabled.</Original>
+				<German>Erlaube die Nutzung der Taktischen Ansicht, wenn ;&quot;3rd-Person;&quot; aktiviert ist.</German>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container>
@@ -78,11 +78,11 @@
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Common_KEY_Screenshot_Title">
 				<Original>Screenshot</Original>
-				<German>Screenshot</German>
+				<German>Bildschirmfoto</German>
 			</Key>
 			<Key ID="STR_AXE_Common_KEY_Screenshot_Tip">
 				<Original>Create a screenshot (without HUD/GUI) in the ArmA profile.</Original>
-				<German>Erstellt einen Screenshot (ohne HUD/GUI) im ArmA-Profil.</German>
+				<German>Erstellt ein Bildschirmfoto (ohne HUD/GUI) im ArmA-Profil.</German>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container>

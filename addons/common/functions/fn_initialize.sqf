@@ -63,13 +63,18 @@ if !(hasInterface) exitWith {};
 ] call CBA_fnc_addKeybind;
 
 // -------------------------------------------------------------------------------------------------
+// TACTICAL VIEW
 
-[] spawn {
+[{
 	
-	waitUntil {if (!isNull (findDisplay 46)) exitWith {true}; false};
+	params ["_params", "_pfhHandler"];
 	
-	(findDisplay 46) displayAddEventHandler ["KeyDown", "_this call AXE_fnc_keyDownHandler"];
+	if (cameraView isEqualTo "GROUP") then {
+		if !(missionNamespace getVariable ["axe_tactical_view_enabled", false]) then {
+			player switchCamera "INTERNAL";
+		};
+	};
 	
-};
+}, 0, []] call CBA_fnc_addPerFrameHandler;
 
 // -------------------------------------------------------------------------------------------------
