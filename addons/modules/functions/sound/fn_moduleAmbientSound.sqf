@@ -59,10 +59,12 @@ switch _mode do {
 		
 		if !((typeName _soundOffset) isEqualType "ARRAY") exitWith {
 			[format [localize "STR_AXE_ModuleError_OffsetNotValid", _soundOffset]] call BIS_fnc_error;
+			[2, "ModuleAmbientSound '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_OffsetNotValid", _soundOffset]], "modules"] call AXE_fnc_log;
 		};
 		
 		if !((count _soundOffset) isEqualTo 3) exitWith {
 			[format [localize "STR_AXE_ModuleError_OffsetNotValid", _soundOffset]] call BIS_fnc_error;
+			[2, "ModuleAmbientSound '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_OffsetNotValid", _soundOffset]], "modules"] call AXE_fnc_log;
 		};
 		
 		// VALIDATE SOURCE
@@ -73,12 +75,14 @@ switch _mode do {
 			
 			if (isNull (missionNamespace getVariable [_source, objNull])) exitWith {
 				[format [localize "STR_AXE_ModuleError_VarIsUnknown", _source]] call BIS_fnc_error;
+				[2, "ModuleAmbientSound '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_VarIsUnknown", _source]], "modules"] call AXE_fnc_log;
 			};
 			
 			_soundSource = missionNamespace getVariable _source;
 			
 			if !((typeName _soundSource) isEqualType "OBJECT") exitWith {
 				[format [localize "STR_AXE_ModuleError_IsNotObject", _soundSource]] call BIS_fnc_error;
+				[2, "ModuleAmbientSound '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_IsNotObject", _soundSource]], "modules"] call AXE_fnc_log;
 			};
 			
 		} else {
@@ -102,18 +106,21 @@ switch _mode do {
 		
 		if (_soundExist isEqualTo 0) exitWith {
 			[format [localize "STR_AXE_ModuleError_UnknownInCfgSounds", _sound]] call BIS_fnc_error;
+			[2, "ModuleAmbientSound '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_UnknownInCfgSounds", _sound]], "modules"] call AXE_fnc_log;
 		};
 		
 		// VALIDATE DISTANCE
 		
 		if (_distance <= 0) exitWith {
 			[format [localize "STR_AXE_ModuleError_DistanceGreaterZero", _distance]] call BIS_fnc_error;
+			[2, "ModuleAmbientSound '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_DistanceGreaterZero", _distance]], "modules"] call AXE_fnc_log;
 		};
 		
 		// VALIDATE MAX DISTANCE
 		
 		if ((_maxDistance > 0) && (_maxDistance <= _distance)) exitWith {
-			[format [localize "STR_AXE_ModuleError_MaxGreaterDistance", _distance]] call BIS_fnc_error;
+			[format [localize "STR_AXE_ModuleError_MaxGreaterDistance", _distance, _maxDistance]] call BIS_fnc_error;
+			[2, "ModuleAmbientSound '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_MaxGreaterDistance", _distance, _maxDistance]], "modules"] call AXE_fnc_log;
 		};
 		
 		// VALIDATE DURATION
@@ -121,6 +128,7 @@ switch _mode do {
 		if (_duration <= 0) then {_duration = [_sound] call AXE_fnc_getSoundDuration;};
 		if (_duration <= 0) exitWith {
 			[format [localize "STR_AXE_ModuleError_DurationNotDefined", _sound]] call BIS_fnc_error;
+			[2, "ModuleAmbientSound '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_DurationNotDefined", _sound]], "modules"] call AXE_fnc_log;
 		};
 		
 		// MODULE
@@ -142,14 +150,14 @@ switch _mode do {
 				private _allPlayers = (allPlayers - entities "HeadlessClient_F");
 				if ((count _allPlayers) == 0) exitWith {};
 				
-				private _inRage = true;
+				private _inRange = true;
 				if (_maxDistance > 0) then {
-					_inRage = false;
+					_inRange = false;
 					{
-						if ((_x distance _source) < _maxDistance) then {_inRage = true;};
+						if ((_x distance _source) < _maxDistance) then {_inRange = true;};
 					} forEach _allPlayers;
 				};
-				if !(_inRage) exitWith {};
+				if !(_inRange) exitWith {};
 				
 				[_source, _sound, _offset, _distance, _maxDistance, _duration] call AXE_fnc_play3dSound;
 				
@@ -159,7 +167,7 @@ switch _mode do {
 			
 		}, 0, [_logic, _soundSource, _sound, _soundOffset, _distance, _maxDistance, _duration, (CBA_missionTime - _duration)]] call CBA_fnc_addPerFrameHandler;
 		
-		_logic setVariable ["loopHandler", _pfhHandler];
+		_logic setVariable ["axe_pfhHandler", _pfhHandler];
 		
 	};
 	
@@ -192,10 +200,12 @@ switch _mode do {
 		
 		if !((typeName _soundOffset) isEqualType "ARRAY") exitWith {
 			[format [localize "STR_AXE_ModuleError_OffsetNotValid", _soundOffset]] call BIS_fnc_error;
+			[2, "ModuleAmbientSound '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_OffsetNotValid", _soundOffset]], "modules"] call AXE_fnc_log;
 		};
 		
 		if !((count _soundOffset) isEqualTo 3) exitWith {
 			[format [localize "STR_AXE_ModuleError_OffsetNotValid", _soundOffset]] call BIS_fnc_error;
+			[2, "ModuleAmbientSound '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_OffsetNotValid", _soundOffset]], "modules"] call AXE_fnc_log;
 		};
 		
 		// VALIDATE CLASSNAME
@@ -212,18 +222,21 @@ switch _mode do {
 		
 		if (_soundExist isEqualTo 0) exitWith {
 			[format [localize "STR_AXE_ModuleError_UnknownInCfgSounds", _sound]] call BIS_fnc_error;
+			[2, "ModuleAmbientSound '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_UnknownInCfgSounds", _sound]], "modules"] call AXE_fnc_log;
 		};
 		
 		// VALIDATE DISTANCE
 		
 		if (_distance <= 0) exitWith {
 			[format [localize "STR_AXE_ModuleError_DistanceGreaterZero", _distance]] call BIS_fnc_error;
+			[2, "ModuleAmbientSound '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_DistanceGreaterZero", _distance]], "modules"] call AXE_fnc_log;
 		};
 		
 		// VALIDATE MAX DISTANCE
 		
 		if ((_maxDistance > 0) && (_maxDistance <= _distance)) exitWith {
-			[format [localize "STR_AXE_ModuleError_MaxGreaterDistance", _distance]] call BIS_fnc_error;
+			[format [localize "STR_AXE_ModuleError_MaxGreaterDistance", _distance, _maxDistance]] call BIS_fnc_error;
+			[2, "ModuleAmbientSound '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_MaxGreaterDistance", _distance, _maxDistance]], "modules"] call AXE_fnc_log;
 		};
 		
 		// VALIDATE DURATION
@@ -231,6 +244,7 @@ switch _mode do {
 		if (_duration <= 0) then {_duration = [_sound] call AXE_fnc_getSoundDuration;};
 		if (_duration <= 0) exitWith {
 			[format [localize "STR_AXE_ModuleError_DurationNotDefined", _sound]] call BIS_fnc_error;
+			[2, "ModuleAmbientSound '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_DurationNotDefined", _sound]], "modules"] call AXE_fnc_log;
 		};
 		
 	};

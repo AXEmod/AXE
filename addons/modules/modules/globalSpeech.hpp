@@ -99,6 +99,44 @@ class AXE_ModuleGlobalSpeech: Module_F {
 			control = "Checkbox";
 		};
 		
+		class Reaction {
+			displayName = "$STR_AXE_ModuleProperty_Speech_Reaction_Title";
+			tooltip = "$STR_AXE_ModuleProperty_Speech_Reaction_Tip";
+			defaultValue = 0;
+			typeName = "NUMBER";
+			expression = "_this setVariable ['%s', _value, true];";
+			property = "AXE_ModuleGlobalSpeech_Reaction";
+			control = "Combo";
+			class Values {
+				class Reaction_0	{
+					name = "$STR_AXE_ModuleProperty_Speech_Reaction_0";
+					value = 0;
+				};
+				class Reaction_1	{
+					name = "$STR_AXE_ModuleProperty_Speech_Reaction_1";
+					value = 1;
+				};
+				class Reaction_2	{
+					name = "$STR_AXE_ModuleProperty_Speech_Reaction_2";
+					value = 2;
+				};
+				class Reaction_3	{
+					name = "$STR_AXE_ModuleProperty_Speech_Reaction_3";
+					value = 3;
+				};
+			};
+		};
+		
+		class Animation {
+			displayName = "$STR_AXE_ModuleProperty_Speech_Animation_Title";
+			tooltip = "$STR_AXE_ModuleProperty_Speech_Animation_Tip";
+			defaultValue = "''";
+			typeName = "STRING";
+			expression = "_this setVariable ['%s', _value, true];";
+			property = "AXE_ModuleGlobalSpeech_Animation";
+			control = "Edit";
+		};
+		
 		class CodeStart {
 			displayName = "$STR_AXE_ModuleProperty_Speech_CodeStart_Title";
 			tooltip = "$STR_AXE_ModuleProperty_Speech_CodeStart_Tip";
