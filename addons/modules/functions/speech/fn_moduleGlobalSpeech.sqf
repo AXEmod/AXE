@@ -44,21 +44,28 @@ switch _mode do {
 		private _maxDistance		= _logic getVariable ["maxDistance", -1];
 		private _duration			= _logic getVariable ["duration", -1];
 		private _onlyOnce			= _logic getVariable ["onlyOnce", false];
+		private _reaction			= _logic getVariable ["reaction", 0];
+		private _animation			= _logic getVariable ["animation", ""];
 		
 		if ((_sound isEqualTo "") || (_sound isEqualTo "$NONE$")) exitWith {};
 		
 		// VALIDATE SOURCE
 		
-		if (_source isEqualTo "") exitWith {};
+		if (_source isEqualTo "") exitWith {
+			[format [localize "STR_AXE_ModuleError_UnitIsEmpty", _source]] call BIS_fnc_error;
+			[2, "ModuleGlobalSpeech '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_UnitIsEmpty", _source]], "modules"] call AXE_fnc_log;
+		};
 		
 		if (isNull (missionNamespace getVariable [_source, objNull])) exitWith {
 			[format [localize "STR_AXE_ModuleError_VarIsUnknown", _source]] call BIS_fnc_error;
+			[2, "ModuleGlobalSpeech '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_VarIsUnknown", _source]], "modules"] call AXE_fnc_log;
 		};
 		
 		private _unit = missionNamespace getVariable _source;
 		
 		if !(_unit isKindOf "Man") exitWith {
 			[format [localize "STR_AXE_ModuleError_IsNotUnit", _unit]] call BIS_fnc_error;
+			[2, "ModuleGlobalSpeech '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_IsNotUnit", _unit]], "modules"] call AXE_fnc_log;
 		};
 		
 		// VALIDATE CLASSNAME
@@ -75,18 +82,21 @@ switch _mode do {
 		
 		if (_soundExist isEqualTo 0) exitWith {
 			[format [localize "STR_AXE_ModuleError_UnknownInCfgSounds", _sound]] call BIS_fnc_error;
+			[2, "ModuleGlobalSpeech '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_UnknownInCfgSounds", _sound]], "modules"] call AXE_fnc_log;
 		};
 		
 		// VALIDATE DISTANCE
 		
 		if (_distance <= 0) exitWith {
 			[format [localize "STR_AXE_ModuleError_DistanceGreaterZero", _distance]] call BIS_fnc_error;
+			[2, "ModuleGlobalSpeech '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_DistanceGreaterZero", _distance]], "modules"] call AXE_fnc_log;
 		};
 		
 		// VALIDATE MAX DISTANCE
 		
 		if ((_maxDistance > 0) && (_maxDistance <= _distance)) exitWith {
-			[format [localize "STR_AXE_ModuleError_MaxGreaterDistance", _distance]] call BIS_fnc_error;
+			[format [localize "STR_AXE_ModuleError_MaxGreaterDistance", _distance, _maxDistance]] call BIS_fnc_error;
+			[2, "ModuleGlobalSpeech '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_MaxGreaterDistance", _distance, _maxDistance]], "modules"] call AXE_fnc_log;
 		};
 		
 		// VALIDATE DURATION
@@ -94,36 +104,19 @@ switch _mode do {
 		if (_duration <= 0) then {_duration = [_sound] call AXE_fnc_getSoundDuration;};
 		if (_duration <= 0) exitWith {
 			[format [localize "STR_AXE_ModuleError_DurationNotDefined", _sound]] call BIS_fnc_error;
+			[2, "ModuleGlobalSpeech '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_DurationNotDefined", _sound]], "modules"] call AXE_fnc_log;
 		};
 		
-		// MODULE
+		// VALIDATE ANIMATION
 		
-		private _unitName = [_unit] call ACE_common_fnc_getName;
-		private _holdText = format [localize "STR_AXE_Module_GlobalSpeech_HoldAction", _unitName];
-		private _holdIcon = "\axe_modules\data\gui\holdAction_speech_ca.paa";
+		if ((_reaction > 2) && (_animation isEqualTo "")) exitWith {
+			[format [localize "STR_AXE_ModuleError_AnimationEmpty", _reaction, _animation]] call BIS_fnc_error;
+			[2, "ModuleGlobalSpeech '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_AnimationEmpty", _reaction, _animation]], "modules"] call AXE_fnc_log;
+		};
 		
-		[
-			_unit,
-			_holdText,
-			_holdIcon,
-			_holdIcon,
-			"(_this distance _target < 2) && !(_target getVariable ['axe_speak3d', false]) && !(_target getVariable ['axe_playedOnce', false])",
-			"(_caller distance _target < 2) && !(_target getVariable ['axe_speak3d', false]) && !(_target getVariable ['axe_playedOnce', false])",
-			{},
-			{},
-			{
-				params ["_target", "_caller", "_actionId", "_params"];
-				if (((_params select 0) getVariable ["enabled", 0]) > 0) then {
-					[(_params select 0), _caller, _target] remoteExecCall ["AXE_fnc_moduleGlobalSpeechPlay", _target];
-				};
-			},
-			{},
-			[_logic],
-			1,
-			999,
-			false,
-			false
-		] remoteExec ["BIS_fnc_holdActionAdd", 0, true];
+		// GLOBAL SPEECH MENU
+		
+		[_logic] remoteExec ["AXE_fnc_moduleGlobalSpeechMenu", 0, true];
 		
 	};
 	
@@ -141,8 +134,17 @@ switch _mode do {
 		private _maxDistance		= _logic getVariable ["maxDistance", -1];
 		private _duration			= _logic getVariable ["duration", -1];
 		private _onlyOnce			= _logic getVariable ["onlyOnce", false];
+		private _reaction			= _logic getVariable ["reaction", 0];
+		private _animation			= _logic getVariable ["animation", ""];
 		
 		if ((_sound isEqualTo "") || (_sound isEqualTo "$NONE$")) exitWith {};
+		
+		// VALIDATE SOURCE
+		
+		if (_source isEqualTo "") exitWith {
+			[format [localize "STR_AXE_ModuleError_UnitIsEmpty", _source]] call BIS_fnc_error;
+			[2, "ModuleGlobalSpeech '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_UnitIsEmpty", _source]], "modules"] call AXE_fnc_log;
+		};
 		
 		// VALIDATE CLASSNAME
 		
@@ -158,18 +160,21 @@ switch _mode do {
 		
 		if (_soundExist isEqualTo 0) exitWith {
 			[format [localize "STR_AXE_ModuleError_UnknownInCfgSounds", _sound]] call BIS_fnc_error;
+			[2, "ModuleGlobalSpeech '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_UnknownInCfgSounds", _sound]], "modules"] call AXE_fnc_log;
 		};
 		
 		// VALIDATE DISTANCE
 		
 		if (_distance <= 0) exitWith {
 			[format [localize "STR_AXE_ModuleError_DistanceGreaterZero", _distance]] call BIS_fnc_error;
+			[2, "ModuleGlobalSpeech '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_DistanceGreaterZero", _distance]], "modules"] call AXE_fnc_log;
 		};
 		
 		// VALIDATE MAX DISTANCE
 		
 		if ((_maxDistance > 0) && (_maxDistance <= _distance)) exitWith {
-			[format [localize "STR_AXE_ModuleError_MaxGreaterDistance", _distance]] call BIS_fnc_error;
+			[format [localize "STR_AXE_ModuleError_MaxGreaterDistance", _distance, _maxDistance]] call BIS_fnc_error;
+			[2, "ModuleGlobalSpeech '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_MaxGreaterDistance", _distance, _maxDistance]], "modules"] call AXE_fnc_log;
 		};
 		
 		// VALIDATE DURATION
@@ -177,6 +182,14 @@ switch _mode do {
 		if (_duration <= 0) then {_duration = [_sound] call AXE_fnc_getSoundDuration;};
 		if (_duration <= 0) exitWith {
 			[format [localize "STR_AXE_ModuleError_DurationNotDefined", _sound]] call BIS_fnc_error;
+			[2, "ModuleGlobalSpeech '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_DurationNotDefined", _sound]], "modules"] call AXE_fnc_log;
+		};
+		
+		// VALIDATE ANIMATION
+		
+		if ((_reaction > 2) && (_animation isEqualTo "")) exitWith {
+			[format [localize "STR_AXE_ModuleError_AnimationEmpty", _reaction, _animation]] call BIS_fnc_error;
+			[2, "ModuleGlobalSpeech '%1' - %2", [_logic, format [localize "STR_AXE_ModuleError_AnimationEmpty", _reaction, _animation]], "modules"] call AXE_fnc_log;
 		};
 		
 	};

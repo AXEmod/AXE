@@ -89,6 +89,16 @@ class AXE_ModuleTriggerSpeech: Module_F {
 			control = "EditShort";
 		};
 		
+		class Loop {
+			displayName = "$STR_AXE_ModuleProperty_Speech_Loop_Title";
+			tooltip = "$STR_AXE_ModuleProperty_Speech_Loop_Tip";
+			defaultValue = "false";
+			typeName = "BOOL";
+			expression = "_this setVariable ['%s', _value, true];";
+			property = "AXE_ModuleTriggerSpeech_Loop";
+			control = "Checkbox";
+		};
+		
 		class IgnoreStop {
 			displayName = "$STR_AXE_ModuleProperty_Speech_IgnoreStop_Title";
 			tooltip = "$STR_AXE_ModuleProperty_Speech_IgnoreStop_Tip";
@@ -99,14 +109,14 @@ class AXE_ModuleTriggerSpeech: Module_F {
 			control = "Checkbox";
 		};
 		
-		class Loop {
-			displayName = "$STR_AXE_ModuleProperty_Speech_Loop_Title";
-			tooltip = "$STR_AXE_ModuleProperty_Speech_Loop_Tip";
-			defaultValue = "false";
-			typeName = "BOOL";
+		class Animation {
+			displayName = "$STR_AXE_ModuleProperty_Speech_Animation2_Title";
+			tooltip = "$STR_AXE_ModuleProperty_Speech_Animation2_Tip";
+			defaultValue = "''";
+			typeName = "STRING";
 			expression = "_this setVariable ['%s', _value, true];";
-			property = "AXE_ModuleTriggerSpeech_Loop";
-			control = "Checkbox";
+			property = "AXE_ModuleGlobalSpeech_Animation";
+			control = "Edit";
 		};
 		
 		class ModuleDescription: ModuleDescription {

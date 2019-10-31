@@ -35,6 +35,10 @@
 				<Original>'%1' is not an unit!</Original>
 				<German>'%1' ist keine Einheit!</German>
 			</Key>
+			<Key ID="STR_AXE_ModuleError_UnitIsEmpty">
+				<Original>Unit can not be empty!</Original>
+				<German>Einheit darf nicht leer sein!</German>
+			</Key>
 			<Key ID="STR_AXE_ModuleError_OffsetNotValid">
 				<Original>'%1' is not a valid offset!</Original>
 				<German>'%1' ist kein gültiger Offset!</German>
@@ -54,6 +58,10 @@
 			<Key ID="STR_AXE_ModuleError_MaxGreaterDistance">
 				<Original>'Max Distance' has to be greater than 'Hearing Range'!</Original>
 				<German>'Max Reichweite' muss größer sein als 'Hörreichweite'!</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleError_AnimationEmpty">
+				<Original>Animation can not be empty!</Original>
+				<German>Animation darf nicht leer sein!</German>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container>
@@ -120,8 +128,8 @@
 				<German>Max Reichweite</German>
 			</Key>
 			<Key ID="STR_AXE_ModuleProperty_Sound_MaxDistance_Tip">
-				<Original>Only players within range of the source are considered.\n&quot;-1&quot; ignores this setting.</Original>
-				<German>Es werden nur Spieler berücksichtigt, die sich innerhalb der Reichweite um die Quelle befinden.\n&quot;-1&quot; ignoriert diese Einstellung.</German>
+				<Original>Only players within the maximum range will be considered.\n&quot;-1&quot; ignores this setting.</Original>
+				<German>Es werden nur Spieler berücksichtigt, die sich innerhalb der maximalen Reichweite um die Quelle befinden.\n&quot;-1&quot; ignoriert diese Einstellung.</German>
 			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_ModuleProperty_Sound_Duration_Title">
@@ -133,6 +141,15 @@
 				<German>Dauer des Sounds (in Sekunden).\n&quot;-1&quot; übernimmt den Wert von &quot;duration&quot; aus CfgSounds.</German>
 			</Key>
 			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Sound_Loop_Title">
+				<Original>Loop</Original>
+				<German>Schleife</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Sound_Loop_Tip">
+				<Original>Sound is repeated based on the duration.</Original>
+				<German>Sound wird anhand der eingestellten Dauer wiederholt.</German>
+			</Key>
+			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_ModuleProperty_Sound_IgnoreStop_Title">
 				<Original>Ignore Stop</Original>
 				<German>Ignoriere Stop</German>
@@ -140,15 +157,6 @@
 			<Key ID="STR_AXE_ModuleProperty_Sound_IgnoreStop_Tip">
 				<Original>Ignores the trigger deactivation.</Original>
 				<German>Ignoriert die Trigger-Deaktivierung.</German>
-			</Key>
-			<!-- =============================================================================== -->
-			<Key ID="STR_AXE_ModuleProperty_Sound_Loop_Title">
-				<Original>Loop</Original>
-				<German>Wiederholen</German>
-			</Key>
-			<Key ID="STR_AXE_ModuleProperty_Sound_Loop_Tip">
-				<Original>Sound is repeated based on the duration.</Original>
-				<German>Sound wird anhand der eingestellten Dauer wiederholt.</German>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container>
@@ -209,8 +217,8 @@
 				<German>Einheit</German>
 			</Key>
 			<Key ID="STR_AXE_ModuleProperty_Speech_Source_Tip">
-				<Original>Unit (object) from which the speech is emitted.</Original>
-				<German>Einheit (Objekt), von der die Ansprache emittiert wird.</German>
+				<Original>Unit (entity) from which the speech is emitted.</Original>
+				<German>Einheit (Entität), von der die Ansprache emittiert wird.</German>
 			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_ModuleProperty_Speech_Classname_Title">
@@ -236,8 +244,8 @@
 				<German>Max Reichweite</German>
 			</Key>
 			<Key ID="STR_AXE_ModuleProperty_Speech_MaxDistance_Tip">
-				<Original>Only players within range of the unit are considered.\n&quot;-1&quot; ignores this setting.</Original>
-				<German>Es werden nur Spieler berücksichtigt, die sich innerhalb der Reichweite um die Einheit befinden.\n&quot;-1&quot; ignoriert diese Einstellung.</German>
+				<Original>Only players within the maximum range will be considered.\n&quot;-1&quot; ignores this setting.</Original>
+				<German>Es werden nur Spieler berücksichtigt, die sich innerhalb der maximalen Reichweite um die Quelle befinden.\n&quot;-1&quot; ignoriert diese Einstellung.</German>
 			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_ModuleProperty_Speech_Duration_Title">
@@ -249,24 +257,6 @@
 				<German>Dauer der Ansprache (in Sekunden).\n&quot;-1&quot; übernimmt den Wert von &quot;duration&quot; aus CfgSounds.</German>
 			</Key>
 			<!-- =============================================================================== -->
-			<Key ID="STR_AXE_ModuleProperty_Speech_IgnoreStop_Title">
-				<Original>Ignore Stop</Original>
-				<German>Ignoriere Stop</German>
-			</Key>
-			<Key ID="STR_AXE_ModuleProperty_Speech_IgnoreStop_Tip">
-				<Original>Ignores the trigger deactivation.</Original>
-				<German>Ignoriert die Trigger-Deaktivierung.</German>
-			</Key>
-			<!-- =============================================================================== -->
-			<Key ID="STR_AXE_ModuleProperty_Speech_Loop_Title">
-				<Original>Loop</Original>
-				<German>Wiederholen</German>
-			</Key>
-			<Key ID="STR_AXE_ModuleProperty_Speech_Loop_Tip">
-				<Original>Sound is repeated based on the duration.</Original>
-				<German>Sound wird anhand der eingestellten Dauer wiederholt.</German>
-			</Key>
-			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_ModuleProperty_Speech_OnlyOnce_Title">
 				<Original>Only Once</Original>
 				<German>Nur einmal</German>
@@ -276,13 +266,74 @@
 				<German>Einheit kann nur einmal angesprochen werden.</German>
 			</Key>
 			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_Loop_Title">
+				<Original>Loop</Original>
+				<German>Schleife</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Loop_Tip">
+				<Original>Sound is repeated based on the duration.</Original>
+				<German>Sound wird anhand der eingestellten Dauer wiederholt.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_IgnoreStop_Title">
+				<Original>Ignore Stop</Original>
+				<German>Ignoriere Stop</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_IgnoreStop_Tip">
+				<Original>Ignores the trigger deactivation.</Original>
+				<German>Ignoriert die Trigger-Deaktivierung.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_Reaction_Title">
+				<Original>Reaction</Original>
+				<German>Reaktion</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Reaction_Tip">
+				<Original>Sets the mode how the unit reacts if speech is starting.\nFollowing modes are available:\n&quot;unchanged&quot; - No change (default).\n&quot;eye contact&quot; - Unit tries to keep eye contact with player.\n&quot;turn to player&quot; - Unit is turned in the direction of the player.\n&quot;play animation&quot; - Unit changes to the specified animation.</Original>
+				<German>Stellt den Modus ein, wie die Einheit reagiert, wenn die Ansprache startet. Folgende Modi sind verfügbar:\n&quot;unverändert&quot; - Keine Änderung (Standard).\n&quot;Blickkontakt&quot; - Einheit versucht den Blickkontakt zu halten.\n&quot;Zum Spieler drehen&quot; - Einheit wird in Richtung des Spielers gedreht.\n&quot;Animation abspielen&quot; - Einheit wechselt in angegebene Animation.</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Reaction_0">
+				<Original>unchanged</Original>
+				<German>unverändert</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Reaction_1">
+				<Original>eye contact</Original>
+				<German>Blickkontakt</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Reaction_2">
+				<Original>turn to player</Original>
+				<German>Zum Spieler drehen</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Reaction_3">
+				<Original>play animation</Original>
+				<German>Animation abspielen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_Animation_Title">
+				<Original>Animation</Original>
+				<German>Animation</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Animation_Tip">
+				<Original>If &quot;Reaction&quot; is set to &quot;play animation&quot;, the unit will switch to the animation specified here.\nCan be copied from the animation viewer!</Original>
+				<German>Wenn &quot;Reaktion&quot; auf &quot;Animation abspielen&quot; gesetzt ist, wird die Einheit in die hier angegebene Animation wechseln.\nKann aus dem Animations-Viewer kopiert werden!</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_ModuleProperty_Speech_Animation2_Title">
+				<Original>Animation</Original>
+				<German>Animation</German>
+			</Key>
+			<Key ID="STR_AXE_ModuleProperty_Speech_Animation2_Tip">
+				<Original>Unit changes to the animation specified here.\nCan be copied from the animation viewer!</Original>
+				<German>Einheit wechselt in die hier angegebene Animation.\nKann aus dem Animations-Viewer kopiert werden!</German>
+			</Key>
+			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_ModuleProperty_Speech_CodeStart_Title">
 				<Original>Start of the speech</Original>
 				<German>Start der Ansprache</German>
 			</Key>
 			<Key ID="STR_AXE_ModuleProperty_Speech_CodeStart_Tip">
-				<Original>Expression that is executed when the speech starts.\nThe following variables are available:\n_logic: This module\n_caller: Player that triggers the unit\n_target: Unit that serves as the sound source</Original>
-				<German>Ausdruck, der bei Start der Ansprache ausgeführt wird.\nFolgende Variablen sind verfügbar:\n_logic: Dieses Modul\n_caller: Spieler, der die Einheit auslöst\n_target: Einheit, die als Sound-Quelle dient</German>
+				<Original>Expression that is executed when the speech starts.\nFollowing parameters are available:\n&quot;_logic&quot; - This module\n&quot;_caller&quot; - Player that triggers the unit\n&quot;_target&quot; - Unit that serves as the sound source</Original>
+				<German>Ausdruck, der bei Start der Ansprache ausgeführt wird.\nFolgende Parameter sind verfügbar:\n&quot;_logic&quot; - Dieses Modul\n&quot;_caller&quot; - Spieler, der die Einheit auslöst\n&quot;_target&quot; - Einheit, die als Sound-Quelle dient</German>
 			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_ModuleProperty_Speech_CodeEnd_Title">
@@ -290,8 +341,8 @@
 				<German>Ende der Ansprache</German>
 			</Key>
 			<Key ID="STR_AXE_ModuleProperty_Speech_CodeEnd_Tip">
-				<Original>Expression that is executed when the speech ends.\nThe following variables are available:\n_logic: This module\n_caller: Player that triggers the unit\n_target: Unit that serves as the sound source</Original>
-				<German>Ausdruck, der bei Ende der Ansprache ausgeführt wird.\nFolgende Variablen sind verfügbar:\n_logic: Dieses Modul\n_caller: Spieler, der die Einheit auslöst\n_target: Einheit, die als Sound-Quelle dient</German>
+				<Original>Expression that is executed when the speech ends.\nFollowing parameters are available:\n&quot;_logic&quot; - This module\n&quot;_caller&quot; - Player that triggers the unit\n&quot;_target&quot; - Unit that serves as the sound source</Original>
+				<German>Ausdruck, der bei Ende der Ansprache ausgeführt wird.\nFolgende Parameter sind verfügbar:\n&quot;_logic&quot; - Dieses Modul\n&quot;_caller&quot; - Spieler, der die Einheit auslöst\n&quot;_target&quot; - Einheit, die als Sound-Quelle dient</German>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container>
@@ -310,8 +361,8 @@
 			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Module_GlobalSpeech_HoldAction">
-				<Original>talk to %1</Original>
-				<German>mit %1 zu reden</German>
+				<Original>Talk to %1</Original>
+				<German>Mit %1 reden</German>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container>

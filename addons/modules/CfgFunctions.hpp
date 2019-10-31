@@ -25,6 +25,7 @@ class CfgFunctions {
 		class Modules_Speech {
 			file = "\axe_modules\functions\speech";
 			class moduleGlobalSpeech {};
+			class moduleGlobalSpeechMenu {};
 			class moduleGlobalSpeechPlay {};
 			class moduleTriggerSpeech {};
 		};
