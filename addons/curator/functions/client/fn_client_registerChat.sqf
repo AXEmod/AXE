@@ -37,6 +37,8 @@ if !(hasInterface) exitWith {};
 					systemChat format [localize "STR_AXE_Curator_Chat_Access_Denied"];
 				};
 				
+				["axe_curator_cleanupModules", []] call CBA_fnc_serverEvent;
+				
 				if ((count allCurators) == 0) exitWith {
 					systemChat format [localize "STR_AXE_Curator_Chat_Zeus_NotPresent"];
 				};

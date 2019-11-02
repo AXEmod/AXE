@@ -151,14 +151,7 @@ addMissionEventHandler ["PlayerDisconnected",
 		};
 		
 		["axe_curator_modulePing", [], [_target]] call CBA_fnc_targetEvent;
-		
-		if (missionNamespace getVariable ["axe_curator_module_deleteEmpty", false]) then {
-			{
-				if (isNull (getAssignedCuratorUnit _x)) then {
-					deleteVehicle _x
-				};
-			} forEach allCurators;
-		};
+		["axe_curator_cleanupModules", []] call CBA_fnc_serverEvent;
 		
 	}
 ] call CBA_fnc_addEventHandler;
@@ -191,6 +184,45 @@ addMissionEventHandler ["PlayerDisconnected",
 				[4, "%1 (%2) removed zeus-module from '%3'", [_callerType, _callerName, _targetName], "curator"] call AXE_fnc_log;
 			};
 			
+		};
+		
+		["axe_curator_cleanupModules", []] call CBA_fnc_serverEvent;
+		
+	}
+] call CBA_fnc_addEventHandler;
+
+// -------------------------------------------------------------------------------------------------
+// EVENT: REASSIGN MODULE
+
+[
+	"axe_curator_reassignModule", 
+	{
+		
+		params ["_unit", "_corpse"];
+		
+		private _curatorLogic = getAssignedCuratorLogic _corpse;
+		if !(isNull _curatorLogic) then {
+			unassignCurator _curatorLogic;
+			_unit assignCurator _curatorLogic;
+			["axe_curator_refreshPlayers", []] call CBA_fnc_serverEvent;
+		};
+		
+	}
+] call CBA_fnc_addEventHandler;
+
+// -------------------------------------------------------------------------------------------------
+// EVENT: CLEANUP MODULES
+
+[
+	"axe_curator_cleanupModules", 
+	{
+		
+		if (missionNamespace getVariable ["axe_curator_module_deleteEmpty", false]) then {
+			{
+				if (isNull (getAssignedCuratorUnit _x)) then {
+					deleteVehicle _x
+				};
+			} forEach allCurators;
 		};
 		
 	}

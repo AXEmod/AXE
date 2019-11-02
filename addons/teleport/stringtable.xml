@@ -83,6 +83,153 @@
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Teleport_Module">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Module_displayName">
+				<Original>Teleport Network</Original>
+				<German>Teleport Netzwerk</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Module_Description">
+				<Original>Creates a network of synchronized teleport flags.</Original>
+				<German>Erstellt ein Netzwerk aus synchronisierten Teleport Flaggen.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Module_Property_Enabled_Title">
+				<Original>Enabled</Original>
+				<German>Aktiviert</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Module_Property_Enabled_Tip">
+				<Original>Enables/disables the entire teleport network.</Original>
+				<German>Aktiviert/Deaktiviert das gesamte Teleport-Netzwerk.</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Module_Property_Enabled_0">
+				<Original>false</Original>
+				<German>false</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Module_Property_Enabled_1">
+				<Original>true</Original>
+				<German>true</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Teleport_Flag">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Flag_displayName">
+				<Original>Teleport-Flag</Original>
+				<German>Teleport-Flagge</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Flag_Description">
+				<Original>Teleports a player to jump targets (module: teleport network) or groups of their own page</Original>
+				<German>Teleportiert einen Spieler zu Sprungziele (Modul: Teleport Netzwerk) oder Gruppen der eigenen Seite.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Flag_Property_Enabled_Title">
+				<Original>Enabled</Original>
+				<German>Aktiviert</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Flag_Property_Enabled_Tip">
+				<Original>Enables/disables this flag within the connected network.</Original>
+				<German>Aktiviert/Deaktiviert diese Flagge innerhalb des Netzwerks.</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Flag_Property_Enabled_0">
+				<Original>false</Original>
+				<German>false</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Flag_Property_Enabled_1">
+				<Original>true</Original>
+				<German>true</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Flag_Property_FlagName_Title">
+				<Original>Name</Original>
+				<German>Name</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Flag_Property_FlagName_Tip">
+				<Original>Used as the name of the jump destination.</Original>
+				<German>Wird als Bezeichnung des Sprungziels verwendet.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Flag_Property_Network_Title">
+				<Original>Network</Original>
+				<German>Netzwerk</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Flag_Property_Network_Tip">
+				<Original>Network to which this flag is connected.</Original>
+				<German>Netzwerk, mit dem diese Flagge verbunden wird.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Flag_Property_IsArrival_Title">
+				<Original>Arrival</Original>
+				<German>Ankunft</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Flag_Property_IsArrival_Tip">
+				<Original>If activated, you can use this flag as a jump destination.</Original>
+				<German>Wenn aktiviert, kann man diese Flagge als Sprungziel verwenden.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Flag_Property_IsDeparture_Title">
+				<Original>Departure</Original>
+				<German>Absprung</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Flag_Property_IsDeparture_Tip">
+				<Original>If activated, you can teleport to other flags.</Original>
+				<German>Wenn aktiviert, kann man zu anderen Flaggen teleportieren.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Flag_Property_IsGroup_Title">
+				<Original>Groups</Original>
+				<German>Gruppen</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Flag_Property_IsGroup_Tip">
+				<Original>If activated, you can teleport to groups of your own side.</Original>
+				<German>Wenn aktiviert, kann man zu Gruppen der eigenen Seite teleportieren.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Flag_Property_FlagTexture_Title">
+				<Original>Texture #0</Original>
+				<German>Texture #0</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Flag_Property_FlagTexture_Tip">
+				<Original></Original>
+				<German>Personalisierte Textur, die als Flaggen-Fahne angewendet wird. Verwende einen Pfad, der sich auf das Verzeichnis des Szenarios (z.B. &quot;Textures\myTexture_ca.paa&quot;) oder auf das Spielverzeichnis bezieht (z.B. &quot;\a3\UI_f\data\Logos\arma3_white_ca.paa&quot;), oder nutze eine prozedurale Textur (z.B. &quot;#(argb,8,8,3)color(1,0,1,1)&quot;).</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Interactions">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Flag_Action_Main">
+				<Original>Teleport Flag</Original>
+				<German>Teleport-Flagge</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Flag_Action_toFlag">
+				<Original>Jump to</Original>
+				<German>Sprungziel</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Flag_Action_toGroup">
+				<Original>To Group</Original>
+				<German>Zur Gruppe</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Teleport_Flag_Default_Name">
+				<Original>Destination %1</Original>
+				<German>Sprungziel %1</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Flag_OwnGroup">
+				<Original>Own group</Original>
+				<German>Eigene Gruppe</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Hints">
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Teleport_Hint_Title">
@@ -95,8 +242,12 @@
 				<German>Teleport läuft noch!</German>
 			</Key>
 			<Key ID="STR_AXE_Teleport_Hint_NoMembers">
-				<Original>You are alone in the group.&lt;br/&gt;Teleport aborted!</Original>
-				<German>Du bist alleine in der Gruppe.&lt;br/&gt;Teleport abgebrochen!</German>
+				<Original>This group has no members.&lt;br/&gt;Teleport aborted!</Original>
+				<German>Diese Gruppe hat keine Mitglieder.&lt;br/&gt;Teleport abgebrochen!</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Hint_OneManGroup">
+				<Original>There is no one to teleport to in your group.&lt;br/&gt;Teleport aborted!</Original>
+				<German>Es gibt niemanden zu dem du dich in deiner Gruppe teleportieren kannst.&lt;br/&gt;Teleport abgebrochen!</German>
 			</Key>
 			<Key ID="STR_AXE_Teleport_Hint_Success">
 				<Original>You were teleported!</Original>
@@ -108,8 +259,8 @@
 			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Teleport_Hint_toGroup">
-				<Original>You were teleported to the group of&lt;br/&gt;%1!</Original>
-				<German>Du wurdest zur Gruppe von&lt;br/&gt;&quot;%1&quot; (%2)&lt;br/&gt;teleportiert!</German>
+				<Original>You were teleported to the group&lt;br/&gt;&quot;%1&quot; (%2)!</Original>
+				<German>Du wurdest zur Gruppe&lt;br/&gt;&quot;%1&quot; (%2)&lt;br/&gt;teleportiert!</German>
 			</Key>
 			<Key ID="STR_AXE_Teleport_Hint_toPos">
 				<Original>You were teleported!</Original>
@@ -118,6 +269,14 @@
 			<Key ID="STR_AXE_Teleport_Hint_toUnit">
 				<Original>You were teleported to&lt;br/&gt;&quot;%1&quot;!</Original>
 				<German>Du wurdest zu&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;teleportiert!</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Hint_toFlag">
+				<Original>You were teleported!&lt;br/&gt;&quot;%1&quot;</Original>
+				<German>Du wurdest teleportiert!&lt;br/&gt;&quot;%1&quot;</German>
+			</Key>
+			<Key ID="STR_AXE_Teleport_Hint_toFlag_NoName">
+				<Original>You were teleported!</Original>
+				<German>Du wurdest teleportiert!</German>
 			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Teleport_Hint_SafeMode_Title">

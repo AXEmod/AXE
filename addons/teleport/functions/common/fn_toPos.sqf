@@ -49,13 +49,11 @@ if (Not local _unit) exitWith {
 	params ["_unit", "_position", "_direction", "_message", "_blackout"];
 	
 	if (_unit getVariable ["AXE_Teleport_InProgress", false]) exitWith {
-		private _hintInProgress = format [hint_tpl_liner_2, toUpper(localize "STR_AXE_Teleport_Hint_Title"), localize "STR_AXE_Teleport_Hint_InProgress"];
+		private _hintInProgress = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_InProgress"];
 		[_hintInProgress, 2] call AXE_fnc_hint;
 	};
 	
 	if (missionNamespace getVariable ["axe_teleport_safeMode", true]) then {
-		//_unit setVariable ["ACE_allowDamage", false, true];
-		//_unit allowDamage false;
 		[_unit, "blockDamage", "axe_teleport_toPos", true] call ACE_common_fnc_statusEffect_set;
 	};
 	
@@ -80,10 +78,10 @@ if (Not local _unit) exitWith {
 		moveOut _unit;
 	};
 	
-	private _pos = _position findEmptyPosition [0, 50, (typeOf _unit)];
+	private _pos = _position findEmptyPosition [0, 30, (typeOf _unit)];
 	if (!(_pos isEqualTo [])) then {
-		_unit setPos _pos;
 		_unit setDir _direction;
+		_unit setPos _pos;
 		_success = true;
 	};
 	
@@ -121,8 +119,6 @@ if (Not local _unit) exitWith {
 			
 			uiSleep _time;
 			
-			//_unit setVariable ["ACE_allowDamage", true, true];
-			//_unit allowDamage true;
 			[_unit, "blockDamage", "axe_teleport_toPos", false] call ACE_common_fnc_statusEffect_set;
 			
 		};
@@ -136,12 +132,10 @@ if (Not local _unit) exitWith {
 	if (missionNamespace getVariable ["axe_teleport_hint", true]) then {
 		if (_success) then {
 			private _hintToPos = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_toPos"];
-			//private _hintToPos = format [hint_tpl_liner_2, toUpper(localize "STR_AXE_Teleport_Hint_Title"), localize "STR_AXE_Teleport_Hint_toPos"];
-			[_hintToPos, 0] call axe_fnc_hint;
+			[_hintToPos, 0] call AXE_fnc_hint;
 		} else {
 			private _hintToPos = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_Failure"];
-			//private _hintToPos = format [hint_tpl_liner_2, toUpper(localize "STR_AXE_Teleport_Hint_Title"), localize "STR_AXE_Teleport_Hint_Failure"];
-			[_hintToPos, 2] call axe_fnc_hint;
+			[_hintToPos, 2] call AXE_fnc_hint;
 		};
 	};
 	
