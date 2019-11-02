@@ -63,7 +63,7 @@ if (isNull _target) exitWith {};
 	private _pos = _target modelToWorld [0, 0, 0];
 	_pos = _pos findEmptyPosition [0, 30, (typeOf _player)];
 	if (!(_pos isEqualTo [])) then {
-		private _dir = _pos getDir _target;
+		private _dir = _target getDir _pos;
 		_player setDir _dir;
 		_player setPos _pos;
 		_success = true;

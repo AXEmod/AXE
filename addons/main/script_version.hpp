@@ -1,6 +1,6 @@
 // VERSIONING
 
 #define MAJOR 1
-#define MINOR 2
-#define PATCHLVL 2
-#define BUILD 134
+#define MINOR 3
+#define PATCHLVL 0
+#define BUILD 236
