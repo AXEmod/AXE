@@ -22,3 +22,11 @@ private _version = ["axe_teleport"] call AXE_fnc_getAddonVersion;
 [4, "Addon (v%1) loaded...", [_version], "teleport"] call AXE_fnc_log;
 
 // -------------------------------------------------------------------------------------------------
+
+if !(hasInterface) exitWith {};
+
+// -------------------------------------------------------------------------------------------------
+
+["AXE_Flag_Teleport", 0] call ACE_interact_menu_fnc_addMainAction;
+
+// -------------------------------------------------------------------------------------------------

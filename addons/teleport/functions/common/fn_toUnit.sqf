@@ -46,13 +46,11 @@ if (Not local _unit) exitWith {
 	params ["_unit", "_target", "_message", "_blackout"];
 	
 	if (_unit getVariable ["AXE_Teleport_InProgress", false]) exitWith {
-		private _hintInProgress = format [hint_tpl_liner_2, toUpper(localize "STR_AXE_Teleport_Hint_Title"), localize "STR_AXE_Teleport_Hint_InProgress"];
+		private _hintInProgress = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_InProgress"];
 		[_hintInProgress, 2] call AXE_fnc_hint;
 	};
 	
 	if (missionNamespace getVariable ["axe_teleport_safeMode", true]) then {
-		//_unit setVariable ["ACE_allowDamage", false, true];
-		//_unit allowDamage false;
 		[_unit, "blockDamage", "axe_teleport_toUnit", true] call ACE_common_fnc_statusEffect_set;
 	};
 	
@@ -70,7 +68,7 @@ if (Not local _unit) exitWith {
 	
 	waitUntil {if (preloadCamera (getPos _target)) exitWith {true}; false};
 	
-	_success = false;
+	private _success = false;
 	
 	if (vehicle _unit != _unit) then {
 		unassignVehicle _unit;
@@ -116,8 +114,8 @@ if (Not local _unit) exitWith {
 		_pos = _pos findEmptyPosition [0, 30, (typeOf _unit)];
 		if (!(_pos isEqualTo [])) then {
 			private _dir = _pos getDir _target;
-			_unit setPos _pos;
 			_unit setDir _dir;
+			_unit setPos _pos;
 			_success = true;
 		};
 	};
@@ -156,8 +154,6 @@ if (Not local _unit) exitWith {
 			
 			uiSleep _time;
 			
-			//_unit setVariable ["ACE_allowDamage", true, true];
-			//_unit allowDamage true;
 			[_unit, "blockDamage", "axe_teleport_toUnit", false] call ACE_common_fnc_statusEffect_set;
 			
 		};
@@ -170,15 +166,13 @@ if (Not local _unit) exitWith {
 	
 	if (missionNamespace getVariable ["axe_teleport_hint", true]) then {
 		if (_success) then {
-			private _targetName = [_target] call ace_common_fnc_getName;
+			private _targetName = [_target] call ACE_common_fnc_getName;
 			private _textToUnit = format [localize "STR_AXE_Teleport_Hint_toUnit", _targetName];
 			private _hintToUnit = format [hint_tpl_liner_1, _textToUnit];
-			//private _hintToUnit = format [hint_tpl_liner_2, toUpper(localize "STR_AXE_Teleport_Hint_Title"), _textToUnit];
-			[_hintToUnit, 0] call axe_fnc_hint;
+			[_hintToUnit, 0] call AXE_fnc_hint;
 		} else {
 			private _hintToUnit = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_Failure"];
-			//private _hintToUnit = format [hint_tpl_liner_2, toUpper(localize "STR_AXE_Teleport_Hint_Title"), localize "STR_AXE_Teleport_Hint_Failure"];
-			[_hintToUnit, 2] call axe_fnc_hint;
+			[_hintToUnit, 2] call AXE_fnc_hint;
 		};
 	};
 	

@@ -25,9 +25,9 @@ _shutter	= [_this, 1, true, [true]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
-[_filename] spawn {
+[_filename, _shutter] spawn {
 	
-	params ["_filename"];
+	params ["_filename", "_shutter"];
 	
 	/*
 	private _ppE = ppEffectCreate ["colorCorrections", 1800];

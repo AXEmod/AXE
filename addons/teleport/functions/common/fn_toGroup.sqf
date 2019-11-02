@@ -46,18 +46,16 @@ if (Not local _unit) exitWith {
 	params ["_unit", "_group", "_message", "_blackout"];
 	
 	if (_unit getVariable ["AXE_Teleport_InProgress", false]) exitWith {
-		private _hintInProgress = format [hint_tpl_liner_2, toUpper(localize "STR_AXE_Teleport_Hint_Title"), localize "STR_AXE_Teleport_Hint_InProgress"];
+		private _hintInProgress = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_InProgress"];
 		[_hintInProgress, 2] call AXE_fnc_hint;
 	};
 	
 	if (count (units _group) < 1) exitWith {
-		private _hintNoMembers = format [hint_tpl_liner_2, toUpper(localize "STR_AXE_Teleport_Hint_Title"), localize "STR_AXE_Teleport_Hint_NoMembers"];
+		private _hintNoMembers = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_NoMembers"];
 		[_hintNoMembers, 2] call AXE_fnc_hint;
 	};
 	
 	if (missionNamespace getVariable ["axe_teleport_safeMode", true]) then {
-		//_unit setVariable ["ACE_allowDamage", false, true];
-		//_unit allowDamage false;
 		[_unit, "blockDamage", "axe_teleport_toGroup", true] call ACE_common_fnc_statusEffect_set;
 	};
 	
@@ -77,14 +75,17 @@ if (Not local _unit) exitWith {
 	private _leader = leader _group;
 	private _target = _leader;
 	
+	if ((_unit == _leader) && ((count (units _group)) < 2)) exitWith {
+		private _hintOneManGroup = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_OneManGroup"];
+		[_hintOneManGroup, 2] call AXE_fnc_hint;
+	};
+	
 	if (_unit == _leader) then {
 		_units = (units _group);
 		private _shuffle = _units call BIS_fnc_arrayShuffle;
-		private _valid = false;
 		{
-			if ((!isNil "_x") && (!_valid)) then {
+			if ((!isNil "_x") && (_x != _leader)) exitWith {
 				_target = _x;
-				_valid = true;
 			};
 		} forEach _shuffle;
 	};
@@ -135,8 +136,8 @@ if (Not local _unit) exitWith {
 		_pos = _pos findEmptyPosition [0, 30, (typeOf _unit)];
 		if (!(_pos isEqualTo [])) then {
 			private _dir = _pos getDir _target;
-			_unit setPos _pos;
 			_unit setDir _dir;
+			_unit setPos _pos;
 			_success = true;
 		};
 	};
@@ -175,8 +176,6 @@ if (Not local _unit) exitWith {
 			
 			uiSleep _time;
 			
-			//_unit setVariable ["ACE_allowDamage", true, true];
-			//_unit allowDamage true;
 			[_unit, "blockDamage", "axe_teleport_toGroup", false] call ACE_common_fnc_statusEffect_set;
 			
 		};
@@ -189,15 +188,13 @@ if (Not local _unit) exitWith {
 	
 	if (missionNamespace getVariable ["axe_teleport_hint", true]) then {
 		if (_success) then {
-			private _targetName = [_target] call ACE_common_fnc_getName;
+			private _targetName = [(leader _group)] call ACE_common_fnc_getName;
 			private _groupName = groupId _group;
-			private _textToGroup = format [localize "STR_AXE_Teleport_Hint_toGroup", _targetName, _groupName];
+			private _textToGroup = format [localize "STR_AXE_Teleport_Hint_toGroup", _groupName, _targetName];
 			private _hintToGroup = format [hint_tpl_liner_1, _textToGroup];
-			//private _hintToGroup = format [hint_tpl_liner_2, toUpper(localize "STR_AXE_Teleport_Hint_Title"), _textToGroup];
 			[_hintToGroup, 0] call AXE_fnc_hint;
 		} else {
 			private _hintToGroup = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_Failure"];
-			//private _hintToGroup = format [hint_tpl_liner_2, toUpper(localize "STR_AXE_Teleport_Hint_Title"), localize "STR_AXE_Teleport_Hint_Failure"];
 			[_hintToGroup, 2] call AXE_fnc_hint;
 		};
 	};

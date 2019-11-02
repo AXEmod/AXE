@@ -50,12 +50,7 @@ if (_fpsInterval < 1) then {_fpsInterval = 1;};
 		
 		params ["_unit", "_corpse"];
 		
-		private _curatorLogic = getAssignedCuratorLogic _corpse;
-		if !(isNull _curatorLogic) then {
-			unassignCurator _curatorLogic;
-			_unit assignCurator _curatorLogic;
-			["axe_curator_refreshPlayers", []] call CBA_fnc_serverEvent;
-		};
+		["axe_curator_reassignModule", [_unit, _corpse]] call CBA_fnc_serverEvent;
 		
 	}];
 	
