@@ -54,7 +54,7 @@
 - Tweaks for the diagnostic display.
 - Field rations (ACEX) with influence on vital values.
 - Food Supplies Boxes.
-- RadioBagpacks (Contact DLC) for ACRE/TFAR.
+- RadioBackpacks (Contact DLC) for ACRE/TFAR.
 - Blindfolds with appropriate interactions.
 - A bunch of inventory items.
 
