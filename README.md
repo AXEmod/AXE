@@ -1,5 +1,6 @@
 
 
+
 <p align="center">
 	<a href="https://github.com/axemod/axe">
 		<img src="http://axemod.userscreen.net/images/github/github_wiki_1.png" width=640>
@@ -39,17 +40,21 @@
 - Stackable hint system (with CBA A3/ACE3 integration).
 - Easy-to-use (file-based) equipment system.
 - Fully configurable via CBA Settings.
-- German / English translations.
+- English / German.
 
 ### Additional
 
+- Curator/Zeus extensions (chat, shortcut keys, etc).
+- Teleport Module/Flags.
 - Global sounds (e.g. fatigue, eating and interaction).
+- Sound-Module for mission-makers.
 - Medical items like stethoscope or refill packs.
 - Medical dressing station.
 - Medical crates.
 - Tweaks for the diagnostic display.
 - Field rations (ACEX) with influence on vital values.
 - Food Supplies Boxes.
+- RadioBagpacks (Contact DLC) for ACRE/TFAR.
 - Blindfolds with appropriate interactions.
 - A bunch of inventory items.
 
