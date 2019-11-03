@@ -3,7 +3,7 @@
  *	\axe_teleport\functions\common\fn_toUnit.sqf
  *	by Ojemineh
  *	
- *	teleport unit to other unit
+ *	teleport unit to another unit
  *	
  *	Arguments:
  *	0: unit		- <OBJECT>
@@ -54,6 +54,10 @@ if (Not local _unit) exitWith {
 		[_unit, "blockDamage", "axe_teleport_toUnit", true] call ACE_common_fnc_statusEffect_set;
 	};
 	
+	if (visibleMap) then {openMap false;};
+	closeDialog 0;
+	disableUserInput true;
+	
 	_unit setVariable ["AXE_Teleport_InProgress", true, true];
 	
 	if (_blackout) then {
@@ -69,6 +73,7 @@ if (Not local _unit) exitWith {
 	waitUntil {if (preloadCamera (getPos _target)) exitWith {true}; false};
 	
 	private _success = false;
+	private _targetInVehicle = false;
 	
 	if (vehicle _unit != _unit) then {
 		unassignVehicle _unit;
@@ -76,6 +81,7 @@ if (Not local _unit) exitWith {
 	};
 	
 	if (vehicle _target != _target) then {
+		_targetInVehicle = true;
 		private _vehicle = vehicle _target;
 		private _freeDriver = _vehicle emptyPositions "driver";
 		if (_freeDriver > 0) then {
@@ -126,6 +132,8 @@ if (Not local _unit) exitWith {
 	
 	_unit hideObjectGlobal false;
 	
+	disableUserInput false;
+	
 	[_unit, _success] spawn {
 		
 		params ["_unit", "_success"];
@@ -171,7 +179,12 @@ if (Not local _unit) exitWith {
 			private _hintToUnit = format [hint_tpl_liner_1, _textToUnit];
 			[_hintToUnit, 0] call AXE_fnc_hint;
 		} else {
-			private _hintToUnit = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_Failure"];
+			private _hintToUnit = "";
+			if (_targetInVehicle) then {
+				_hintToUnit = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_FailureVehicle"];
+			} else {
+				_hintToUnit = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_Failure"];
+			};
 			[_hintToUnit, 2] call AXE_fnc_hint;
 		};
 	};

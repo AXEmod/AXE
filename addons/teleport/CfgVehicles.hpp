@@ -191,7 +191,7 @@ class CfgVehicles {
 				
 				class AXE_Flag_Teleport_Action_toFlag {
 					displayName = "$STR_AXE_Teleport_Flag_Action_toFlag";
-					condition = "(_target getVariable ['isDeparture', false])";
+					condition = "[_player, _target] call AXE_teleport_fnc_flag_showFlags";
 					statement = "true";
 					insertChildren = "[_player, _target] call AXE_teleport_fnc_flag_getFlags";
 					exceptions[] = {};
@@ -202,7 +202,7 @@ class CfgVehicles {
 				
 				class AXE_Flag_Teleport_Action_toGroup {
 					displayName = "$STR_AXE_Teleport_Flag_Action_toGroup";
-					condition = "(_target getVariable ['isGroup', false])";
+					condition = "[_player, _target] call AXE_teleport_fnc_flag_showGroups";
 					statement = "true";
 					insertChildren = "[_player, _target] call AXE_teleport_fnc_flag_getGroups";
 					exceptions[] = {};

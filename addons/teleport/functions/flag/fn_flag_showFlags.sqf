@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\axe_teleport\functions\flag\fn_flag_getFlags.sqf
+ *	\axe_teleport\functions\flag\fn_flag_showFlags.sqf
  *	by Ojemineh
  *	
  *	get all teleporters in the network
@@ -10,10 +10,10 @@
  *	1: target - <OBJECT>
  *	
  *	Return:
- *	<ARRAY>
+ *	<BOOLEAN>
  *	
  *	Example:
- *	[_player, _target] call AXE_teleport_fnc_flag_getFlags;
+ *	[_player, _target] call AXE_teleport_fnc_flag_showFlags;
  *	
  */
 
@@ -26,22 +26,21 @@ _target	= [_this, 1, objNull, [objNull]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
-if (isNull _player) exitWith {[]};
-if (isNull _target) exitWith {[]};
+if (isNull _player) exitWith {false};
+if (isNull _target) exitWith {false};
 
 // -------------------------------------------------------------------------------------------------
 
-private _actions = [];
-private _counter = 1;
+private _return = false;
 
 private _controller = objNull;
 if ((_target getVariable ["network", ""]) != "") then {
 	_controller = missionNamespace getVariable (_target getVariable ["network", ""]);
 };
-if (isNull _controller) exitWith {[]};
+if (isNull _controller) exitWith {false};
 
 private _synchronizedObjects = [_controller, "AXE_Flag_Teleport"] call BIS_fnc_synchronizedObjects;
-if ((count _synchronizedObjects) isEqualTo 0) exitWith {[]};
+if ((count _synchronizedObjects) isEqualTo 0) exitWith {false};
 
 private _allTeleporters = [];
 {
@@ -49,30 +48,14 @@ private _allTeleporters = [];
 		_allTeleporters pushBack _x;
 	};
 } forEach _synchronizedObjects;
-if ((count _allTeleporters) < 2) exitWith {[]};
+if ((count _allTeleporters) < 2) exitWith {false};
 
-{
-	
-	if (_x != _target) then {
-		
-		private _displayName = _x getVariable ["FlagName", ""];
-		if (_displayName isEqualTo "") then {
-			_displayName = format [localize "STR_AXE_Teleport_Flag_Default_Name", _counter];
-		} else {
-			if (isLocalized _displayName) then {_displayName = localize _displayName;};
-		};
-		
-		_statement = {
-			params ["_target", "_player", "_params"];
-			[_player, _params] call AXE_teleport_fnc_flag_toFlag;
-		};
-		
-		private _action = [_x, _displayName, "", _statement, {true}, {}, _x] call ACE_interact_menu_fnc_createAction;
-		_actions pushBack [_action, [], _target];
-		_counter = _counter + 1;
-		
-	};
-	
-} forEach _allTeleporters;
+// -------------------------------------------------------------------------------------------------
 
-_actions;
+_return = (
+	((_controller getVariable ["enabled", 0]) > 0) && 
+	(_target getVariable ['isDeparture', false]) && 
+	((count _allTeleporters) > 1)
+);
+
+_return;

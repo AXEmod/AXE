@@ -59,6 +59,10 @@ if (Not local _unit) exitWith {
 		[_unit, "blockDamage", "axe_teleport_toGroup", true] call ACE_common_fnc_statusEffect_set;
 	};
 	
+	if (visibleMap) then {openMap false;};
+	closeDialog 0;
+	disableUserInput true;
+	
 	_unit setVariable ["AXE_Teleport_InProgress", true, true];
 	
 	if (_blackout) then {
@@ -72,6 +76,7 @@ if (Not local _unit) exitWith {
 	_unit hideObjectGlobal true;
 	
 	private _success = false;
+	private _targetInVehicle = false;
 	private _leader = leader _group;
 	private _target = _leader;
 	
@@ -98,6 +103,7 @@ if (Not local _unit) exitWith {
 	};
 	
 	if (vehicle _target != _target) then {
+		_targetInVehicle = true;
 		private _vehicle = vehicle _target;
 		private _freeDriver = _vehicle emptyPositions "driver";
 		if (_freeDriver > 0) then {
@@ -148,6 +154,8 @@ if (Not local _unit) exitWith {
 	
 	_unit hideObjectGlobal false;
 	
+	disableUserInput false;
+	
 	[_unit, _success] spawn {
 		
 		params ["_unit", "_success"];
@@ -194,7 +202,12 @@ if (Not local _unit) exitWith {
 			private _hintToGroup = format [hint_tpl_liner_1, _textToGroup];
 			[_hintToGroup, 0] call AXE_fnc_hint;
 		} else {
-			private _hintToGroup = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_Failure"];
+			private _hintToGroup = "";
+			if (_targetInVehicle) then {
+				_hintToGroup = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_FailureVehicle"];
+			} else {
+				_hintToGroup = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_Failure"];
+			};
 			[_hintToGroup, 2] call AXE_fnc_hint;
 		};
 	};

@@ -257,6 +257,10 @@
 				<Original>You could not be teleported!</Original>
 				<German>Teleport fehlgeschlagen!</German>
 			</Key>
+			<Key ID="STR_AXE_Teleport_Hint_FailureVehicle">
+				<Original>Teleport into the vehicle failed! Maybe all seats are occupied!</Original>
+				<German>Teleport ins Fahrzeug fehlgeschlagen! Möglicherweise sind alle Plätze besetzt!</German>
+			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Teleport_Hint_toGroup">
 				<Original>You were teleported to the group&lt;br/&gt;&quot;%1&quot; (%2)!</Original>
