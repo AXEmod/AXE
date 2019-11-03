@@ -44,6 +44,10 @@ if (isNull _target) exitWith {};
 		[_player, "blockDamage", "axe_teleport_toFlag", true] call ACE_common_fnc_statusEffect_set;
 	};
 	
+	if (visibleMap) then {openMap false;};
+	closeDialog 0;
+	disableUserInput true;
+	
 	_player setVariable ["AXE_Teleport_InProgress", true, true];
 	
 	100 cutText ["", "BLACK OUT", 0.5];
@@ -74,6 +78,8 @@ if (isNull _target) exitWith {};
 	100 cutText ["", "BLACK IN", 1.0];
 	
 	_player hideObjectGlobal false;
+	
+	disableUserInput false;
 	
 	[_player, _success] spawn {
 		

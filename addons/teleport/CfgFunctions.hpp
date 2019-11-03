@@ -13,6 +13,7 @@ class CfgFunctions {
 		class Common {
 			file = "\axe_teleport\functions\common";
 			class toGroup {};
+			class toMarker {};
 			class toPos {};
 			class toUnit {};
 		};
@@ -22,6 +23,8 @@ class CfgFunctions {
 			class flag_getFlags {};
 			class flag_getGroups {};
 			class flag_isEnabled {};
+			class flag_showFlags {};
+			class flag_showGroups {};
 			class flag_toFlag {};
 			class flag_toGroup {};
 		};

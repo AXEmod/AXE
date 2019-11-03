@@ -75,7 +75,7 @@
 		localize "STR_AXE_Common_CBA_Category_Options"
 	],
 	false,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 

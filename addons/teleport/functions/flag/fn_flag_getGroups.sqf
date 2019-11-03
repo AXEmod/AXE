@@ -31,11 +31,17 @@ if (isNull _target) exitWith {[]};
 
 // -------------------------------------------------------------------------------------------------
 
-private _allGroups = [];
 private _actions = [];
 private _action = [];
 private _displayName = "";
 
+private _controller = objNull;
+if ((_target getVariable ["network", ""]) != "") then {
+	_controller = missionNamespace getVariable (_target getVariable ["network", ""]);
+};
+if (isNull _controller) exitWith {[]};
+
+private _allGroups = [];
 _allGroups = allGroups select {side _x isEqualTo playerSide};
 if ((count _allGroups) isEqualTo 0) exitWith {[]};
 

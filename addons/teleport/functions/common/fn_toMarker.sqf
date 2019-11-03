@@ -1,52 +1,52 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\axe_teleport\functions\common\fn_toPos.sqf
+ *	\axe_teleport\functions\common\fn_toMarker.sqf
  *	by Ojemineh
  *	
- *	teleport unit to a position
+ *	teleport unit to a marker
  *	
  *	Arguments:
- *	0: unit			- <OBJECT>
- *	1: position		- <ARRAY>
- *	2: direction	- <NUMBER>
- *	3: message		- <STRING>	(optional)
- *	4: blackout		- <BOOLEAN>
+ *	0: unit		- <OBJECT>
+ *	1: marker	- <STRING>
+ *	2: message	- <STRING>
+ *	3: blackout	- <BOOLEAN>
  *	
  *	Return:
  *	nothing
  *	
  *	Example:
- *	[player, (getPos target), (getDir target)] call AXE_teleport_fnc_toPos;
+ *	[player, "marker1"] call AXE_teleport_fnc_toMarker;
  *	
  */
 
 // -------------------------------------------------------------------------------------------------
 
-private ["_unit", "_position", "_direction", "_message", "_blackout"];
+private ["_unit", "_marker", "_message", "_blackout"];
 
 _unit		= [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_position	= [_this, 1, [], [[]]] call BIS_fnc_param;
-_direction	= [_this, 2, -1, [0]] call BIS_fnc_param;
-_message	= [_this, 3, "", [""]] call BIS_fnc_param;
-_blackout	= [_this, 4, true, [true]] call BIS_fnc_param;
+_marker		= [_this, 1, "", [""]] call BIS_fnc_param;
+_message	= [_this, 2, "", [""]] call BIS_fnc_param;
+_blackout	= [_this, 3, true, [true]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
 if (isNull _unit) exitWith {};
-if (_position isEqualTo []) then { _position = [0,0,0]; };
-if (_direction isEqualTo -1) then { _direction = getDir _unit; };
+if (_marker isEqualTo "") exitWith {};
 
 // -------------------------------------------------------------------------------------------------
 
 if (Not local _unit) exitWith {
-	[_unit, _position, _direction, _message, _blackout] remoteExecCall ["AXE_teleport_fnc_toPos", _unit];
+	[_unit, _marker, _message, _blackout] remoteExecCall ["AXE_teleport_fnc_toMarker", _unit];
 };
 
 // -------------------------------------------------------------------------------------------------
 
-[_unit, _position, _direction, _message, _blackout] spawn {
+private _markerPos = markerPos _marker;
+private _markerDir = markerDir _marker;
+
+[_unit, _markerPos, _markerDir, _message, _blackout] spawn {
 	
-	params ["_unit", "_position", "_direction", "_message", "_blackout"];
+	params ["_unit", "_markerPos", "_markerDir", "_message", "_blackout"];
 	
 	if (_unit getVariable ["AXE_Teleport_InProgress", false]) exitWith {
 		private _hintInProgress = format [hint_tpl_liner_1, localize "STR_AXE_Teleport_Hint_InProgress"];
@@ -73,7 +73,7 @@ if (Not local _unit) exitWith {
 	
 	_unit hideObjectGlobal true;
 	
-	waitUntil {if (preloadCamera (_position)) exitWith {true}; false};
+	waitUntil {if (preloadCamera (_markerPos)) exitWith {true}; false};
 	
 	private _success = false;
 	
@@ -82,9 +82,9 @@ if (Not local _unit) exitWith {
 		moveOut _unit;
 	};
 	
-	private _pos = _position findEmptyPosition [0, 30, (typeOf _unit)];
+	private _pos = _markerPos findEmptyPosition [0, 30, (typeOf _unit)];
 	if (!(_pos isEqualTo [])) then {
-		_unit setDir _direction;
+		_unit setDir _markerDir;
 		_unit setPos _pos;
 		_success = true;
 	};
