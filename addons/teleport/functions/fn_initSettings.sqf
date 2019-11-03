@@ -50,7 +50,7 @@
 		localize "STR_AXE_Teleport_CBA_Category_Safemode"
 	],
 	true,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -66,7 +66,7 @@
 		localize "STR_AXE_Teleport_CBA_Category_Safemode"
 	],
 	[3,30,5,0],
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -82,7 +82,7 @@
 		localize "STR_AXE_Teleport_CBA_Category_Safemode"
 	],
 	true,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 

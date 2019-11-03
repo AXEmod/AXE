@@ -32,7 +32,7 @@
 		localize "STR_AXE_Field_Rations_CBA_Category_Common"
 	],
 	true,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -48,7 +48,7 @@
 		localize "STR_AXE_Field_Rations_CBA_Category_Common"
 	],
 	true,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -66,7 +66,7 @@
 		localize "STR_AXE_Field_Rations_CBA_Category_Water"
 	],
 	true,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -82,7 +82,7 @@
 		localize "STR_AXE_Field_Rations_CBA_Category_Water"
 	],
 	[0.1,2,1,2],
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -98,7 +98,7 @@
 		localize "STR_AXE_Field_Rations_CBA_Category_Water"
 	],
 	true,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -116,7 +116,7 @@
 		localize "STR_AXE_Field_Rations_CBA_Category_Energy"
 	],
 	true,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -132,7 +132,7 @@
 		localize "STR_AXE_Field_Rations_CBA_Category_Energy"
 	],
 	[30,300,180,0],
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -150,7 +150,7 @@
 		localize "STR_AXE_Field_Rations_CBA_Category_Food"
 	],
 	true,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -166,7 +166,7 @@
 		localize "STR_AXE_Field_Rations_CBA_Category_Food"
 	],
 	[0.1,2,1,2],
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 

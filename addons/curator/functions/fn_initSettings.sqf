@@ -40,7 +40,7 @@
 		], 
 		1
 	],
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -64,7 +64,7 @@
 		], 
 		2
 	],
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -80,7 +80,7 @@
 		localize "STR_AXE_Curator_CBA_Category_Common"
 	],
 	true,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -114,7 +114,7 @@
 		localize "STR_AXE_Curator_CBA_Category_FPS"
 	],
 	[1,10,3,0],
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -146,7 +146,7 @@
 		localize "STR_AXE_Curator_CBA_Category_FPS"
 	],
 	true,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 

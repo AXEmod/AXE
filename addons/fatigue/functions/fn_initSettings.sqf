@@ -32,7 +32,7 @@
 		localize "STR_AXE_Fatigue_CBA_Category_Common"
 	],
 	true,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 

@@ -32,7 +32,7 @@
 		localize "STR_AXE_Interactions_CBA_Category_Common"
 	],
 	true,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -52,7 +52,7 @@
 		localize "STR_AXE_Interactions_CBA_Category_TapShoulder"
 	],
 	false,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -95,7 +95,7 @@
 		], 
 		2
 	],
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -118,7 +118,7 @@
 		], 
 		1
 	],
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -141,7 +141,7 @@
 		], 
 		0
 	],
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -184,7 +184,7 @@
 		], 
 		1
 	],
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 

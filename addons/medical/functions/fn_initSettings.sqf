@@ -32,7 +32,7 @@
 		localize "STR_AXE_Medical_CBA_Category_Common"
 	],
 	false,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -48,7 +48,7 @@
 		localize "STR_AXE_Medical_CBA_Category_Common"
 	],
 	true,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -73,7 +73,7 @@
 		], 
 		0
 	],
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -96,7 +96,7 @@
 		], 
 		1
 	],
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -114,7 +114,7 @@
 		localize "STR_AXE_Medical_CBA_Category_Return"
 	],
 	true,
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
@@ -130,7 +130,7 @@
 		localize "STR_AXE_Medical_CBA_Category_Return"
 	],
 	[0,4,1,0],
-	0,
+	1,
 	{}
 ] call CBA_Settings_fnc_init;
 
