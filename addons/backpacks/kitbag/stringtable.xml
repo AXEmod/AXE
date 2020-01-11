@@ -6,7 +6,7 @@
 		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Backpacks_Kitbag">
-			<!-- ------------------------------------------------------------------------------- -->
+			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Backpacks_Kitbag_Title">
 				<Original>AXE Backpacks Carryall</Original>
 			</Key>
@@ -16,13 +16,13 @@
 			<Key ID="STR_AXE_Backpacks_Kitbag_URL">
 				<Original>https://github.com/AXEmod/AXE</Original>
 			</Key>
-			<!-- ------------------------------------------------------------------------------- -->
+			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Kitbag">
-			<!-- ------------------------------------------------------------------------------- -->
+			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Backpacks_Kitbag_01_BLACK">
 				<Original>Kitbag (Black)</Original>
 				<German>Seesack (Schwarz)</German>
@@ -127,6 +127,14 @@
 				<Original>Kitbag (OCP MED)</Original>
 				<German>Seesack (OCP MED)</German>
 			</Key>
+			<Key ID="STR_AXE_Backpacks_Kitbag_01_TROPIC">
+				<Original>Kitbag (Tropic)</Original>
+				<German>Seesack (Tropen)</German>
+			</Key>
+			<Key ID="STR_AXE_Backpacks_Kitbag_01_TROPIC_MEDIC">
+				<Original>Kitbag (Tropic MED)</Original>
+				<German>Seesack (Tropen MED)</German>
+			</Key>
 			<Key ID="STR_AXE_Backpacks_Kitbag_01_UCP">
 				<Original>Kitbag (UCP)</Original>
 				<German>Seesack (UCP)</German>
@@ -143,7 +151,15 @@
 				<Original>Kitbag (Wood Classic MED)</Original>
 				<German>Seesack (Wald Klassisch MED)</German>
 			</Key>
-			<!-- ------------------------------------------------------------------------------- -->
+			<Key ID="STR_AXE_Backpacks_Kitbag_01_WDL2">
+				<Original>Kitbag (Woodland)</Original>
+				<German>Seesack (Waldtarn)</German>
+			</Key>
+			<Key ID="STR_AXE_Backpacks_Kitbag_01_WDL2_MEDIC">
+				<Original>Kitbag (Woodland MED)</Original>
+				<German>Seesack (Waldtarn MED)</German>
+			</Key>
+			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		

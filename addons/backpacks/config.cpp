@@ -7,8 +7,8 @@ class CfgPatches {
 		name = "$STR_AXE_Backpacks_Title";
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
-			"a3_weapons_f",
-			"axe_main"
+			"axe_main",
+			"a3_weapons_f"
 		};
 		units[] = {};
 		weapons[] = {};

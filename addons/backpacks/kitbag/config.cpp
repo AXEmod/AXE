@@ -7,8 +7,8 @@ class CfgPatches {
 		addonRootClass = "AXE_Backpacks";
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
-			"a3_weapons_f_ammoboxes",
-			"axe_backpacks"
+			"axe_backpacks",
+			"a3_weapons_f_ammoboxes"
 		};
 		units[] = {
 			"AXE_Kitbag_01_BLACK",
@@ -37,10 +37,14 @@ class CfgPatches {
 			"AXE_Kitbag_01_MTP_MEDIC",
 			"AXE_Kitbag_01_OCP",
 			"AXE_Kitbag_01_OCP_MEDIC",
+			"AXE_Kitbag_01_TROPIC",
+			"AXE_Kitbag_01_TROPIC_MEDIC",
 			"AXE_Kitbag_01_UCP",
 			"AXE_Kitbag_01_UCP_MEDIC",
 			"AXE_Kitbag_01_WDL",
-			"AXE_Kitbag_01_WDL_MEDIC"
+			"AXE_Kitbag_01_WDL_MEDIC",
+			"AXE_Kitbag_01_WDL2",
+			"AXE_Kitbag_01_WDL2_MEDIC"
 		};
 		weapons[] = {};
 		author = "$STR_AXE_Backpacks_Kitbag_Author";

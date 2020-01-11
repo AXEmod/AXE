@@ -361,6 +361,32 @@ class CfgVehicles {
 		hiddenSelectionsTextures[] = {"\axe_backpacks\carryall\data\textures\carryall_ocp_medic_co.paa"};
 	};
 	
+	// CARRYALL TROPIC
+	
+	class AXE_Carryall_01_TROPIC: AXE_Carryall_01_Base {
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		displayName = "$STR_AXE_Backpacks_Carryall_01_TROPIC";
+		descriptionShort = "";
+		editorPreview = "\axe_backpacks\carryall\data\previews\carryall_tropic.jpg";
+		picture = "\axe_backpacks\carryall\data\ui\carryall_tropic_ca.paa";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\axe_backpacks\carryall\data\textures\carryall_tropic_co.paa"};
+	};
+	
+	class AXE_Carryall_01_TROPIC_MEDIC: AXE_Carryall_01_Base {
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		displayName = "$STR_AXE_Backpacks_Carryall_01_TROPIC_MEDIC";
+		descriptionShort = "";
+		editorPreview = "\axe_backpacks\carryall\data\previews\carryall_tropic.jpg";
+		picture = "\axe_backpacks\carryall\data\ui\carryall_tropic_ca.paa";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\axe_backpacks\carryall\data\textures\carryall_tropic_medic_co.paa"};
+	};
+	
 	// CARRYALL UCP
 	
 	class AXE_Carryall_01_UCP: AXE_Carryall_01_Base {
@@ -421,7 +447,7 @@ class CfgVehicles {
 		scopeCurator = 2;
 		displayName = "$STR_AXE_Backpacks_Carryall_01_WDL2";
 		descriptionShort = "";
-		editorPreview = "\axe_backpacks\carryall\data\previews\carryall_wdl.jpg";
+		editorPreview = "\axe_backpacks\carryall\data\previews\carryall_wdl2.jpg";
 		picture = "\axe_backpacks\carryall\data\ui\carryall_wdl2_ca.paa";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\axe_backpacks\carryall\data\textures\carryall_wdl2_co.paa"};
@@ -433,7 +459,7 @@ class CfgVehicles {
 		scopeCurator = 2;
 		displayName = "$STR_AXE_Backpacks_Carryall_01_WDL2_MEDIC";
 		descriptionShort = "";
-		editorPreview = "\axe_backpacks\carryall\data\previews\carryall_wdl.jpg";
+		editorPreview = "\axe_backpacks\carryall\data\previews\carryall_wdl2.jpg";
 		picture = "\axe_backpacks\carryall\data\ui\carryall_wdl2_ca.paa";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\axe_backpacks\carryall\data\textures\carryall_wdl2_medic_co.paa"};

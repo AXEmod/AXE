@@ -6,7 +6,7 @@
 		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Backpacks_RadioBag">
-			<!-- ------------------------------------------------------------------------------- -->
+			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Backpacks_RadioBag_Title">
 				<Original>AXE Backpacks RadioBag</Original>
 			</Key>
@@ -16,74 +16,90 @@
 			<Key ID="STR_AXE_Backpacks_RadioBag_URL">
 				<Original>https://github.com/AXEmod/AXE</Original>
 			</Key>
-			<!-- ------------------------------------------------------------------------------- -->
+			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="RadioBag">
-			<!-- ------------------------------------------------------------------------------- -->
-			<Key ID="STR_AXE_Backpacks_RadioBag_02_BLACK">
+			<!-- =============================================================================== -->
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_BLACK">
 				<Original>Radio Pack (Black)</Original>
 				<German>Funkrucksack (Schwarz)</German>
 			</Key>
-			<Key ID="STR_AXE_Backpacks_RadioBag_02_BW_D">
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_BW_D">
 				<Original>Radio Pack (BW Tropic)</Original>
 				<German>Funkrucksack (BW Tropen)</German>
 			</Key>
-			<Key ID="STR_AXE_Backpacks_RadioBag_02_BW_W">
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_BW_W">
 				<Original>Radio Pack (BW Camo)</Original>
 				<German>Funkrucksack (BW Fleck)</German>
 			</Key>
-			<Key ID="STR_AXE_Backpacks_RadioBag_02_COYOTE">
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_COYOTE">
 				<Original>Radio Pack (Coyote)</Original>
 				<German>Funkrucksack (Coyote)</German>
 			</Key>
-			<Key ID="STR_AXE_Backpacks_RadioBag_02_GREEN_DARK">
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_GEOMETRIC">
+				<Original>Radio Pack (Geometric)</Original>
+				<German>Funkrucksack (Geometrisch)</German>
+			</Key>
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_GREEN_DARK">
 				<Original>Radio Pack (Green Dark)</Original>
 				<German>Funkrucksack (Grün Dunkel)</German>
 			</Key>
-			<Key ID="STR_AXE_Backpacks_RadioBag_02_GREEN_DGTL">
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_GREEN_DGTL">
 				<Original>Radio Pack (Green Digital)</Original>
 				<German>Funkrucksack (Grün Digital)</German>
 			</Key>
-			<Key ID="STR_AXE_Backpacks_RadioBag_02_GREEN_RNGR">
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_GREEN_RNGR">
 				<Original>Radio Pack (Green Ranger)</Original>
 				<German>Funkrucksack (Grün Ranger)</German>
 			</Key>
-			<Key ID="STR_AXE_Backpacks_RadioBag_02_HEX_CAMO">
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_HEX_CAMO">
 				<Original>Radio Pack (Hex Camo)</Original>
 				<German>Funkrucksack (Hex Camo)</German>
 			</Key>
-			<Key ID="STR_AXE_Backpacks_RadioBag_02_HEX_GREEN">
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_HEX_GREEN">
 				<Original>Radio Pack (Hex Green)</Original>
 				<German>Funkrucksack (Hex Grün)</German>
 			</Key>
-			<Key ID="STR_AXE_Backpacks_RadioBag_02_MARPAT_D">
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_MARPAT_D">
 				<Original>Radio Pack (MARPAT-D)</Original>
 				<German>Funkrucksack (MARPAT-D)</German>
 			</Key>
-			<Key ID="STR_AXE_Backpacks_RadioBag_02_MARPAT_W">
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_MARPAT_W">
 				<Original>Radio Pack (MARPAT-W)</Original>
 				<German>Funkrucksack (MARPAT-W)</German>
 			</Key>
-			<Key ID="STR_AXE_Backpacks_RadioBag_02_MTP">
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_MTP">
 				<Original>Radio Pack (MTP)</Original>
 				<German>Funkrucksack (MTP)</German>
 			</Key>
-			<Key ID="STR_AXE_Backpacks_RadioBag_02_OCP">
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_OCP">
 				<Original>Radio Pack (OCP)</Original>
 				<German>Funkrucksack (OCP)</German>
 			</Key>
-			<Key ID="STR_AXE_Backpacks_RadioBag_02_UCP">
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_TROPIC">
+				<Original>Radio Pack (Tropic)</Original>
+				<German>Funkrucksack (Tropen)</German>
+			</Key>
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_UCP">
 				<Original>Radio Pack (UCP)</Original>
 				<German>Funkrucksack (UCP)</German>
 			</Key>
-			<Key ID="STR_AXE_Backpacks_RadioBag_02_WDL">
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_URBAN">
+				<Original>Radio Pack (Urban)</Original>
+				<German>Funkrucksack (Urban)</German>
+			</Key>
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_WDL">
+				<Original>Radio Pack (Wood Classic)</Original>
+				<German>Funkrucksack (Wald Klassisch)</German>
+			</Key>
+			<Key ID="STR_AXE_Backpacks_RadioBag_01_WDL2">
 				<Original>Radio Pack (Woodland)</Original>
 				<German>Funkrucksack (Waldtarn)</German>
 			</Key>
-			<!-- ------------------------------------------------------------------------------- -->
+			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		

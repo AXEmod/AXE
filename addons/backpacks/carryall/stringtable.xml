@@ -6,7 +6,7 @@
 		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Backpacks_Carryall">
-			<!-- ------------------------------------------------------------------------------- -->
+			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Backpacks_Carryall_Title">
 				<Original>AXE Backpacks Carryall</Original>
 			</Key>
@@ -16,142 +16,150 @@
 			<Key ID="STR_AXE_Backpacks_Carryall_URL">
 				<Original>https://github.com/AXEmod/AXE</Original>
 			</Key>
-			<!-- ------------------------------------------------------------------------------- -->
+			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Carryall">
-			<!-- ------------------------------------------------------------------------------- -->
+			<!-- =============================================================================== -->
 			<Key ID="STR_AXE_Backpacks_Carryall_01_BLACK">
-				<Original>Carryall (Black)</Original>
+				<Original>Carryall Backpack (Black)</Original>
 				<German>Großer Rucksack (Schwarz)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_BLACK_MEDIC">
-				<Original>Carryall (Black MED)</Original>
+				<Original>Carryall Backpack (Black MED)</Original>
 				<German>Großer Rucksack (Schwarz MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_BW_D">
-				<Original>Carryall (BW Tropic)</Original>
+				<Original>Carryall Backpack (BW Tropic)</Original>
 				<German>Großer Rucksack (BW Tropen)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_BW_D_MEDIC">
-				<Original>Carryall (BW Tropic MED)</Original>
+				<Original>Carryall Backpack (BW Tropic MED)</Original>
 				<German>Großer Rucksack (BW Tropen MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_BW_W">
-				<Original>Carryall (BW Camo)</Original>
+				<Original>Carryall Backpack (BW Camo)</Original>
 				<German>Großer Rucksack (BW Fleck)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_BW_W_MEDIC">
-				<Original>Carryall (BW Camo MED)</Original>
+				<Original>Carryall Backpack (BW Camo MED)</Original>
 				<German>Großer Rucksack (BW Fleck MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_COYOTE">
-				<Original>Carryall (Coyote)</Original>
+				<Original>Carryall Backpack (Coyote)</Original>
 				<German>Großer Rucksack (Coyote)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_COYOTE_MEDIC">
-				<Original>Carryall (Coyote MED)</Original>
+				<Original>Carryall Backpack (Coyote MED)</Original>
 				<German>Großer Rucksack (Coyote MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_GREEN_DARK">
-				<Original>Carryall (Green Dark)</Original>
+				<Original>Carryall Backpack (Green Dark)</Original>
 				<German>Großer Rucksack (Grün Dunkel)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_GREEN_DARK_MEDIC">
-				<Original>Carryall (Green Dark MED)</Original>
+				<Original>Carryall Backpack (Green Dark MED)</Original>
 				<German>Großer Rucksack (Grün Dunkel MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_GREEN_DGTL">
-				<Original>Carryall (Green Digital)</Original>
+				<Original>Carryall Backpack (Green Digital)</Original>
 				<German>Großer Rucksack (Grün Digital)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_GREEN_DGTL_MEDIC">
-				<Original>Carryall (Green Digital MED)</Original>
+				<Original>Carryall Backpack (Green Digital MED)</Original>
 				<German>Großer Rucksack (Grün Digital MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_GREEN_RNGR">
-				<Original>Carryall (Green Ranger)</Original>
+				<Original>Carryall Backpack (Green Ranger)</Original>
 				<German>Großer Rucksack (Grün Ranger)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_GREEN_RNGR_MEDIC">
-				<Original>Carryall (Green Ranger MED)</Original>
+				<Original>Carryall Backpack (Green Ranger MED)</Original>
 				<German>Großer Rucksack (Grün Ranger MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_HEX_CAMO">
-				<Original>Carryall (Hex Camo)</Original>
+				<Original>Carryall Backpack (Hex Camo)</Original>
 				<German>Großer Rucksack (Hex Camo)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_HEX_CAMO_MEDIC">
-				<Original>Carryall (Hex Camo MED)</Original>
+				<Original>Carryall Backpack (Hex Camo MED)</Original>
 				<German>Großer Rucksack (Hex Camo MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_HEX_GREEN">
-				<Original>Carryall (Hex Green)</Original>
+				<Original>Carryall Backpack (Hex Green)</Original>
 				<German>Großer Rucksack (Hex Grün)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_HEX_GREEN_MEDIC">
-				<Original>Carryall (Hex Green MED)</Original>
+				<Original>Carryall Backpack (Hex Green MED)</Original>
 				<German>Großer Rucksack (Hex Grün MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_MARPAT_D">
-				<Original>Carryall (MARPAT-D)</Original>
+				<Original>Carryall Backpack (MARPAT-D)</Original>
 				<German>Großer Rucksack (MARPAT-D)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_MARPAT_D_MEDIC">
-				<Original>Carryall (MARPAT-D MED)</Original>
+				<Original>Carryall Backpack (MARPAT-D MED)</Original>
 				<German>Großer Rucksack (MARPAT-D MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_MARPAT_W">
-				<Original>Carryall (MARPAT-W)</Original>
+				<Original>Carryall Backpack (MARPAT-W)</Original>
 				<German>Großer Rucksack (MARPAT-W)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_MARPAT_W_MEDIC">
-				<Original>Carryall (MARPAT-W MED)</Original>
+				<Original>Carryall Backpack (MARPAT-W MED)</Original>
 				<German>Großer Rucksack (MARPAT-W MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_MTP">
-				<Original>Carryall (MTP)</Original>
+				<Original>Carryall Backpack (MTP)</Original>
 				<German>Großer Rucksack (MTP)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_MTP_MEDIC">
-				<Original>Carryall (MTP MED)</Original>
+				<Original>Carryall Backpack (MTP MED)</Original>
 				<German>Großer Rucksack (MTP MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_OCP">
-				<Original>Carryall (OCP)</Original>
+				<Original>Carryall Backpack (OCP)</Original>
 				<German>Großer Rucksack (OCP)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_OCP_MEDIC">
-				<Original>Carryall (OCP MED)</Original>
+				<Original>Carryall Backpack (OCP MED)</Original>
 				<German>Großer Rucksack (OCP MED)</German>
 			</Key>
+			<Key ID="STR_AXE_Backpacks_Carryall_01_TROPIC">
+				<Original>Carryall Backpack (Tropic)</Original>
+				<German>Großer Rucksack (Tropen)</German>
+			</Key>
+			<Key ID="STR_AXE_Backpacks_Carryall_01_TROPIC_MEDIC">
+				<Original>Carryall Backpack (Tropic MED)</Original>
+				<German>Großer Rucksack (Tropen MED)</German>
+			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_UCP">
-				<Original>Carryall (UCP)</Original>
+				<Original>Carryall Backpack (UCP)</Original>
 				<German>Großer Rucksack (UCP)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_UCP_MEDIC">
-				<Original>Carryall (UCP MED)</Original>
+				<Original>Carryall Backpack (UCP MED)</Original>
 				<German>Großer Rucksack (UCP MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_WDL">
-				<Original>Carryall (Wood Classic)</Original>
+				<Original>Carryall Backpack (Wood Classic)</Original>
 				<German>Großer Rucksack (Wald Klassisch)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_WDL_MEDIC">
-				<Original>Carryall (Wood Classic MED)</Original>
+				<Original>Carryall Backpack (Wood Classic MED)</Original>
 				<German>Großer Rucksack (Wald Klassisch MED)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_WDL2">
-				<Original>Carryall (Woodland)</Original>
+				<Original>Carryall Backpack (Woodland)</Original>
 				<German>Großer Rucksack (Waldtarn)</German>
 			</Key>
 			<Key ID="STR_AXE_Backpacks_Carryall_01_WDL2_MEDIC">
-				<Original>Carryall (Woodland MED)</Original>
+				<Original>Carryall Backpack (Woodland MED)</Original>
 				<German>Großer Rucksack (Waldtarn MED)</German>
 			</Key>
-			<!-- ------------------------------------------------------------------------------- -->
+			<!-- =============================================================================== -->
 		</Container>
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		

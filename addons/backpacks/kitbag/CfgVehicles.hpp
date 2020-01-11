@@ -362,6 +362,32 @@ class CfgVehicles {
 		hiddenSelectionsTextures[] = {"\axe_backpacks\kitbag\data\textures\kitbag_ocp_medic_co.paa"};
 	};
 	
+	// KITBAG TROPIC
+	
+	class AXE_Kitbag_01_TROPIC: AXE_Kitbag_01_Base {
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		displayName = "$STR_AXE_Backpacks_Kitbag_01_TROPIC";
+		descriptionShort = "";
+		editorPreview = "\axe_backpacks\kitbag\data\previews\kitbag_tropic.jpg";
+		picture = "\axe_backpacks\kitbag\data\ui\kitbag_tropic_ca.paa";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\axe_backpacks\kitbag\data\textures\kitbag_tropic_co.paa"};
+	};
+	
+	class AXE_Kitbag_01_TROPIC_MEDIC: AXE_Kitbag_01_Base {
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		displayName = "$STR_AXE_Backpacks_Kitbag_01_TROPIC_MEDIC";
+		descriptionShort = "";
+		editorPreview = "\axe_backpacks\kitbag\data\previews\kitbag_tropic.jpg";
+		picture = "\axe_backpacks\kitbag\data\ui\kitbag_tropic_ca.paa";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\axe_backpacks\kitbag\data\textures\kitbag_tropic_medic_co.paa"};
+	};
+	
 	// KITBAG UCP
 	
 	class AXE_Kitbag_01_UCP: AXE_Kitbag_01_Base {
@@ -412,6 +438,32 @@ class CfgVehicles {
 		picture = "\axe_backpacks\kitbag\data\ui\kitbag_wdl_ca.paa";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\axe_backpacks\kitbag\data\textures\kitbag_wdl_medic_co.paa"};
+	};
+	
+	// KITBAG WOODLAND 2
+	
+	class AXE_Kitbag_01_WDL2: AXE_Kitbag_01_Base {
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		displayName = "$STR_AXE_Backpacks_Kitbag_01_WDL2";
+		descriptionShort = "";
+		editorPreview = "\axe_backpacks\kitbag\data\previews\kitbag_wdl2.jpg";
+		picture = "\axe_backpacks\kitbag\data\ui\kitbag_wdl2_ca.paa";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\axe_backpacks\kitbag\data\textures\kitbag_wdl2_co.paa"};
+	};
+	
+	class AXE_Kitbag_01_WDL2_MEDIC: AXE_Kitbag_01_Base {
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		displayName = "$STR_AXE_Backpacks_Kitbag_01_WDL2_MEDIC";
+		descriptionShort = "";
+		editorPreview = "\axe_backpacks\kitbag\data\previews\kitbag_wdl2.jpg";
+		picture = "\axe_backpacks\kitbag\data\ui\kitbag_wdl2_ca.paa";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\axe_backpacks\kitbag\data\textures\kitbag_wdl2_medic_co.paa"};
 	};
 	
 };
